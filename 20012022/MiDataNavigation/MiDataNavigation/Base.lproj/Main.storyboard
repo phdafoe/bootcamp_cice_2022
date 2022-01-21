@@ -80,7 +80,7 @@
                                 <rect key="frame" x="20" y="221" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dirección" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kLO-cO-UI4">
                                 <rect key="frame" x="20" y="278" width="374" height="34"/>
@@ -92,7 +92,7 @@
                                 <rect key="frame" x="20" y="332" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9G-K4-oEV">
                                 <rect key="frame" x="20" y="400" width="374" height="47"/>
@@ -215,7 +215,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bWv-he-Epb" kind="show" id="pab-88-X5S"/>
+                                    <segue destination="bWv-he-Epb" kind="show" identifier="segueV4" id="pab-88-X5S"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -223,6 +223,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ventana 3" id="pTg-Lw-Q62"/>
+                    <connections>
+                        <outlet property="edadPerroLBL" destination="jh4-BN-yK7" id="f5U-eb-OZ3"/>
+                        <outlet property="miApellidoLBL" destination="6NM-Hg-jq3" id="qoE-DT-Deo"/>
+                        <outlet property="miCiudadTF" destination="yaf-Xd-IZt" id="brR-SN-rG3"/>
+                        <outlet property="miCodigoPostalTF" destination="IxL-y8-pwV" id="nOh-0f-gHW"/>
+                        <outlet property="miDireccionLBL" destination="Ut3-PM-kmJ" id="fsO-BF-zf7"/>
+                        <outlet property="miNombreLBL" destination="xAX-8R-zdY" id="0Wc-ZB-3xS"/>
+                        <outlet property="miPosicionGeoTF" destination="Uga-4G-tQ2" id="3Dd-up-LuX"/>
+                        <outlet property="miTelefonoLBL" destination="Tm3-SE-ow8" id="vsb-yX-B3c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYB-Co-6Sg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -278,6 +288,9 @@
                                 <state key="normal" title="Enviar mail con toda esta info">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="enviarTodaLaInformacionMailACTION:" destination="bWv-he-Epb" eventType="touchUpInside" id="J4f-1w-glm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_ mi Código postal es:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6G-UQ-eU1">
                                 <rect key="frame" x="20" y="387" width="374" height="32"/>
@@ -307,6 +320,16 @@
                     <navigationItem key="navigationItem" title="Ventana 4" id="2XP-iw-oRt">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="WHU-0e-btt"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ciudadLBL" destination="oBf-vf-Gh8" id="R2h-Gb-RSP"/>
+                        <outlet property="codigoPOstalLBL" destination="u6G-UQ-eU1" id="Vr4-q7-YyR"/>
+                        <outlet property="edadPerroLBL" destination="l6s-G7-Kzc" id="Syd-2i-Sec"/>
+                        <outlet property="miApellidoLBL" destination="o8N-Z0-lCU" id="N7e-qq-MAu"/>
+                        <outlet property="miDireccionLBL" destination="97K-jm-pvQ" id="b2y-qC-1M8"/>
+                        <outlet property="miNombreLBL" destination="8MQ-ru-FTR" id="Pqp-sN-B3z"/>
+                        <outlet property="miTelefonoLBL" destination="2tv-X8-WAo" id="b7A-UQ-niP"/>
+                        <outlet property="posicionGeoLBL" destination="FCl-sx-At6" id="WCK-P6-STj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BfR-0K-1ha" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

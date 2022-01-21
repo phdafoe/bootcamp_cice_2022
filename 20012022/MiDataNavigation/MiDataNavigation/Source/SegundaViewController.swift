@@ -29,12 +29,15 @@ class SegundaViewController: UIViewController {
         self.edadPerro = Int(self.edadPerroTF.text ?? "0")
         
         if let edadPerroUnw = self.edadPerro {
+            
             self.nuevaEdadPerro = edadPerroUnw * 7
+            
             self.present(Utils.shared.showAlertVC(title: "Edad de mi Perro",
                                                   message: "El calculo de la edad de mi perro es: \(self.nuevaEdadPerro ?? 0)"),
                          animated: true) {
                 self.edadPerroTF.text = "\(self.nuevaEdadPerro ?? 0)"
             }
+            
         } else {
             self.present(Utils.shared.showAlertVC(title: "Estimado usuario",
                                                   message: "Por favor introduce la edad de tu perro para calcularla"),
@@ -62,21 +65,44 @@ class SegundaViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        
         if segue.identifier == "segueV3"{
-            if !(self.miTelefonoTF.text?.isEmpty ?? false) &&
-                !(self.miDireccionTF.text?.isEmpty ?? false) &&
-                "\(self.nuevaEdadPerro ?? 0)".isEmpty {
+            
+            if let edadPerro = self.nuevaEdadPerro {
                 
-                _ = segue.destination as? TerceraViewController
+                self.navigacionVentana3(segue: segue, edadPerro: edadPerro)
                 
             } else {
+                
                 self.present(Utils.shared.showAlertVC(title: "Heyeee",
                                                       message: "Por favor introduce datos en todos los campos de texto"),
                              animated: true,
                              completion: nil)
             }
         }
-        
     }
     
-
+    private func navigacionVentana3(segue: UIStoryboardSegue, edadPerro: Int){
+        
+        if !(self.miTelefonoTF.text?.isEmpty ?? false) && !(self.miDireccionTF.text?.isEmpty ?? false) && !("\(edadPerro)".isEmpty) {
+            
+            let ventana3 = segue.destination as? TerceraViewController
+            ventana3?.datosUsuario.nombreData = self.datosUsuario.nombreData
+            ventana3?.datosUsuario.apellidoData = self.datosUsuario.apellidoData
+            ventana3?.datosUsuario.telefonoData = self.miTelefonoTF.text
+            ventana3?.datosUsuario.direccionData = self.miDireccionTF.text
+            ventana3?.datosUsuario.edadPerroData = self.edadPerroTF.text
+            
+        } else {
+            self.present(Utils.shared.showAlertVC(title: "Heyeee",
+                                                  message: "Por favor introduce datos en todos los campos de texto"),
+                         animated: true,
+                         completion: nil)
+        }
+    }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
 }

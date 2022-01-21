@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MessageUI
 
 class Utils {
     
@@ -23,6 +24,38 @@ class Utils {
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         return alertVC
     }
+    
+    func configuracionPickerView(tag: Int,
+                                 delegate: UIPickerViewDelegate,
+                                 dataSource: UIPickerViewDataSource,
+                                 textField: UITextField) {
+        
+        let pickerView = UIPickerView()
+        pickerView.delegate = delegate
+        pickerView.dataSource = dataSource
+        pickerView.tag = tag
+        textField.inputView = pickerView
+    }
+    
+    func dataIntextFieldIsEmpty(parametros: [String]) -> Bool {
+        for item in parametros {
+            if (item.isEmpty) {
+                return false
+            }
+        }
+        return true
+    }
+    
+    func configuracionMailCompose(delegate: MFMailComposeViewControllerDelegate, data: [String]) -> MFMailComposeViewController {
+        let mailCompo = MFMailComposeViewController()
+        mailCompo.mailComposeDelegate = delegate
+        mailCompo.setToRecipients(["info@mail.com", "masinfo@mail.es"])
+        mailCompo.setSubject("este es en mensaje para el equipo de soporte")
+        let emailBody = "Los datos del formualario de registro son \(data)"
+        mailCompo.setMessageBody(emailBody, isHTML: false)
+        return mailCompo
+    }
+    
 }
 
 
