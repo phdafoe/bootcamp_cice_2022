@@ -8,22 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		B4010CC6279F23840080774D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010CC5279F23840080774D /* AppDelegate.swift */; };
-		B4010CC8279F23840080774D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010CC7279F23840080774D /* SceneDelegate.swift */; };
-		B4010CCA279F23840080774D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010CC9279F23840080774D /* ViewController.swift */; };
-		B4010CCD279F23840080774D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4010CCB279F23840080774D /* Main.storyboard */; };
 		B4010CCF279F23860080774D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4010CCE279F23860080774D /* Assets.xcassets */; };
 		B4010CD2279F23860080774D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4010CD0279F23860080774D /* LaunchScreen.storyboard */; };
+		B4010CE0279F25850080774D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010CDF279F25850080774D /* AppCoordinator.swift */; };
+		B4010CE7279F29D10080774D /* ListaCochesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010CE5279F29D10080774D /* ListaCochesViewController.swift */; };
+		B4010CE8279F29D10080774D /* ListaCochesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4010CE6279F29D10080774D /* ListaCochesViewController.xib */; };
+		B4010CEB279F2A310080774D /* ListaCochesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010CEA279F2A310080774D /* ListaCochesCoordinator.swift */; };
+		B4010CF0279F2DBE0080774D /* MesesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010CEE279F2DBD0080774D /* MesesCell.swift */; };
+		B4010CF1279F2DBE0080774D /* MesesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4010CEF279F2DBE0080774D /* MesesCell.xib */; };
+		B4010CF5279F3B730080774D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010CF4279F3B730080774D /* Utils.swift */; };
+		B4010CFA279F3E560080774D /* ListSuperCochesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010CF8279F3E560080774D /* ListSuperCochesViewController.swift */; };
+		B4010CFB279F3E560080774D /* ListSuperCochesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4010CF9279F3E560080774D /* ListSuperCochesViewController.xib */; };
+		B4010CFF279F3E6C0080774D /* ListSuperCochesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010CFE279F3E6C0080774D /* ListSuperCochesCoordinator.swift */; };
+		B4010D04279F3FB20080774D /* HometabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010D02279F3FB20080774D /* HometabBarViewController.swift */; };
+		B4010D05279F3FB20080774D /* HometabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4010D03279F3FB20080774D /* HometabBarViewController.xib */; };
+		B4010D09279F3FCF0080774D /* HometabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010D08279F3FCF0080774D /* HometabBarCoordinator.swift */; };
+		B4010D0D279F45060080774D /* CochesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010D0C279F45060080774D /* CochesModel.swift */; };
+		B4010D12279F49420080774D /* CochesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4010D10279F49420080774D /* CochesCell.swift */; };
+		B4010D13279F49420080774D /* CochesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4010D11279F49420080774D /* CochesCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B4010CC2279F23830080774D /* MiAppIntroduccionTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiAppIntroduccionTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4010CC5279F23840080774D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B4010CC7279F23840080774D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B4010CC9279F23840080774D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B4010CCC279F23840080774D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4010CCE279F23860080774D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4010CD1279F23860080774D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4010CD3279F23860080774D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4010CDF279F25850080774D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B4010CE5279F29D10080774D /* ListaCochesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCochesViewController.swift; sourceTree = "<group>"; };
+		B4010CE6279F29D10080774D /* ListaCochesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaCochesViewController.xib; sourceTree = "<group>"; };
+		B4010CEA279F2A310080774D /* ListaCochesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCochesCoordinator.swift; sourceTree = "<group>"; };
+		B4010CEE279F2DBD0080774D /* MesesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesesCell.swift; sourceTree = "<group>"; };
+		B4010CEF279F2DBE0080774D /* MesesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MesesCell.xib; sourceTree = "<group>"; };
+		B4010CF4279F3B730080774D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B4010CF8279F3E560080774D /* ListSuperCochesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSuperCochesViewController.swift; sourceTree = "<group>"; };
+		B4010CF9279F3E560080774D /* ListSuperCochesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListSuperCochesViewController.xib; sourceTree = "<group>"; };
+		B4010CFE279F3E6C0080774D /* ListSuperCochesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSuperCochesCoordinator.swift; sourceTree = "<group>"; };
+		B4010D02279F3FB20080774D /* HometabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HometabBarViewController.swift; sourceTree = "<group>"; };
+		B4010D03279F3FB20080774D /* HometabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HometabBarViewController.xib; sourceTree = "<group>"; };
+		B4010D08279F3FCF0080774D /* HometabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HometabBarCoordinator.swift; sourceTree = "<group>"; };
+		B4010D0C279F45060080774D /* CochesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CochesModel.swift; sourceTree = "<group>"; };
+		B4010D10279F49420080774D /* CochesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CochesCell.swift; sourceTree = "<group>"; };
+		B4010D11279F49420080774D /* CochesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CochesCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +82,108 @@
 		B4010CC4279F23830080774D /* MiAppIntroduccionTableView */ = {
 			isa = PBXGroup;
 			children = (
-				B4010CC5279F23840080774D /* AppDelegate.swift */,
-				B4010CC7279F23840080774D /* SceneDelegate.swift */,
-				B4010CC9279F23840080774D /* ViewController.swift */,
-				B4010CCB279F23840080774D /* Main.storyboard */,
+				B4010D0B279F44EB0080774D /* Models */,
+				B4010CF3279F3B640080774D /* Uitls+Helpers */,
+				B4010CE2279F28F10080774D /* Sources */,
+				B4010CDE279F25680080774D /* CoreApp */,
 				B4010CCE279F23860080774D /* Assets.xcassets */,
 				B4010CD0279F23860080774D /* LaunchScreen.storyboard */,
 				B4010CD3279F23860080774D /* Info.plist */,
 			);
 			path = MiAppIntroduccionTableView;
+			sourceTree = "<group>";
+		};
+		B4010CDE279F25680080774D /* CoreApp */ = {
+			isa = PBXGroup;
+			children = (
+				B4010CC5279F23840080774D /* AppDelegate.swift */,
+				B4010CDF279F25850080774D /* AppCoordinator.swift */,
+			);
+			path = CoreApp;
+			sourceTree = "<group>";
+		};
+		B4010CE2279F28F10080774D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B4010CE3279F28FD0080774D /* Modules */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B4010CE3279F28FD0080774D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B4010D01279F3F8A0080774D /* HomeTabBarView */,
+				B4010CF7279F3E310080774D /* ListaSuperCochesView */,
+				B4010CE4279F29090080774D /* ListaCochesView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B4010CE4279F29090080774D /* ListaCochesView */ = {
+			isa = PBXGroup;
+			children = (
+				B4010CED279F2D740080774D /* Cell */,
+				B4010CE5279F29D10080774D /* ListaCochesViewController.swift */,
+				B4010CE6279F29D10080774D /* ListaCochesViewController.xib */,
+				B4010CEA279F2A310080774D /* ListaCochesCoordinator.swift */,
+			);
+			path = ListaCochesView;
+			sourceTree = "<group>";
+		};
+		B4010CED279F2D740080774D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B4010CEE279F2DBD0080774D /* MesesCell.swift */,
+				B4010CEF279F2DBE0080774D /* MesesCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B4010CF3279F3B640080774D /* Uitls+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B4010CF4279F3B730080774D /* Utils.swift */,
+			);
+			path = "Uitls+Helpers";
+			sourceTree = "<group>";
+		};
+		B4010CF7279F3E310080774D /* ListaSuperCochesView */ = {
+			isa = PBXGroup;
+			children = (
+				B4010D0F279F49200080774D /* Cell */,
+				B4010CF8279F3E560080774D /* ListSuperCochesViewController.swift */,
+				B4010CF9279F3E560080774D /* ListSuperCochesViewController.xib */,
+				B4010CFE279F3E6C0080774D /* ListSuperCochesCoordinator.swift */,
+			);
+			path = ListaSuperCochesView;
+			sourceTree = "<group>";
+		};
+		B4010D01279F3F8A0080774D /* HomeTabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				B4010D02279F3FB20080774D /* HometabBarViewController.swift */,
+				B4010D03279F3FB20080774D /* HometabBarViewController.xib */,
+				B4010D08279F3FCF0080774D /* HometabBarCoordinator.swift */,
+			);
+			path = HomeTabBarView;
+			sourceTree = "<group>";
+		};
+		B4010D0B279F44EB0080774D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B4010D0C279F45060080774D /* CochesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B4010D0F279F49200080774D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B4010D10279F49420080774D /* CochesCell.swift */,
+				B4010D11279F49420080774D /* CochesCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +244,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4010CD2279F23860080774D /* LaunchScreen.storyboard in Resources */,
+				B4010D05279F3FB20080774D /* HometabBarViewController.xib in Resources */,
+				B4010CFB279F3E560080774D /* ListSuperCochesViewController.xib in Resources */,
+				B4010D13279F49420080774D /* CochesCell.xib in Resources */,
+				B4010CE8279F29D10080774D /* ListaCochesViewController.xib in Resources */,
 				B4010CCF279F23860080774D /* Assets.xcassets in Resources */,
-				B4010CCD279F23840080774D /* Main.storyboard in Resources */,
+				B4010CF1279F2DBE0080774D /* MesesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +260,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4010CCA279F23840080774D /* ViewController.swift in Sources */,
+				B4010D12279F49420080774D /* CochesCell.swift in Sources */,
+				B4010CF0279F2DBE0080774D /* MesesCell.swift in Sources */,
+				B4010CE0279F25850080774D /* AppCoordinator.swift in Sources */,
+				B4010CEB279F2A310080774D /* ListaCochesCoordinator.swift in Sources */,
+				B4010D0D279F45060080774D /* CochesModel.swift in Sources */,
+				B4010CFA279F3E560080774D /* ListSuperCochesViewController.swift in Sources */,
+				B4010CE7279F29D10080774D /* ListaCochesViewController.swift in Sources */,
+				B4010D04279F3FB20080774D /* HometabBarViewController.swift in Sources */,
 				B4010CC6279F23840080774D /* AppDelegate.swift in Sources */,
-				B4010CC8279F23840080774D /* SceneDelegate.swift in Sources */,
+				B4010D09279F3FCF0080774D /* HometabBarCoordinator.swift in Sources */,
+				B4010CFF279F3E6C0080774D /* ListSuperCochesCoordinator.swift in Sources */,
+				B4010CF5279F3B730080774D /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B4010CCB279F23840080774D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B4010CCC279F23840080774D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B4010CD0279F23860080774D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,6 +411,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C7W4RF846;
 				INFOPLIST_FILE = MiAppIntroduccionTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,7 +420,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cice.education.Tecnologia.iOS.MiAppIntroduccionTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +430,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C7W4RF846;
 				INFOPLIST_FILE = MiAppIntroduccionTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,7 +439,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cice.education.Tecnologia.iOS.MiAppIntroduccionTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
