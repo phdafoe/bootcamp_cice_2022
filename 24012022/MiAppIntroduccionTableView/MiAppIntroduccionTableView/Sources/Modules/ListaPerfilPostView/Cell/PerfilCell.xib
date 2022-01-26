@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="265" id="KGk-i7-Jjw" customClass="PerfilCell" customModule="MiAppIntroduccionTableView" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="265" id="KGk-i7-Jjw" customClass="PerfilCell" customModule="MiAppIntroduccionTableView" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="265"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -38,6 +38,9 @@
                         </constraints>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="B1"/>
+                        <connections>
+                            <action selector="senderEventAlertB1ACTION:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dXV-42-uMF"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDF-Mp-Ndp">
                         <rect key="frame" x="201" y="213" width="107" height="44"/>
@@ -48,6 +51,9 @@
                         </constraints>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="B3"/>
+                        <connections>
+                            <action selector="senderEventButton3ACTION:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Fdy-z3-VF1"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="_Nombre perfilLBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FC5-PI-9V6">
                         <rect key="frame" x="12" y="133" width="296" height="21"/>
@@ -87,6 +93,9 @@
                         </constraints>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="B2"/>
+                        <connections>
+                            <action selector="senderEventAlertB2ACTION:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uAU-yl-WWJ"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

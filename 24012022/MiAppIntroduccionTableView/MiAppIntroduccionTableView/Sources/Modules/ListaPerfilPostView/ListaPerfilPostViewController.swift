@@ -21,7 +21,10 @@ class ListaPerfilPostViewController: UIViewController {
     private func configuracionTableView() {
         self.miPerfilposttableView.delegate = self
         self.miPerfilposttableView.dataSource = self
+        
         self.miPerfilposttableView.register(UINib(nibName: PerfilCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: PerfilCell.defaultReuseIdentifier)
+        
+        self.miPerfilposttableView.register(UINib(nibName: PostCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: PostCell.defaultReuseIdentifier)
     }
 
 }
@@ -45,6 +48,7 @@ extension ListaPerfilPostViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cellPerfil = self.miPerfilposttableView.dequeueReusableCell(withIdentifier: PerfilCell.defaultReuseIdentifier, for: indexPath) as! PerfilCell
+            cellPerfil.delegate = self
             cellPerfil.setupCellPerfil(data: UserDataModel(nombrePerfil: "Andres Felipe Ocampo",
                                                            descripcionPerfil: "Senior llead iOS Engineer en NTTDATA, e instructior de iOS en CICE, Loremipsum,lo que sea que tiene que ser, Lrem ipsum donde las leyes haces lo que quieran Lrem ipsum donde las leyes haces lo que quieran Lrem ipsum donde las leyes haces lo que quieran",
                                                            puestoActualperfil: "Sebioer Lead iOS Engineer",
@@ -52,7 +56,13 @@ extension ListaPerfilPostViewController: UITableViewDataSource {
                                                            imagePerfil: "thor"))
             return cellPerfil
         default:
-            return UITableViewCell()
+            let cellPost = self.miPerfilposttableView.dequeueReusableCell(withIdentifier: PostCell.defaultReuseIdentifier, for: indexPath) as! PostCell
+            cellPost.setupPostCell(data: UserDataModel(nombrePerfil: "Miranda",
+                                                       descripcionPerfil: "Senior llead iOS Engineer en NTTDATA, e instructior de iOS en CICE, Senior llead iOS Engineer en NTTDATA, e instructior de iOS en CICE, Loremipsum,lo que sea que tiene que ser, Lrem ipsum ",
+                                                       puestoActualperfil: "Sebioer Lead iOS Engineer",
+                                                       usuarioLinkedInPerfil: "@Miranda_Lambert",
+                                                       imagePerfil: "Miranda_Lambert"))
+            return cellPost
         }
     }
     
@@ -69,8 +79,31 @@ extension ListaPerfilPostViewController: UITableViewDelegate {
         case 0:
             return 265
         default:
-            return 265
+            return UITableView.automaticDimension
         }
     }
+}
+
+
+extension ListaPerfilPostViewController: PerfilCellOutputDelegate {
+    
+    func showAlertB1() {
+        let alertVC = UIAlertController(title: "Explota la cebaxa", message: "\(#function)", preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    func showAlertB2() {
+        let alertVC = UIAlertController(title: "Explota la cebaxa", message: "\(#function)", preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    func navigationToDetailView(withData: UserDataModel?) {
+        let alertVC = UIAlertController(title: "Explota la cebaxa", message: withData?.nombrePerfil, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
     
 }
