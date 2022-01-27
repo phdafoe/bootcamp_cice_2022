@@ -9,6 +9,8 @@ import UIKit
 
 final class HomeViewCoordinator {
     
+    
+    
     static func homeView() -> UITabBarController {
         let homeVC = HomeViewController()
         
@@ -29,7 +31,11 @@ final class HomeViewCoordinator {
         
         homeVC.viewControllers = [listaCochesVC, listaPostVC]
         
+        // TODO: - tarea para los alumnos
+        var vc = RegistroCoordinator.view()
+        vc = nil
         
         return homeVC
     }
+
 }

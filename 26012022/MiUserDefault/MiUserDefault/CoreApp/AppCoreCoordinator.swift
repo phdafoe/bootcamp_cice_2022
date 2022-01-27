@@ -25,7 +25,6 @@ extension AppCoreCoordinator: AppCoreCoordinatorProtocol {
         } else {
             self.actualVC = RegistroCoordinator.view()
         }
-        
        
         window.rootViewController = self.actualVC
         window.makeKeyAndVisible()
