@@ -14,6 +14,7 @@
 		B4462B7627A1E91600C9125E /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4462B7427A1E91600C9125E /* RegistroViewController.swift */; };
 		B4462B7727A1E91600C9125E /* RegistroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4462B7527A1E91600C9125E /* RegistroViewController.xib */; };
 		B4462B7B27A1E92D00C9125E /* RegistroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4462B7A27A1E92D00C9125E /* RegistroCoordinator.swift */; };
+		B49A430927A319230064A2A0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49A430827A319230064A2A0 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B4462B7427A1E91600C9125E /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		B4462B7527A1E91600C9125E /* RegistroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistroViewController.xib; sourceTree = "<group>"; };
 		B4462B7A27A1E92D00C9125E /* RegistroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroCoordinator.swift; sourceTree = "<group>"; };
+		B49A430827A319230064A2A0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		B4462B5227A1E37500C9125E /* MiUserDefault */ = {
 			isa = PBXGroup;
 			children = (
+				B49A430727A317E90064A2A0 /* Utils+Helpers */,
 				B4462B7227A1E8E300C9125E /* Sources */,
 				B4462B6C27A1E3DF00C9125E /* CoreApp */,
 				B4462B5C27A1E37800C9125E /* Assets.xcassets */,
@@ -92,6 +95,14 @@
 				B4462B7A27A1E92D00C9125E /* RegistroCoordinator.swift */,
 			);
 			path = RegistroView;
+			sourceTree = "<group>";
+		};
+		B49A430727A317E90064A2A0 /* Utils+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B49A430827A319230064A2A0 /* Utils.swift */,
+			);
+			path = "Utils+Helpers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49A430927A319230064A2A0 /* Utils.swift in Sources */,
 				B4462B5427A1E37500C9125E /* AppDelegate.swift in Sources */,
 				B4462B7627A1E91600C9125E /* RegistroViewController.swift in Sources */,
 				B4462B7027A1E4E800C9125E /* AppCoreCoordinator.swift in Sources */,
@@ -307,6 +319,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C7W4RF846;
 				INFOPLIST_FILE = MiUserDefault/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -325,6 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C7W4RF846;
 				INFOPLIST_FILE = MiUserDefault/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

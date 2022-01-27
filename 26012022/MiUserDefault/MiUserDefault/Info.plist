@@ -32,6 +32,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>La Aplicación MiUserDefault requiere acceso a la camara para una mejor expericnia de usuario</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>La Aplicación MiUserDefault requiere acceso a la librería de fotos para una mejor expericnia de usuario</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
