@@ -22,7 +22,9 @@ class Utils {
         let kPrefs = UserDefaults.standard
     }
     
-    func muestraAlerta(titulo: String, mensaje: String, completionHandler: ((UIAlertAction) -> Void)? ) -> UIAlertController {
+    func muestraAlerta(titulo: String,
+                       mensaje: String,
+                       completionHandler: ((UIAlertAction) -> Void)? ) -> UIAlertController {
         let alertVC = UIAlertController(title: titulo, message: mensaje, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: completionHandler))
         return alertVC
