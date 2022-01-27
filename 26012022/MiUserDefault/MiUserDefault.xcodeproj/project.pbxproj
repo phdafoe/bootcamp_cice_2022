@@ -15,6 +15,15 @@
 		B4462B7727A1E91600C9125E /* RegistroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4462B7527A1E91600C9125E /* RegistroViewController.xib */; };
 		B4462B7B27A1E92D00C9125E /* RegistroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4462B7A27A1E92D00C9125E /* RegistroCoordinator.swift */; };
 		B49A430927A319230064A2A0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49A430827A319230064A2A0 /* Utils.swift */; };
+		B49A430F27A32F890064A2A0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49A430D27A32F890064A2A0 /* HomeViewController.swift */; };
+		B49A431027A32F890064A2A0 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49A430E27A32F890064A2A0 /* HomeViewController.xib */; };
+		B49A431627A32FC20064A2A0 /* LIstaPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49A431427A32FC20064A2A0 /* LIstaPostsViewController.swift */; };
+		B49A431727A32FC20064A2A0 /* LIstaPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49A431527A32FC20064A2A0 /* LIstaPostsViewController.xib */; };
+		B49A431C27A32FF10064A2A0 /* ListCochesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49A431B27A32FF10064A2A0 /* ListCochesViewController.swift */; };
+		B49A431F27A3300A0064A2A0 /* ListCochesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49A431E27A3300A0064A2A0 /* ListCochesViewController.xib */; };
+		B49A432227A3307C0064A2A0 /* ListCochesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49A432127A3307C0064A2A0 /* ListCochesCoordinator.swift */; };
+		B49A432527A330EF0064A2A0 /* LIstaPostsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49A432427A330EF0064A2A0 /* LIstaPostsCoordinator.swift */; };
+		B49A432827A331620064A2A0 /* HomeViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49A432727A331620064A2A0 /* HomeViewCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +37,15 @@
 		B4462B7527A1E91600C9125E /* RegistroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistroViewController.xib; sourceTree = "<group>"; };
 		B4462B7A27A1E92D00C9125E /* RegistroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroCoordinator.swift; sourceTree = "<group>"; };
 		B49A430827A319230064A2A0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		B49A430D27A32F890064A2A0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B49A430E27A32F890064A2A0 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		B49A431427A32FC20064A2A0 /* LIstaPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LIstaPostsViewController.swift; sourceTree = "<group>"; };
+		B49A431527A32FC20064A2A0 /* LIstaPostsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LIstaPostsViewController.xib; sourceTree = "<group>"; };
+		B49A431B27A32FF10064A2A0 /* ListCochesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCochesViewController.swift; sourceTree = "<group>"; };
+		B49A431E27A3300A0064A2A0 /* ListCochesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCochesViewController.xib; sourceTree = "<group>"; };
+		B49A432127A3307C0064A2A0 /* ListCochesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCochesCoordinator.swift; sourceTree = "<group>"; };
+		B49A432427A330EF0064A2A0 /* LIstaPostsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LIstaPostsCoordinator.swift; sourceTree = "<group>"; };
+		B49A432727A331620064A2A0 /* HomeViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +100,9 @@
 		B4462B7227A1E8E300C9125E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B49A431A27A32FC60064A2A0 /* ListaCocheView */,
+				B49A431327A32F940064A2A0 /* ListaPostView */,
+				B49A430C27A32F6B0064A2A0 /* HomeView */,
 				B4462B7327A1E8F400C9125E /* RegistroView */,
 			);
 			path = Sources;
@@ -103,6 +124,36 @@
 				B49A430827A319230064A2A0 /* Utils.swift */,
 			);
 			path = "Utils+Helpers";
+			sourceTree = "<group>";
+		};
+		B49A430C27A32F6B0064A2A0 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				B49A430D27A32F890064A2A0 /* HomeViewController.swift */,
+				B49A430E27A32F890064A2A0 /* HomeViewController.xib */,
+				B49A432727A331620064A2A0 /* HomeViewCoordinator.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		B49A431327A32F940064A2A0 /* ListaPostView */ = {
+			isa = PBXGroup;
+			children = (
+				B49A431427A32FC20064A2A0 /* LIstaPostsViewController.swift */,
+				B49A431527A32FC20064A2A0 /* LIstaPostsViewController.xib */,
+				B49A432427A330EF0064A2A0 /* LIstaPostsCoordinator.swift */,
+			);
+			path = ListaPostView;
+			sourceTree = "<group>";
+		};
+		B49A431A27A32FC60064A2A0 /* ListaCocheView */ = {
+			isa = PBXGroup;
+			children = (
+				B49A431B27A32FF10064A2A0 /* ListCochesViewController.swift */,
+				B49A431E27A3300A0064A2A0 /* ListCochesViewController.xib */,
+				B49A432127A3307C0064A2A0 /* ListCochesCoordinator.swift */,
+			);
+			path = ListaCocheView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +215,10 @@
 			files = (
 				B4462B7727A1E91600C9125E /* RegistroViewController.xib in Resources */,
 				B4462B6027A1E37800C9125E /* LaunchScreen.storyboard in Resources */,
+				B49A431727A32FC20064A2A0 /* LIstaPostsViewController.xib in Resources */,
+				B49A431F27A3300A0064A2A0 /* ListCochesViewController.xib in Resources */,
 				B4462B5D27A1E37800C9125E /* Assets.xcassets in Resources */,
+				B49A431027A32F890064A2A0 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,11 +229,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49A431627A32FC20064A2A0 /* LIstaPostsViewController.swift in Sources */,
+				B49A431C27A32FF10064A2A0 /* ListCochesViewController.swift in Sources */,
+				B49A432527A330EF0064A2A0 /* LIstaPostsCoordinator.swift in Sources */,
 				B49A430927A319230064A2A0 /* Utils.swift in Sources */,
 				B4462B5427A1E37500C9125E /* AppDelegate.swift in Sources */,
+				B49A432827A331620064A2A0 /* HomeViewCoordinator.swift in Sources */,
+				B49A432227A3307C0064A2A0 /* ListCochesCoordinator.swift in Sources */,
 				B4462B7627A1E91600C9125E /* RegistroViewController.swift in Sources */,
 				B4462B7027A1E4E800C9125E /* AppCoreCoordinator.swift in Sources */,
 				B4462B7B27A1E92D00C9125E /* RegistroCoordinator.swift in Sources */,
+				B49A430F27A32F890064A2A0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,11 +42,22 @@ class RegistroViewController: UIViewController {
                                                     completionHandler: { _ in
                                                         self.usuarioLogado = true
                                                         Utils.Constants().kPrefs.setValue(self.usuarioLogado, forKey: Utils.Constants().kUserLogado)
+                                                        
+                                                        let vc = HomeViewCoordinator.homeView()
+                                                        vc.modalTransitionStyle = .coverVertical
+                                                        vc.modalPresentationStyle = .fullScreen
+                                                        self.present(vc, animated: true, completion: nil)
                                                     }),
                          animated: true,
                          completion: nil)
             
             
+        } else {
+            self.present(Utils.shared.muestraAlerta(titulo: "Debes cumplimentar el formulario",
+                                                    mensaje: "Adelante solecciona una foto y te registrarás con éxito",
+                                                    completionHandler: nil),
+                         animated: true,
+                         completion: nil)
         }
     }
     
