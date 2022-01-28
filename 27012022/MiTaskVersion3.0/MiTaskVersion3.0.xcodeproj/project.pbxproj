@@ -10,6 +10,26 @@
 		B43D238827A468E000CD6232 /* AppCoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D238727A468DF00CD6232 /* AppCoreCoordinator.swift */; };
 		B43D238D27A46B6400CD6232 /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = B43D238C27A46B6400CD6232 /* contacts.json */; };
 		B43D239027A46B9700CD6232 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D238F27A46B9700CD6232 /* TaskModel.swift */; };
+		B43D239C27A471A000CD6232 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D239A27A471A000CD6232 /* LoginViewController.swift */; };
+		B43D239D27A471A000CD6232 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B43D239B27A471A000CD6232 /* LoginViewController.xib */; };
+		B43D23A127A471C500CD6232 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D239F27A471C500CD6232 /* HomeTabBarViewController.swift */; };
+		B43D23A227A471C500CD6232 /* HomeTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B43D23A027A471C500CD6232 /* HomeTabBarViewController.xib */; };
+		B43D23A627A471EF00CD6232 /* ContactosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23A427A471EF00CD6232 /* ContactosViewController.swift */; };
+		B43D23A727A471EF00CD6232 /* ContactosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B43D23A527A471EF00CD6232 /* ContactosViewController.xib */; };
+		B43D23AB27A4720100CD6232 /* NuevaTareaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23A927A4720100CD6232 /* NuevaTareaViewController.swift */; };
+		B43D23AC27A4720100CD6232 /* NuevaTareaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B43D23AA27A4720100CD6232 /* NuevaTareaViewController.xib */; };
+		B43D23B027A4721200CD6232 /* CategoriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23AE27A4721200CD6232 /* CategoriaViewController.swift */; };
+		B43D23B127A4721200CD6232 /* CategoriaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B43D23AF27A4721200CD6232 /* CategoriaViewController.xib */; };
+		B43D23B527A4722700CD6232 /* ListaTareasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23B327A4722700CD6232 /* ListaTareasViewController.swift */; };
+		B43D23B627A4722700CD6232 /* ListaTareasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B43D23B427A4722700CD6232 /* ListaTareasViewController.xib */; };
+		B43D23BB27A4723D00CD6232 /* DetalleTareaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23B927A4723D00CD6232 /* DetalleTareaViewController.swift */; };
+		B43D23BC27A4723D00CD6232 /* DetalleTareaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B43D23BA27A4723D00CD6232 /* DetalleTareaViewController.xib */; };
+		B43D23BF27A472FD00CD6232 /* LoginViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23BE27A472FD00CD6232 /* LoginViewCoordinator.swift */; };
+		B43D23C227A473AF00CD6232 /* ContactosViewCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23C127A473AF00CD6232 /* ContactosViewCordinator.swift */; };
+		B43D23C527A473F000CD6232 /* NuevaTareaViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23C427A473F000CD6232 /* NuevaTareaViewCoordinator.swift */; };
+		B43D23C827A4740F00CD6232 /* CategoriaViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23C727A4740F00CD6232 /* CategoriaViewCoordinator.swift */; };
+		B43D23CB27A4743400CD6232 /* ListaTareasViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23CA27A4743400CD6232 /* ListaTareasViewCoordinator.swift */; };
+		B43D23CE27A4745400CD6232 /* DetalleTareaViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23CD27A4745400CD6232 /* DetalleTareaViewCoordinator.swift */; };
 		B4D1182027A33DF10087F60C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D1181F27A33DF10087F60C /* AppDelegate.swift */; };
 		B4D1182927A33DF30087F60C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4D1182827A33DF30087F60C /* Assets.xcassets */; };
 		B4D1182C27A33DF30087F60C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4D1182A27A33DF30087F60C /* LaunchScreen.storyboard */; };
@@ -19,6 +39,26 @@
 		B43D238727A468DF00CD6232 /* AppCoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoreCoordinator.swift; sourceTree = "<group>"; };
 		B43D238C27A46B6400CD6232 /* contacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contacts.json; sourceTree = "<group>"; };
 		B43D238F27A46B9700CD6232 /* TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		B43D239A27A471A000CD6232 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B43D239B27A471A000CD6232 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		B43D239F27A471C500CD6232 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		B43D23A027A471C500CD6232 /* HomeTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBarViewController.xib; sourceTree = "<group>"; };
+		B43D23A427A471EF00CD6232 /* ContactosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosViewController.swift; sourceTree = "<group>"; };
+		B43D23A527A471EF00CD6232 /* ContactosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactosViewController.xib; sourceTree = "<group>"; };
+		B43D23A927A4720100CD6232 /* NuevaTareaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevaTareaViewController.swift; sourceTree = "<group>"; };
+		B43D23AA27A4720100CD6232 /* NuevaTareaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NuevaTareaViewController.xib; sourceTree = "<group>"; };
+		B43D23AE27A4721200CD6232 /* CategoriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaViewController.swift; sourceTree = "<group>"; };
+		B43D23AF27A4721200CD6232 /* CategoriaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriaViewController.xib; sourceTree = "<group>"; };
+		B43D23B327A4722700CD6232 /* ListaTareasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTareasViewController.swift; sourceTree = "<group>"; };
+		B43D23B427A4722700CD6232 /* ListaTareasViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaTareasViewController.xib; sourceTree = "<group>"; };
+		B43D23B927A4723D00CD6232 /* DetalleTareaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTareaViewController.swift; sourceTree = "<group>"; };
+		B43D23BA27A4723D00CD6232 /* DetalleTareaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalleTareaViewController.xib; sourceTree = "<group>"; };
+		B43D23BE27A472FD00CD6232 /* LoginViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewCoordinator.swift; sourceTree = "<group>"; };
+		B43D23C127A473AF00CD6232 /* ContactosViewCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosViewCordinator.swift; sourceTree = "<group>"; };
+		B43D23C427A473F000CD6232 /* NuevaTareaViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevaTareaViewCoordinator.swift; sourceTree = "<group>"; };
+		B43D23C727A4740F00CD6232 /* CategoriaViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaViewCoordinator.swift; sourceTree = "<group>"; };
+		B43D23CA27A4743400CD6232 /* ListaTareasViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTareasViewCoordinator.swift; sourceTree = "<group>"; };
+		B43D23CD27A4745400CD6232 /* DetalleTareaViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTareaViewCoordinator.swift; sourceTree = "<group>"; };
 		B4D1181C27A33DF10087F60C /* MiTaskVersion3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiTaskVersion3.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D1181F27A33DF10087F60C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4D1182827A33DF30087F60C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +102,89 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B43D239227A4710E00CD6232 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B43D239827A4714C00CD6232 /* ListaTareasView */,
+				B43D239627A4713000CD6232 /* NuevaTareaView */,
+				B43D239527A4712800CD6232 /* ContactosView */,
+				B43D239427A4711E00CD6232 /* HomeTabBarView */,
+				B43D239327A4711700CD6232 /* LoginView */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B43D239327A4711700CD6232 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				B43D239A27A471A000CD6232 /* LoginViewController.swift */,
+				B43D239B27A471A000CD6232 /* LoginViewController.xib */,
+				B43D23BE27A472FD00CD6232 /* LoginViewCoordinator.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		B43D239427A4711E00CD6232 /* HomeTabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				B43D239F27A471C500CD6232 /* HomeTabBarViewController.swift */,
+				B43D23A027A471C500CD6232 /* HomeTabBarViewController.xib */,
+			);
+			path = HomeTabBarView;
+			sourceTree = "<group>";
+		};
+		B43D239527A4712800CD6232 /* ContactosView */ = {
+			isa = PBXGroup;
+			children = (
+				B43D23A427A471EF00CD6232 /* ContactosViewController.swift */,
+				B43D23A527A471EF00CD6232 /* ContactosViewController.xib */,
+				B43D23C127A473AF00CD6232 /* ContactosViewCordinator.swift */,
+			);
+			path = ContactosView;
+			sourceTree = "<group>";
+		};
+		B43D239627A4713000CD6232 /* NuevaTareaView */ = {
+			isa = PBXGroup;
+			children = (
+				B43D239727A4713F00CD6232 /* CategoriasView */,
+				B43D23A927A4720100CD6232 /* NuevaTareaViewController.swift */,
+				B43D23AA27A4720100CD6232 /* NuevaTareaViewController.xib */,
+				B43D23C427A473F000CD6232 /* NuevaTareaViewCoordinator.swift */,
+			);
+			path = NuevaTareaView;
+			sourceTree = "<group>";
+		};
+		B43D239727A4713F00CD6232 /* CategoriasView */ = {
+			isa = PBXGroup;
+			children = (
+				B43D23AE27A4721200CD6232 /* CategoriaViewController.swift */,
+				B43D23AF27A4721200CD6232 /* CategoriaViewController.xib */,
+				B43D23C727A4740F00CD6232 /* CategoriaViewCoordinator.swift */,
+			);
+			path = CategoriasView;
+			sourceTree = "<group>";
+		};
+		B43D239827A4714C00CD6232 /* ListaTareasView */ = {
+			isa = PBXGroup;
+			children = (
+				B43D239927A4715F00CD6232 /* DetalleTareaView */,
+				B43D23B327A4722700CD6232 /* ListaTareasViewController.swift */,
+				B43D23B427A4722700CD6232 /* ListaTareasViewController.xib */,
+				B43D23CA27A4743400CD6232 /* ListaTareasViewCoordinator.swift */,
+			);
+			path = ListaTareasView;
+			sourceTree = "<group>";
+		};
+		B43D239927A4715F00CD6232 /* DetalleTareaView */ = {
+			isa = PBXGroup;
+			children = (
+				B43D23B927A4723D00CD6232 /* DetalleTareaViewController.swift */,
+				B43D23BA27A4723D00CD6232 /* DetalleTareaViewController.xib */,
+				B43D23CD27A4745400CD6232 /* DetalleTareaViewCoordinator.swift */,
+			);
+			path = DetalleTareaView;
+			sourceTree = "<group>";
+		};
 		B4D1181327A33DF10087F60C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +204,7 @@
 		B4D1181E27A33DF10087F60C /* MiTaskVersion3.0 */ = {
 			isa = PBXGroup;
 			children = (
+				B43D239227A4710E00CD6232 /* Sources */,
 				B43D238B27A46B1800CD6232 /* Resources */,
 				B43D238A27A46B1200CD6232 /* Models */,
 				B43D238527A468CA00CD6232 /* CoreApp */,
@@ -148,9 +272,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B43D239D27A471A000CD6232 /* LoginViewController.xib in Resources */,
+				B43D23AC27A4720100CD6232 /* NuevaTareaViewController.xib in Resources */,
+				B43D23BC27A4723D00CD6232 /* DetalleTareaViewController.xib in Resources */,
+				B43D23B127A4721200CD6232 /* CategoriaViewController.xib in Resources */,
+				B43D23A727A471EF00CD6232 /* ContactosViewController.xib in Resources */,
+				B43D23B627A4722700CD6232 /* ListaTareasViewController.xib in Resources */,
 				B4D1182C27A33DF30087F60C /* LaunchScreen.storyboard in Resources */,
 				B43D238D27A46B6400CD6232 /* contacts.json in Resources */,
 				B4D1182927A33DF30087F60C /* Assets.xcassets in Resources */,
+				B43D23A227A471C500CD6232 /* HomeTabBarViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,9 +292,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B43D239C27A471A000CD6232 /* LoginViewController.swift in Sources */,
+				B43D23A627A471EF00CD6232 /* ContactosViewController.swift in Sources */,
+				B43D23C227A473AF00CD6232 /* ContactosViewCordinator.swift in Sources */,
+				B43D23C827A4740F00CD6232 /* CategoriaViewCoordinator.swift in Sources */,
+				B43D23CB27A4743400CD6232 /* ListaTareasViewCoordinator.swift in Sources */,
 				B43D239027A46B9700CD6232 /* TaskModel.swift in Sources */,
+				B43D23C527A473F000CD6232 /* NuevaTareaViewCoordinator.swift in Sources */,
+				B43D23BF27A472FD00CD6232 /* LoginViewCoordinator.swift in Sources */,
 				B4D1182027A33DF10087F60C /* AppDelegate.swift in Sources */,
+				B43D23CE27A4745400CD6232 /* DetalleTareaViewCoordinator.swift in Sources */,
+				B43D23AB27A4720100CD6232 /* NuevaTareaViewController.swift in Sources */,
 				B43D238827A468E000CD6232 /* AppCoreCoordinator.swift in Sources */,
+				B43D23B027A4721200CD6232 /* CategoriaViewController.swift in Sources */,
+				B43D23B527A4722700CD6232 /* ListaTareasViewController.swift in Sources */,
+				B43D23BB27A4723D00CD6232 /* DetalleTareaViewController.swift in Sources */,
+				B43D23A127A471C500CD6232 /* HomeTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
