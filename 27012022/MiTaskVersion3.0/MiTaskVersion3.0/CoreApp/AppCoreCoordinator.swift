@@ -17,7 +17,7 @@ final class AppCoreCoordinator {
 
 extension AppCoreCoordinator: AppCoreCoordinatorProtocol {
     func initialViewController(window: UIWindow) {
-        self.actualVC = UIViewController()
+        self.actualVC = LoginViewCoordinator.view()
         window.rootViewController = self.actualVC
         window.makeKeyAndVisible()
     }

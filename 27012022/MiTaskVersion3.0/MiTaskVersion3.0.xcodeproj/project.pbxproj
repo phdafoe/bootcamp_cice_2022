@@ -30,6 +30,7 @@
 		B43D23C827A4740F00CD6232 /* CategoriaViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23C727A4740F00CD6232 /* CategoriaViewCoordinator.swift */; };
 		B43D23CB27A4743400CD6232 /* ListaTareasViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23CA27A4743400CD6232 /* ListaTareasViewCoordinator.swift */; };
 		B43D23CE27A4745400CD6232 /* DetalleTareaViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23CD27A4745400CD6232 /* DetalleTareaViewCoordinator.swift */; };
+		B43D23D127A4750C00CD6232 /* HomeTabBarViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23D027A4750C00CD6232 /* HomeTabBarViewCoordinator.swift */; };
 		B4D1182027A33DF10087F60C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D1181F27A33DF10087F60C /* AppDelegate.swift */; };
 		B4D1182927A33DF30087F60C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4D1182827A33DF30087F60C /* Assets.xcassets */; };
 		B4D1182C27A33DF30087F60C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4D1182A27A33DF30087F60C /* LaunchScreen.storyboard */; };
@@ -59,6 +60,7 @@
 		B43D23C727A4740F00CD6232 /* CategoriaViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaViewCoordinator.swift; sourceTree = "<group>"; };
 		B43D23CA27A4743400CD6232 /* ListaTareasViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTareasViewCoordinator.swift; sourceTree = "<group>"; };
 		B43D23CD27A4745400CD6232 /* DetalleTareaViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTareaViewCoordinator.swift; sourceTree = "<group>"; };
+		B43D23D027A4750C00CD6232 /* HomeTabBarViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewCoordinator.swift; sourceTree = "<group>"; };
 		B4D1181C27A33DF10087F60C /* MiTaskVersion3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiTaskVersion3.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D1181F27A33DF10087F60C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4D1182827A33DF30087F60C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				B43D239F27A471C500CD6232 /* HomeTabBarViewController.swift */,
 				B43D23A027A471C500CD6232 /* HomeTabBarViewController.xib */,
+				B43D23D027A4750C00CD6232 /* HomeTabBarViewCoordinator.swift */,
 			);
 			path = HomeTabBarView;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B43D23D127A4750C00CD6232 /* HomeTabBarViewCoordinator.swift in Sources */,
 				B43D239C27A471A000CD6232 /* LoginViewController.swift in Sources */,
 				B43D23A627A471EF00CD6232 /* ContactosViewController.swift in Sources */,
 				B43D23C227A473AF00CD6232 /* ContactosViewCordinator.swift in Sources */,
