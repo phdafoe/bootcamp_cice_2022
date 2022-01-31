@@ -17,7 +17,13 @@ final class AppCoreCoordinator {
 
 extension AppCoreCoordinator: AppCoreCoordinatorProtocol {
     func initialViewController(window: UIWindow) {
-        self.actualVC = LoginViewCoordinator.view()
+        
+        if Utils.Constantes().kPrefs.bool(forKey: Utils.Constantes().kUsuarioLogado) {
+            self.actualVC = HomeTabBarViewCoordinator.homeViewController()
+        } else {
+            self.actualVC = LoginViewCoordinator.view()
+        }
+        
         window.rootViewController = self.actualVC
         window.makeKeyAndVisible()
     }

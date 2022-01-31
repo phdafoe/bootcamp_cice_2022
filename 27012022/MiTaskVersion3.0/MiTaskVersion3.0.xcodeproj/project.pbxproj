@@ -31,6 +31,7 @@
 		B43D23CB27A4743400CD6232 /* ListaTareasViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23CA27A4743400CD6232 /* ListaTareasViewCoordinator.swift */; };
 		B43D23CE27A4745400CD6232 /* DetalleTareaViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23CD27A4745400CD6232 /* DetalleTareaViewCoordinator.swift */; };
 		B43D23D127A4750C00CD6232 /* HomeTabBarViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23D027A4750C00CD6232 /* HomeTabBarViewCoordinator.swift */; };
+		B43D23D527A48A4C00CD6232 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D23D427A48A4C00CD6232 /* Utils.swift */; };
 		B4D1182027A33DF10087F60C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D1181F27A33DF10087F60C /* AppDelegate.swift */; };
 		B4D1182927A33DF30087F60C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4D1182827A33DF30087F60C /* Assets.xcassets */; };
 		B4D1182C27A33DF30087F60C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4D1182A27A33DF30087F60C /* LaunchScreen.storyboard */; };
@@ -61,6 +62,7 @@
 		B43D23CA27A4743400CD6232 /* ListaTareasViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTareasViewCoordinator.swift; sourceTree = "<group>"; };
 		B43D23CD27A4745400CD6232 /* DetalleTareaViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTareaViewCoordinator.swift; sourceTree = "<group>"; };
 		B43D23D027A4750C00CD6232 /* HomeTabBarViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewCoordinator.swift; sourceTree = "<group>"; };
+		B43D23D427A48A4C00CD6232 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B4D1181C27A33DF10087F60C /* MiTaskVersion3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiTaskVersion3.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D1181F27A33DF10087F60C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4D1182827A33DF30087F60C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -188,6 +190,14 @@
 			path = DetalleTareaView;
 			sourceTree = "<group>";
 		};
+		B43D23D327A48A3700CD6232 /* Utils+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B43D23D427A48A4C00CD6232 /* Utils.swift */,
+			);
+			path = "Utils+Helpers";
+			sourceTree = "<group>";
+		};
 		B4D1181327A33DF10087F60C = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +217,7 @@
 		B4D1181E27A33DF10087F60C /* MiTaskVersion3.0 */ = {
 			isa = PBXGroup;
 			children = (
+				B43D23D327A48A3700CD6232 /* Utils+Helpers */,
 				B43D239227A4710E00CD6232 /* Sources */,
 				B43D238B27A46B1800CD6232 /* Resources */,
 				B43D238A27A46B1200CD6232 /* Models */,
@@ -306,6 +317,7 @@
 				B43D23BF27A472FD00CD6232 /* LoginViewCoordinator.swift in Sources */,
 				B4D1182027A33DF10087F60C /* AppDelegate.swift in Sources */,
 				B43D23CE27A4745400CD6232 /* DetalleTareaViewCoordinator.swift in Sources */,
+				B43D23D527A48A4C00CD6232 /* Utils.swift in Sources */,
 				B43D23AB27A4720100CD6232 /* NuevaTareaViewController.swift in Sources */,
 				B43D238827A468E000CD6232 /* AppCoreCoordinator.swift in Sources */,
 				B43D23B027A4721200CD6232 /* CategoriaViewController.swift in Sources */,
