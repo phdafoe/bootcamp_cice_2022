@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class Utils {
     
@@ -13,6 +14,7 @@ class Utils {
         let kUsername = "USERNAME"
         let kPassword = "PASSWORD"
         let kUsuarioLogado = "LOGADO"
+        let kImageProfile = "IMAGE_PROFILE"
         let kPrefs = UserDefaults.standard
     }
     
@@ -20,6 +22,16 @@ class Utils {
         let alertVC = UIAlertController(title: titulo, message: mensaje, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: completionHandler))
         return alertVC
+    }
+    
+    static func configuracionMailCompose(delegate: MFMailComposeViewControllerDelegate, data: Contact?) -> MFMailComposeViewController {
+        let mailCompo = MFMailComposeViewController()
+        mailCompo.mailComposeDelegate = delegate
+        mailCompo.setToRecipients(["info@mail.com", "masinfo@mail.es"])
+        mailCompo.setSubject("este es en mensaje para el equipo de soporte")
+        let emailBody = "Los datos del formulario de registro son \(data?.firstName)"
+        mailCompo.setMessageBody(emailBody, isHTML: false)
+        return mailCompo
     }
     
 }

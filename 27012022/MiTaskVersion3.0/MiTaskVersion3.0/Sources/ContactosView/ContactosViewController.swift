@@ -59,11 +59,8 @@ extension ContactosViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = self.contactsTableView.dequeueReusableCell(withIdentifier: ContactosCell.defaultReuseIdentifier, for: indexPath) as! ContactosCell
-        
         cell.configuracionCell(data: self.datasourceContactos[indexPath.row])
-        
         return cell
     }
   

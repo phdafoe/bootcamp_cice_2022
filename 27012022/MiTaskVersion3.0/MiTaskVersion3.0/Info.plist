@@ -32,6 +32,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Estimado usuario, la App requiere acceso a la Camara del dispositivo para una mejor experiencia de usuario</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Estimado usuario, la App requiere acceso a la biblioteca de fotos del dispositivo para una mejor experiencia de usuario</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
