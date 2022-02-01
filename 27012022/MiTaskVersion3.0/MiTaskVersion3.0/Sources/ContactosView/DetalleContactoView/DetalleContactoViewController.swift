@@ -11,7 +11,7 @@ class DetalleContactoViewController: UIViewController {
     
     
     // MARK: - Variables globales
-    var dataModel: ArrayContact?
+    var dataModel: Contact?
     
     // MARK: - IBOutlets
     @IBOutlet weak var detalleContactoTableView: UITableView!

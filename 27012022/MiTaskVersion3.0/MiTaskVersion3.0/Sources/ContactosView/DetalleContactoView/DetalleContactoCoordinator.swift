@@ -22,5 +22,5 @@ final class DetalleContactoCoordinator {
 }
 
 struct DetalleContactoCoordinatorDTO {
-    var model: ArrayContact?
+    var model: Contact?
 }

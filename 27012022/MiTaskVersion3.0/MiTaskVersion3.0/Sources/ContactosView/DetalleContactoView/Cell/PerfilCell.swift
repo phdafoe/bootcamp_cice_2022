@@ -8,7 +8,7 @@
 import UIKit
 
 protocol PerfilCellProtocol {
-    func configuracionCell(data: ArrayContact)
+    func configuracionCell(data: Contact)
 }
 
 class PerfilCell: UITableViewCell, ReuseIdentifierProtocol {
@@ -35,7 +35,7 @@ class PerfilCell: UITableViewCell, ReuseIdentifierProtocol {
 }
 
 extension PerfilCell: PerfilCellProtocol {
-    func configuracionCell(data: ArrayContact) {
+    func configuracionCell(data: Contact) {
         self.photoProfile.image = UIImage(named: data.imageProfile ?? "placeholder")
         self.usuarioTwitter.text = data.usernameTwitter
         self.nombrePerfil.text = data.firstName

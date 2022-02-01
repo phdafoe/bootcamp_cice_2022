@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ContactosCellProtocol {
-    func configuracionCell(data: ArrayContact)
+    func configuracionCell(data: Contact)
 }
 
 class ContactosCell: UITableViewCell, ReuseIdentifierProtocol {
@@ -50,7 +50,7 @@ class ContactosCell: UITableViewCell, ReuseIdentifierProtocol {
 }
 
 extension ContactosCell: ContactosCellProtocol {
-    func configuracionCell(data: ArrayContact) {
+    func configuracionCell(data: Contact) {
         self.imagePerfil.image = UIImage(named: data.imageProfile ?? "placeholder")
         self.namePerfil.text = data.firstName
         self.lastnamePerfil.text = data.lastName
