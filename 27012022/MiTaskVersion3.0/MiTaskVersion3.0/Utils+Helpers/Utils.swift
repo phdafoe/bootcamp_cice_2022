@@ -34,15 +34,11 @@ class Utils {
         return mailCompo
     }
     
-    static func muestraPhotoMenu(delegate: UIImagePickerControllerDelegate & UINavigationControllerDelegate) -> UIAlertController {
+    static func muestraPhotoMenu(completionFoto: ((UIAlertAction) -> Void)?, completionLibrary: ((UIAlertAction) -> Void)?) -> UIAlertController {
         let actionSheetVC = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         actionSheetVC.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
-        actionSheetVC.addAction(UIAlertAction(title: "Tomar foto", style: .default, handler: { _ in
-            _ = tomafoto(delegate: delegate)
-        }))
-        actionSheetVC.addAction(UIAlertAction(title: "Escoge de la libreria", style: .default, handler: { _ in
-            _ = muestraPhotoLibrary(delegate: delegate)
-        }))
+        actionSheetVC.addAction(UIAlertAction(title: "Tomar foto", style: .default, handler: completionFoto))
+        actionSheetVC.addAction(UIAlertAction(title: "Escoge de la libreria", style: .default, handler: completionLibrary))
         return actionSheetVC
     }
     
