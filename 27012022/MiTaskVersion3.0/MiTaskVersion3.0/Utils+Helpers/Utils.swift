@@ -29,9 +29,37 @@ class Utils {
         mailCompo.mailComposeDelegate = delegate
         mailCompo.setToRecipients(["info@mail.com", "masinfo@mail.es"])
         mailCompo.setSubject("este es en mensaje para el equipo de soporte")
-        let emailBody = "Los datos del formulario de registro son \(data?.firstName)"
+        let emailBody = "Los datos del formulario de registro son \(data?.firstName ?? "")"
         mailCompo.setMessageBody(emailBody, isHTML: false)
         return mailCompo
+    }
+    
+    static func muestraPhotoMenu(delegate: UIImagePickerControllerDelegate & UINavigationControllerDelegate) -> UIAlertController {
+        let actionSheetVC = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionSheetVC.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        actionSheetVC.addAction(UIAlertAction(title: "Tomar foto", style: .default, handler: { _ in
+            _ = tomafoto(delegate: delegate)
+        }))
+        actionSheetVC.addAction(UIAlertAction(title: "Escoge de la libreria", style: .default, handler: { _ in
+            _ = muestraPhotoLibrary(delegate: delegate)
+        }))
+        return actionSheetVC
+    }
+    
+    static func muestraPhotoLibrary(delegate: UIImagePickerControllerDelegate & UINavigationControllerDelegate) -> UIImagePickerController{
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = delegate
+        imagePicker.allowsEditing = true
+        return imagePicker //self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    static func tomafoto(delegate: UIImagePickerControllerDelegate & UINavigationControllerDelegate) -> UIImagePickerController {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        imagePicker.delegate = delegate
+        imagePicker.allowsEditing = true
+        return imagePicker  //self.present(imagePicker, animated: true, completion: nil)
     }
     
 }
