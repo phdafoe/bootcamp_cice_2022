@@ -27,11 +27,20 @@ class NuevaTareaViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func muestraLIstaCategorias(_ sender: Any) {
-        debugPrint(#function)
+        let vc = CategoriaViewCoordinator.view()
+        self.show(vc, sender: nil)
     }
     
     @IBAction func salvarTareaUDACTION(_ sender: Any) {
-        debugPrint(#function)
+        if validacionDatos() {
+            
+        } else {
+            self.present(Utils.muestraAlerta(titulo: "Hey!!",
+                                             mensaje: "Por favor rellena todos los casmpos y ten en cuenta seleccionar una fotografia de la tarea",
+                                             completionHandler: nil),
+                         animated: true,
+                         completion: nil)
+        }
     }
     
     @IBAction func muestraCamaraFotosACTION(_ sender: Any) {
@@ -39,8 +48,11 @@ class NuevaTareaViewController: UIViewController {
     }
     
     
-    @IBAction func resignFirstResponderACTION(_ sender: UITextField) {
-        self.nuevaTareaTF.resignFirstResponder()
+    @IBAction func muestraDatePickerACTION(_ sender: UITextField) {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .dateAndTime
+        sender.inputView = datePicker
+        datePicker.addTarget(self, action: #selector(datePickervalueChanged(_:)), for: .valueChanged)
     }
     
     
@@ -49,6 +61,22 @@ class NuevaTareaViewController: UIViewController {
         self.configuracionUI()
     }
     
+    @objc
+    func datePickervalueChanged(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+        self.fechaTF.text = dateFormatter.string(from: sender.date)
+    }
+    
+    private func validacionDatos() -> Bool {
+        return !(self.nuevaTareaTF.text?.isEmpty ?? false) &&
+            !(self.prioridadTF.text?.isEmpty ?? false) &&
+            !(self.fechaTF.text?.isEmpty ?? false) &&
+            !(self.descripcionTV.text?.isEmpty ?? false) &&
+            !(self.categoriaLBL.text?.isEmpty ?? false) &&
+            fotoSeleccionada
+    }
     
     private func muestraSelectorFoto() {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
