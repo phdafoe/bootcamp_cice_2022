@@ -27,13 +27,43 @@ class NuevaTareaViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func muestraLIstaCategorias(_ sender: Any) {
-        let vc = CategoriaViewCoordinator.view()
+        let vc = CategoriaViewCoordinator.view(delegate: self)
         self.show(vc, sender: nil)
     }
     
     @IBAction func salvarTareaUDACTION(_ sender: Any) {
         if validacionDatos() {
             
+            if let imageData = self.imagenTareaIV.image?.jpegData(compressionQuality: 0.3) {
+                
+                SaveFavoritesPresenter.shared.addLocal(favorite: DownloadNewModel(pId: Int.random(in: 0..<999),
+                                                                                  pNewTask: self.nuevaTareaTF.text ?? "",
+                                                                                  pPriority: self.prioridadTF.text ?? "",
+                                                                                  pTaskDate: self.fechaTF.text ?? "",
+                                                                                  pTaskDescription: self.descripcionTV.text ?? "",
+                                                                                  pTaskCategory: self.categoriaLBL.text ?? "",
+                                                                                  pTaskImage: imageData)) { result in
+                    if result != nil{
+                        self.present(Utils.muestraAlerta(titulo: "Genial!!",
+                                                         mensaje: "Los datos se han salvado correctamente en Userdefault",
+                                                         completionHandler: { _ in
+                                                            // notification push local (deprecated)
+                                                            let notification = UILocalNotification()
+                                                            notification.fireDate = Date(timeIntervalSinceNow: 5)
+                                                            notification.alertBody = self.nuevaTareaTF.text
+                                                            notification.timeZone = NSTimeZone.default
+                                                            notification.applicationIconBadgeNumber = UIApplication.shared.applicationIconBadgeNumber + 1
+                                                            UIApplication.shared.scheduleLocalNotification(notification)
+                                                            
+                                                            self.limpiarDatos()
+                                                         }),
+                                     animated: true,
+                                     completion: nil)
+                    }
+                } failure: { error in
+                    debugPrint(error ?? "")
+                }
+            }
         } else {
             self.present(Utils.muestraAlerta(titulo: "Hey!!",
                                              mensaje: "Por favor rellena todos los casmpos y ten en cuenta seleccionar una fotografia de la tarea",
@@ -59,6 +89,15 @@ class NuevaTareaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configuracionUI()
+    }
+    
+    private func limpiarDatos() {
+        self.nuevaTareaTF.text = ""
+        self.prioridadTF.text = ""
+        self.fechaTF.text = ""
+        self.descripcionTV.text = "Coloca una breve descripción de tu tarea"
+        self.imagenTareaIV.image = UIImage(named: "placeholder")
+        self.categoriaLBL.text = self.nombreCategoria
     }
     
     @objc
@@ -162,5 +201,12 @@ extension NuevaTareaViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+}
+
+
+extension NuevaTareaViewController: CategoriaViewControllerDelegate {
+    func nombreCategoriaSeleccionada(categoria: String) {
+        self.categoriaLBL.text = categoria
     }
 }

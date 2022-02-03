@@ -8,22 +8,55 @@
 import UIKit
 
 class ListaTareasViewController: UIViewController {
+    
+    // MARK: - Variables globales
+    var datasourceTareas: [DownloadNewModel] = []
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var listaTareasTableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.configuracionTV()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        SaveFavoritesPresenter.shared.getAllLocal { results in
+            if let resultsUnw = results{
+                self.datasourceTareas = resultsUnw.downloads ?? []
+                self.listaTareasTableView.reloadData()
+            }
+        } failure: { error in
+            debugPrint(error?.debugDescription ?? "AQUI ANDRES METE-GAMBA")
+        }
+    }
+    
+    private func configuracionTV() {
+        self.listaTareasTableView.delegate = self
+        self.listaTareasTableView.dataSource = self
+        self.listaTareasTableView.register(UINib(nibName: CategoriaCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: CategoriaCell.defaultReuseIdentifier)
     }
 
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension ListaTareasViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
-    */
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.datasourceTareas.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.listaTareasTableView.dequeueReusableCell(withIdentifier: CategoriaCell.defaultReuseIdentifier, for: indexPath) as! CategoriaCell
+        cell.nombreCategoriaLBL.text = self.datasourceTareas[indexPath.row].newTask
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
 }
