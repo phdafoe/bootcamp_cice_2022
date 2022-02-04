@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B485D38D27ADA66300C07C35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D38C27ADA66300C07C35 /* AppDelegate.swift */; };
+		B485D39627ADA66500C07C35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B485D39527ADA66500C07C35 /* Assets.xcassets */; };
+		B485D39927ADA66500C07C35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B485D39727ADA66500C07C35 /* LaunchScreen.storyboard */; };
+		B485D3A627ADA7B500C07C35 /* AppCoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D3A527ADA7B500C07C35 /* AppCoreCoordinator.swift */; };
+		B485D3AA27ADA94C00C07C35 /* BaseVIPER.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D3A927ADA94C00C07C35 /* BaseVIPER.swift */; };
+		B485D3B027ADAC0000C07C35 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D3AE27ADAC0000C07C35 /* SplashViewController.swift */; };
+		B485D3B127ADAC0000C07C35 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B485D3AF27ADAC0000C07C35 /* SplashViewController.xib */; };
+		B485D3B527ADAC5E00C07C35 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D3B427ADAC5E00C07C35 /* SplashPresenter.swift */; };
+		B485D3B827ADADC700C07C35 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D3B727ADADC700C07C35 /* SplashInteractor.swift */; };
+		B485D3BB27ADADD600C07C35 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D3BA27ADADD600C07C35 /* SplashRouter.swift */; };
+		B485D3BE27ADB1D000C07C35 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D3BD27ADB1D000C07C35 /* SplashCoordinator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B485D38927ADA66300C07C35 /* CiceMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiceMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B485D38C27ADA66300C07C35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B485D39527ADA66500C07C35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B485D39827ADA66500C07C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B485D39A27ADA66500C07C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B485D3A527ADA7B500C07C35 /* AppCoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoreCoordinator.swift; sourceTree = "<group>"; };
+		B485D3A927ADA94C00C07C35 /* BaseVIPER.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVIPER.swift; sourceTree = "<group>"; };
+		B485D3AE27ADAC0000C07C35 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		B485D3AF27ADAC0000C07C35 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		B485D3B427ADAC5E00C07C35 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		B485D3B727ADADC700C07C35 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		B485D3BA27ADADD600C07C35 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		B485D3BD27ADB1D000C07C35 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B485D38627ADA66300C07C35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B485D38027ADA66300C07C35 = {
+			isa = PBXGroup;
+			children = (
+				B485D38B27ADA66300C07C35 /* CiceMusic */,
+				B485D38A27ADA66300C07C35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B485D38A27ADA66300C07C35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B485D38927ADA66300C07C35 /* CiceMusic.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B485D38B27ADA66300C07C35 /* CiceMusic */ = {
+			isa = PBXGroup;
+			children = (
+				B485D3AC27ADABD700C07C35 /* Sources */,
+				B485D3A827ADA92400C07C35 /* BaseVIPER */,
+				B485D3A427ADA79F00C07C35 /* CoreApp */,
+				B485D39527ADA66500C07C35 /* Assets.xcassets */,
+				B485D39727ADA66500C07C35 /* LaunchScreen.storyboard */,
+				B485D39A27ADA66500C07C35 /* Info.plist */,
+			);
+			path = CiceMusic;
+			sourceTree = "<group>";
+		};
+		B485D3A427ADA79F00C07C35 /* CoreApp */ = {
+			isa = PBXGroup;
+			children = (
+				B485D38C27ADA66300C07C35 /* AppDelegate.swift */,
+				B485D3A527ADA7B500C07C35 /* AppCoreCoordinator.swift */,
+			);
+			path = CoreApp;
+			sourceTree = "<group>";
+		};
+		B485D3A827ADA92400C07C35 /* BaseVIPER */ = {
+			isa = PBXGroup;
+			children = (
+				B485D3A927ADA94C00C07C35 /* BaseVIPER.swift */,
+			);
+			path = BaseVIPER;
+			sourceTree = "<group>";
+		};
+		B485D3AC27ADABD700C07C35 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B485D3AD27ADABE100C07C35 /* SplashView */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B485D3AD27ADABE100C07C35 /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				B485D3AE27ADAC0000C07C35 /* SplashViewController.swift */,
+				B485D3AF27ADAC0000C07C35 /* SplashViewController.xib */,
+				B485D3B427ADAC5E00C07C35 /* SplashPresenter.swift */,
+				B485D3B727ADADC700C07C35 /* SplashInteractor.swift */,
+				B485D3BA27ADADD600C07C35 /* SplashRouter.swift */,
+				B485D3BD27ADB1D000C07C35 /* SplashCoordinator.swift */,
+			);
+			path = SplashView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B485D38827ADA66300C07C35 /* CiceMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B485D39D27ADA66500C07C35 /* Build configuration list for PBXNativeTarget "CiceMusic" */;
+			buildPhases = (
+				B485D38527ADA66300C07C35 /* Sources */,
+				B485D38627ADA66300C07C35 /* Frameworks */,
+				B485D38727ADA66300C07C35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CiceMusic;
+			productName = CiceMusic;
+			productReference = B485D38927ADA66300C07C35 /* CiceMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B485D38127ADA66300C07C35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					B485D38827ADA66300C07C35 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = B485D38427ADA66300C07C35 /* Build configuration list for PBXProject "CiceMusic" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B485D38027ADA66300C07C35;
+			productRefGroup = B485D38A27ADA66300C07C35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B485D38827ADA66300C07C35 /* CiceMusic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B485D38727ADA66300C07C35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B485D39927ADA66500C07C35 /* LaunchScreen.storyboard in Resources */,
+				B485D3B127ADAC0000C07C35 /* SplashViewController.xib in Resources */,
+				B485D39627ADA66500C07C35 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B485D38527ADA66300C07C35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B485D38D27ADA66300C07C35 /* AppDelegate.swift in Sources */,
+				B485D3BE27ADB1D000C07C35 /* SplashCoordinator.swift in Sources */,
+				B485D3B827ADADC700C07C35 /* SplashInteractor.swift in Sources */,
+				B485D3BB27ADADD600C07C35 /* SplashRouter.swift in Sources */,
+				B485D3B527ADAC5E00C07C35 /* SplashPresenter.swift in Sources */,
+				B485D3AA27ADA94C00C07C35 /* BaseVIPER.swift in Sources */,
+				B485D3A627ADA7B500C07C35 /* AppCoreCoordinator.swift in Sources */,
+				B485D3B027ADAC0000C07C35 /* SplashViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B485D39727ADA66500C07C35 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B485D39827ADA66500C07C35 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B485D39B27ADA66500C07C35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B485D39C27ADA66500C07C35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B485D39E27ADA66500C07C35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C7W4RF846;
+				INFOPLIST_FILE = CiceMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cice.education.Tecnologia.iOS.CiceMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B485D39F27ADA66500C07C35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2C7W4RF846;
+				INFOPLIST_FILE = CiceMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cice.education.Tecnologia.iOS.CiceMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B485D38427ADA66300C07C35 /* Build configuration list for PBXProject "CiceMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B485D39B27ADA66500C07C35 /* Debug */,
+				B485D39C27ADA66500C07C35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B485D39D27ADA66500C07C35 /* Build configuration list for PBXNativeTarget "CiceMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B485D39E27ADA66500C07C35 /* Debug */,
+				B485D39F27ADA66500C07C35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B485D38127ADA66300C07C35 /* Project object */;
+}

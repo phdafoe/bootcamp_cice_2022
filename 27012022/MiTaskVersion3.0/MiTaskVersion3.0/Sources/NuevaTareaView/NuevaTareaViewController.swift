@@ -33,7 +33,7 @@ class NuevaTareaViewController: UIViewController {
     
     @IBAction func salvarTareaUDACTION(_ sender: Any) {
         if validacionDatos() {
-            
+            //self.salvarDatosBTN.isEnabled = true -> esto es interesante de cara a la reactividad ???
             if let imageData = self.imagenTareaIV.image?.jpegData(compressionQuality: 0.3) {
                 
                 SaveFavoritesPresenter.shared.addLocal(favorite: DownloadNewModel(pId: Int.random(in: 0..<999),
@@ -144,6 +144,7 @@ class NuevaTareaViewController: UIViewController {
         
         self.categoriaLBL.text = self.nombreCategoria
         self.nuevaTareaTF.delegate = self
+        //self.salvarDatosBTN.isEnabled = false
         
     }
     

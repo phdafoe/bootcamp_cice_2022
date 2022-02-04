@@ -46,6 +46,13 @@ extension ListaTareasViewController: UITableViewDelegate, UITableViewDataSource 
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.datasourceTareas.count == 0{
+            let imageBackground = UIImageView(image: #imageLiteral(resourceName: "img_empty_list"))
+            imageBackground.contentMode = .scaleAspectFit
+            self.listaTareasTableView.backgroundView = imageBackground
+        }else{
+            self.listaTareasTableView.backgroundView = UIView()
+        }
         return self.datasourceTareas.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
