@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4226FD927B19DD800DFFD1D /* MusicServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4226FD827B19DD800DFFD1D /* MusicServerModel.swift */; };
 		B485D38D27ADA66300C07C35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D38C27ADA66300C07C35 /* AppDelegate.swift */; };
 		B485D39627ADA66500C07C35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B485D39527ADA66500C07C35 /* Assets.xcassets */; };
 		B485D39927ADA66500C07C35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B485D39727ADA66500C07C35 /* LaunchScreen.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B4226FD827B19DD800DFFD1D /* MusicServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicServerModel.swift; sourceTree = "<group>"; };
 		B485D38927ADA66300C07C35 /* CiceMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiceMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B485D38C27ADA66300C07C35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B485D39527ADA66500C07C35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B4226FD727B19DC800DFFD1D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B4226FD827B19DD800DFFD1D /* MusicServerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B485D38027ADA66300C07C35 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		B485D38B27ADA66300C07C35 /* CiceMusic */ = {
 			isa = PBXGroup;
 			children = (
+				B4226FD727B19DC800DFFD1D /* Models */,
 				B485D3C827ADC12A00C07C35 /* Utils+Helpers */,
 				B485D3C027ADBF3A00C07C35 /* NetworkService */,
 				B485D3AC27ADABD700C07C35 /* Sources */,
@@ -212,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4226FD927B19DD800DFFD1D /* MusicServerModel.swift in Sources */,
 				B485D38D27ADA66300C07C35 /* AppDelegate.swift in Sources */,
 				B485D3CD27ADC95700C07C35 /* SplashProvider.swift in Sources */,
 				B485D3BE27ADB1D000C07C35 /* SplashCoordinator.swift in Sources */,
