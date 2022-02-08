@@ -1,6 +1,4 @@
 /*
-Copyright, everisSL
-All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -26,32 +24,31 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 import Foundation
-import UIKit
 
-// MARK: - module builder
-
-final class TestCoordinator: ModuleInterface {
-
-    typealias View = TestViewController
-    typealias Presenter = TestPresenter
-    typealias Router = TestRouter
-    typealias Interactor = TestInteractor
-    
-    func navigation(dto: TestCoordinatorDTO? = nil) -> UINavigationController {
-        UINavigationController(rootViewController: build())
-    }
-
-    func build(dto: TestCoordinatorDTO? = nil) -> UIViewController {
-        let view = View()
-        let interactor = Interactor()
-        let presenter = Presenter()
-        let router = Router()
-        self.coordinator(view: view, presenter: presenter, router: router, interactor: interactor)
-        router.viewController = view
-        return view
-    }
-}
-
-struct TestCoordinatorDTO {
+// Input del Presenter
+protocol PodcatsPresenterInputProtocol {
     
 }
+
+// Output del Interactor
+protocol PodcatsInteractorOutputProtocol {
+    
+}
+
+final class PodcatsPresenter: BasePresenter<PodcatsPresenterOutputProtocol, PodcatsInteractorInputProtocol, PodcatsRouterInputProtocol> {
+    
+   
+    
+}
+
+// Input del Presenter
+extension PodcatsPresenter: PodcatsPresenterInputProtocol {
+    
+}
+
+// Output del Interactor
+extension PodcatsPresenter: PodcatsInteractorOutputProtocol {
+    
+}
+
+

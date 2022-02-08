@@ -1,5 +1,5 @@
 /*
-
+ 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
 
@@ -25,30 +25,19 @@ POSSIBILITY OF SUCH DAMAGE.
 
 import Foundation
 
-// Input del Presenter
-protocol TestPresenterInputProtocol {
+// Input del Interactor
+protocol BookInteractorInputProtocol {
     
 }
 
-// Output del Interactor
-protocol TestInteractorOutputProtocol {
+final class BookInteractor: BaseInteractor<BookInteractorOutputProtocol> {
+    
+    let provider: BookProviderInputProtocol = BookProvider()
+
     
 }
 
-final class TestPresenter: BasePresenter<TestPresenterOutputProtocol, TestInteractorInputProtocol, TestRouterInputProtocol> {
-    
-   
-    
-}
-
-// Input del Presenter
-extension TestPresenter: TestPresenterInputProtocol {
+// Input del Interactor
+extension BookInteractor: BookInteractorInputProtocol {
     
 }
-
-// Output del Interactor
-extension TestPresenter: TestInteractorOutputProtocol {
-    
-}
-
-

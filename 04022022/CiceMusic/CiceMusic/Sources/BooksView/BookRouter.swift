@@ -24,24 +24,18 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 import Foundation
+import UIKit
 
-// Input Protocol
-protocol TestProviderInputProtocol {
-    
+// Input del Router
+protocol BookRouterInputProtocol {
+
 }
 
-final class TestProvider: TestProviderInputProtocol {
-    
-    let networkService: NetworkServiceProtocol = NetworkService()
-    
+final class BookRouter: BaseRouter<BookViewController> {
+        
 }
 
-struct TestRequestDTO {
+// Input del Router
+extension BookRouter: BookRouterInputProtocol {
     
-    static func requestData(numeroItems: String) -> RequestDTO {
-        let argument: [CVarArg] = [numeroItems]
-        let urlComplete = String(format: URLEnpoint.music, arguments: argument)
-        let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete)
-        return request
-    }
 }

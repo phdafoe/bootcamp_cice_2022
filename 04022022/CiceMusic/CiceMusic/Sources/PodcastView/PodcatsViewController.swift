@@ -26,11 +26,11 @@ POSSIBILITY OF SUCH DAMAGE.
 import UIKit
 
 // Output del Presenter
-protocol TestPresenterOutputProtocol {
+protocol PodcatsPresenterOutputProtocol {
     func reloadInformationInView()
 }
 
-class TestViewController: BaseView<TestPresenterInputProtocol> {
+class PodcatsViewController: BaseView<PodcatsPresenterInputProtocol> {
 
     
     override func viewDidLoad() {
@@ -41,7 +41,7 @@ class TestViewController: BaseView<TestPresenterInputProtocol> {
 }
 
 // Output del Presenter
-extension TestViewController: TestPresenterOutputProtocol {
+extension PodcatsViewController: PodcatsPresenterOutputProtocol {
 
     func reloadInformationInView() {
         

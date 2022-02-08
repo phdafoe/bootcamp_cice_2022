@@ -1,5 +1,5 @@
 /*
- 
+
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
 
@@ -24,20 +24,18 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 import Foundation
+import UIKit
 
-// Input del Interactor
-protocol TestInteractorInputProtocol {
-    
+// Input del Router
+protocol PodcatsRouterInputProtocol {
+
 }
 
-final class TestInteractor: BaseInteractor<TestInteractorOutputProtocol> {
-    
-    let provider: TestProviderInputProtocol = TestProvider()
-
-    
+final class PodcatsRouter: BaseRouter<PodcatsViewController> {
+        
 }
 
-// Input del Interactor
-extension TestInteractor: TestInteractorInputProtocol {
+// Input del Router
+extension PodcatsRouter: PodcatsRouterInputProtocol {
     
 }

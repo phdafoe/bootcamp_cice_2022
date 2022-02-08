@@ -8,13 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B4226FD927B19DD800DFFD1D /* MusicServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4226FD827B19DD800DFFD1D /* MusicServerModel.swift */; };
-		B4226FF627B1BFC800DFFD1D /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4226FEF27B1BFC800DFFD1D /* TestViewController.xib */; };
-		B4226FF727B1BFC800DFFD1D /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4226FF027B1BFC800DFFD1D /* TestViewController.swift */; };
-		B4226FF827B1BFC800DFFD1D /* TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4226FF127B1BFC800DFFD1D /* TestRouter.swift */; };
-		B4226FF927B1BFC800DFFD1D /* TestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4226FF227B1BFC800DFFD1D /* TestProvider.swift */; };
-		B4226FFA27B1BFC800DFFD1D /* TestCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4226FF327B1BFC800DFFD1D /* TestCoordinator.swift */; };
-		B4226FFB27B1BFC800DFFD1D /* TestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4226FF427B1BFC800DFFD1D /* TestPresenter.swift */; };
-		B4226FFC27B1BFC800DFFD1D /* TestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4226FF527B1BFC800DFFD1D /* TestInteractor.swift */; };
 		B485D38D27ADA66300C07C35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D38C27ADA66300C07C35 /* AppDelegate.swift */; };
 		B485D39627ADA66500C07C35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B485D39527ADA66500C07C35 /* Assets.xcassets */; };
 		B485D39927ADA66500C07C35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B485D39727ADA66500C07C35 /* LaunchScreen.storyboard */; };
@@ -30,17 +23,36 @@
 		B485D3C627ADC0A100C07C35 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D3C527ADC0A100C07C35 /* NetworkError.swift */; };
 		B485D3CA27ADC13900C07C35 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D3C927ADC13900C07C35 /* Utils.swift */; };
 		B485D3CD27ADC95700C07C35 /* SplashProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D3CC27ADC95700C07C35 /* SplashProvider.swift */; };
+		B4FDF3A927B2ED4600D3C570 /* MusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4FDF3A227B2ED4600D3C570 /* MusicViewController.xib */; };
+		B4FDF3AA27B2ED4600D3C570 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3A327B2ED4600D3C570 /* MusicViewController.swift */; };
+		B4FDF3AB27B2ED4600D3C570 /* MusicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3A427B2ED4600D3C570 /* MusicRouter.swift */; };
+		B4FDF3AC27B2ED4600D3C570 /* MusicProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3A527B2ED4600D3C570 /* MusicProvider.swift */; };
+		B4FDF3AD27B2ED4700D3C570 /* MusicCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3A627B2ED4600D3C570 /* MusicCoordinator.swift */; };
+		B4FDF3AE27B2ED4700D3C570 /* MusicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3A727B2ED4600D3C570 /* MusicPresenter.swift */; };
+		B4FDF3AF27B2ED4700D3C570 /* MusicInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3A827B2ED4600D3C570 /* MusicInteractor.swift */; };
+		B4FDF3B827B2ED5900D3C570 /* PodcatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4FDF3B127B2ED5900D3C570 /* PodcatsViewController.xib */; };
+		B4FDF3B927B2ED5900D3C570 /* PodcatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3B227B2ED5900D3C570 /* PodcatsViewController.swift */; };
+		B4FDF3BA27B2ED5900D3C570 /* PodcatsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3B327B2ED5900D3C570 /* PodcatsRouter.swift */; };
+		B4FDF3BB27B2ED5900D3C570 /* PodcatsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3B427B2ED5900D3C570 /* PodcatsProvider.swift */; };
+		B4FDF3BC27B2ED5900D3C570 /* PodcatsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3B527B2ED5900D3C570 /* PodcatsCoordinator.swift */; };
+		B4FDF3BD27B2ED5900D3C570 /* PodcatsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3B627B2ED5900D3C570 /* PodcatsPresenter.swift */; };
+		B4FDF3BE27B2ED5900D3C570 /* PodcatsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3B727B2ED5900D3C570 /* PodcatsInteractor.swift */; };
+		B4FDF3C727B2ED7300D3C570 /* BookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4FDF3C027B2ED7300D3C570 /* BookViewController.xib */; };
+		B4FDF3C827B2ED7300D3C570 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3C127B2ED7300D3C570 /* BookViewController.swift */; };
+		B4FDF3C927B2ED7300D3C570 /* BookRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3C227B2ED7300D3C570 /* BookRouter.swift */; };
+		B4FDF3CA27B2ED7300D3C570 /* BookProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3C327B2ED7300D3C570 /* BookProvider.swift */; };
+		B4FDF3CB27B2ED7300D3C570 /* BookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3C427B2ED7300D3C570 /* BookCoordinator.swift */; };
+		B4FDF3CC27B2ED7300D3C570 /* BookPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3C527B2ED7300D3C570 /* BookPresenter.swift */; };
+		B4FDF3CD27B2ED7300D3C570 /* BookInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3C627B2ED7300D3C570 /* BookInteractor.swift */; };
+		B4FDF3D127B2F02700D3C570 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3CF27B2F02700D3C570 /* HomeTabBarViewController.swift */; };
+		B4FDF3D227B2F02700D3C570 /* HomeTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4FDF3D027B2F02700D3C570 /* HomeTabBarViewController.xib */; };
+		B4FDF3D527B2F04200D3C570 /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3D427B2F04200D3C570 /* HomeTabBarCoordinator.swift */; };
+		B4FDF3DB27B30D4A00D3C570 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3D927B30D4A00D3C570 /* MusicCell.swift */; };
+		B4FDF3DC27B30D4A00D3C570 /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4FDF3DA27B30D4A00D3C570 /* MusicCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B4226FD827B19DD800DFFD1D /* MusicServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicServerModel.swift; sourceTree = "<group>"; };
-		B4226FEF27B1BFC800DFFD1D /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
-		B4226FF027B1BFC800DFFD1D /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		B4226FF127B1BFC800DFFD1D /* TestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRouter.swift; sourceTree = "<group>"; };
-		B4226FF227B1BFC800DFFD1D /* TestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProvider.swift; sourceTree = "<group>"; };
-		B4226FF327B1BFC800DFFD1D /* TestCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoordinator.swift; sourceTree = "<group>"; };
-		B4226FF427B1BFC800DFFD1D /* TestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresenter.swift; sourceTree = "<group>"; };
-		B4226FF527B1BFC800DFFD1D /* TestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInteractor.swift; sourceTree = "<group>"; };
 		B485D38927ADA66300C07C35 /* CiceMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiceMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B485D38C27ADA66300C07C35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B485D39527ADA66500C07C35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +70,32 @@
 		B485D3C527ADC0A100C07C35 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		B485D3C927ADC13900C07C35 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B485D3CC27ADC95700C07C35 /* SplashProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashProvider.swift; sourceTree = "<group>"; };
+		B4FDF3A227B2ED4600D3C570 /* MusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicViewController.xib; sourceTree = "<group>"; };
+		B4FDF3A327B2ED4600D3C570 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		B4FDF3A427B2ED4600D3C570 /* MusicRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRouter.swift; sourceTree = "<group>"; };
+		B4FDF3A527B2ED4600D3C570 /* MusicProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicProvider.swift; sourceTree = "<group>"; };
+		B4FDF3A627B2ED4600D3C570 /* MusicCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCoordinator.swift; sourceTree = "<group>"; };
+		B4FDF3A727B2ED4600D3C570 /* MusicPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPresenter.swift; sourceTree = "<group>"; };
+		B4FDF3A827B2ED4600D3C570 /* MusicInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicInteractor.swift; sourceTree = "<group>"; };
+		B4FDF3B127B2ED5900D3C570 /* PodcatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PodcatsViewController.xib; sourceTree = "<group>"; };
+		B4FDF3B227B2ED5900D3C570 /* PodcatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcatsViewController.swift; sourceTree = "<group>"; };
+		B4FDF3B327B2ED5900D3C570 /* PodcatsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcatsRouter.swift; sourceTree = "<group>"; };
+		B4FDF3B427B2ED5900D3C570 /* PodcatsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcatsProvider.swift; sourceTree = "<group>"; };
+		B4FDF3B527B2ED5900D3C570 /* PodcatsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcatsCoordinator.swift; sourceTree = "<group>"; };
+		B4FDF3B627B2ED5900D3C570 /* PodcatsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcatsPresenter.swift; sourceTree = "<group>"; };
+		B4FDF3B727B2ED5900D3C570 /* PodcatsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcatsInteractor.swift; sourceTree = "<group>"; };
+		B4FDF3C027B2ED7300D3C570 /* BookViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookViewController.xib; sourceTree = "<group>"; };
+		B4FDF3C127B2ED7300D3C570 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		B4FDF3C227B2ED7300D3C570 /* BookRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRouter.swift; sourceTree = "<group>"; };
+		B4FDF3C327B2ED7300D3C570 /* BookProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookProvider.swift; sourceTree = "<group>"; };
+		B4FDF3C427B2ED7300D3C570 /* BookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCoordinator.swift; sourceTree = "<group>"; };
+		B4FDF3C527B2ED7300D3C570 /* BookPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPresenter.swift; sourceTree = "<group>"; };
+		B4FDF3C627B2ED7300D3C570 /* BookInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInteractor.swift; sourceTree = "<group>"; };
+		B4FDF3CF27B2F02700D3C570 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		B4FDF3D027B2F02700D3C570 /* HomeTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBarViewController.xib; sourceTree = "<group>"; };
+		B4FDF3D427B2F04200D3C570 /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
+		B4FDF3D927B30D4A00D3C570 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
+		B4FDF3DA27B30D4A00D3C570 /* MusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,20 +115,6 @@
 				B4226FD827B19DD800DFFD1D /* MusicServerModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		B4226FDE27B1BF8F00DFFD1D /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				B4226FEF27B1BFC800DFFD1D /* TestViewController.xib */,
-				B4226FF027B1BFC800DFFD1D /* TestViewController.swift */,
-				B4226FF127B1BFC800DFFD1D /* TestRouter.swift */,
-				B4226FF227B1BFC800DFFD1D /* TestProvider.swift */,
-				B4226FF327B1BFC800DFFD1D /* TestCoordinator.swift */,
-				B4226FF427B1BFC800DFFD1D /* TestPresenter.swift */,
-				B4226FF527B1BFC800DFFD1D /* TestInteractor.swift */,
-			);
-			path = Test;
 			sourceTree = "<group>";
 		};
 		B485D38027ADA66300C07C35 = {
@@ -145,7 +169,10 @@
 		B485D3AC27ADABD700C07C35 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B4226FDE27B1BF8F00DFFD1D /* Test */,
+				B4FDF3A127B2ED1C00D3C570 /* BooksView */,
+				B4FDF3A027B2ED0E00D3C570 /* PodcastView */,
+				B4FDF39F27B2ED0800D3C570 /* MusicView */,
+				B4FDF39E27B2ECFF00D3C570 /* HomeTabBar */,
 				B485D3AD27ADABE100C07C35 /* SplashView */,
 			);
 			path = Sources;
@@ -180,6 +207,68 @@
 				B485D3C927ADC13900C07C35 /* Utils.swift */,
 			);
 			path = "Utils+Helpers";
+			sourceTree = "<group>";
+		};
+		B4FDF39E27B2ECFF00D3C570 /* HomeTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B4FDF3CF27B2F02700D3C570 /* HomeTabBarViewController.swift */,
+				B4FDF3D027B2F02700D3C570 /* HomeTabBarViewController.xib */,
+				B4FDF3D427B2F04200D3C570 /* HomeTabBarCoordinator.swift */,
+			);
+			path = HomeTabBar;
+			sourceTree = "<group>";
+		};
+		B4FDF39F27B2ED0800D3C570 /* MusicView */ = {
+			isa = PBXGroup;
+			children = (
+				B4FDF3D827B30D2E00D3C570 /* Cell */,
+				B4FDF3A227B2ED4600D3C570 /* MusicViewController.xib */,
+				B4FDF3A327B2ED4600D3C570 /* MusicViewController.swift */,
+				B4FDF3A427B2ED4600D3C570 /* MusicRouter.swift */,
+				B4FDF3A527B2ED4600D3C570 /* MusicProvider.swift */,
+				B4FDF3A627B2ED4600D3C570 /* MusicCoordinator.swift */,
+				B4FDF3A727B2ED4600D3C570 /* MusicPresenter.swift */,
+				B4FDF3A827B2ED4600D3C570 /* MusicInteractor.swift */,
+			);
+			path = MusicView;
+			sourceTree = "<group>";
+		};
+		B4FDF3A027B2ED0E00D3C570 /* PodcastView */ = {
+			isa = PBXGroup;
+			children = (
+				B4FDF3B127B2ED5900D3C570 /* PodcatsViewController.xib */,
+				B4FDF3B227B2ED5900D3C570 /* PodcatsViewController.swift */,
+				B4FDF3B327B2ED5900D3C570 /* PodcatsRouter.swift */,
+				B4FDF3B427B2ED5900D3C570 /* PodcatsProvider.swift */,
+				B4FDF3B527B2ED5900D3C570 /* PodcatsCoordinator.swift */,
+				B4FDF3B627B2ED5900D3C570 /* PodcatsPresenter.swift */,
+				B4FDF3B727B2ED5900D3C570 /* PodcatsInteractor.swift */,
+			);
+			path = PodcastView;
+			sourceTree = "<group>";
+		};
+		B4FDF3A127B2ED1C00D3C570 /* BooksView */ = {
+			isa = PBXGroup;
+			children = (
+				B4FDF3C027B2ED7300D3C570 /* BookViewController.xib */,
+				B4FDF3C127B2ED7300D3C570 /* BookViewController.swift */,
+				B4FDF3C227B2ED7300D3C570 /* BookRouter.swift */,
+				B4FDF3C327B2ED7300D3C570 /* BookProvider.swift */,
+				B4FDF3C427B2ED7300D3C570 /* BookCoordinator.swift */,
+				B4FDF3C527B2ED7300D3C570 /* BookPresenter.swift */,
+				B4FDF3C627B2ED7300D3C570 /* BookInteractor.swift */,
+			);
+			path = BooksView;
+			sourceTree = "<group>";
+		};
+		B4FDF3D827B30D2E00D3C570 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B4FDF3D927B30D4A00D3C570 /* MusicCell.swift */,
+				B4FDF3DA27B30D4A00D3C570 /* MusicCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,10 +328,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4FDF3A927B2ED4600D3C570 /* MusicViewController.xib in Resources */,
 				B485D39927ADA66500C07C35 /* LaunchScreen.storyboard in Resources */,
 				B485D3B127ADAC0000C07C35 /* SplashViewController.xib in Resources */,
-				B4226FF627B1BFC800DFFD1D /* TestViewController.xib in Resources */,
 				B485D39627ADA66500C07C35 /* Assets.xcassets in Resources */,
+				B4FDF3B827B2ED5900D3C570 /* PodcatsViewController.xib in Resources */,
+				B4FDF3C727B2ED7300D3C570 /* BookViewController.xib in Resources */,
+				B4FDF3D227B2F02700D3C570 /* HomeTabBarViewController.xib in Resources */,
+				B4FDF3DC27B30D4A00D3C570 /* MusicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,25 +346,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4226FF727B1BFC800DFFD1D /* TestViewController.swift in Sources */,
 				B4226FD927B19DD800DFFD1D /* MusicServerModel.swift in Sources */,
 				B485D38D27ADA66300C07C35 /* AppDelegate.swift in Sources */,
 				B485D3CD27ADC95700C07C35 /* SplashProvider.swift in Sources */,
+				B4FDF3D527B2F04200D3C570 /* HomeTabBarCoordinator.swift in Sources */,
 				B485D3BE27ADB1D000C07C35 /* SplashCoordinator.swift in Sources */,
-				B4226FFA27B1BFC800DFFD1D /* TestCoordinator.swift in Sources */,
 				B485D3B827ADADC700C07C35 /* SplashInteractor.swift in Sources */,
 				B485D3BB27ADADD600C07C35 /* SplashRouter.swift in Sources */,
-				B4226FFB27B1BFC800DFFD1D /* TestPresenter.swift in Sources */,
+				B4FDF3BE27B2ED5900D3C570 /* PodcatsInteractor.swift in Sources */,
+				B4FDF3CB27B2ED7300D3C570 /* BookCoordinator.swift in Sources */,
+				B4FDF3BA27B2ED5900D3C570 /* PodcatsRouter.swift in Sources */,
 				B485D3C227ADBF5900C07C35 /* NetworkService.swift in Sources */,
-				B4226FF927B1BFC800DFFD1D /* TestProvider.swift in Sources */,
+				B4FDF3C827B2ED7300D3C570 /* BookViewController.swift in Sources */,
 				B485D3B527ADAC5E00C07C35 /* SplashPresenter.swift in Sources */,
+				B4FDF3CA27B2ED7300D3C570 /* BookProvider.swift in Sources */,
+				B4FDF3D127B2F02700D3C570 /* HomeTabBarViewController.swift in Sources */,
+				B4FDF3AA27B2ED4600D3C570 /* MusicViewController.swift in Sources */,
+				B4FDF3AD27B2ED4700D3C570 /* MusicCoordinator.swift in Sources */,
+				B4FDF3C927B2ED7300D3C570 /* BookRouter.swift in Sources */,
+				B4FDF3AB27B2ED4600D3C570 /* MusicRouter.swift in Sources */,
+				B4FDF3B927B2ED5900D3C570 /* PodcatsViewController.swift in Sources */,
+				B4FDF3AF27B2ED4700D3C570 /* MusicInteractor.swift in Sources */,
+				B4FDF3AC27B2ED4600D3C570 /* MusicProvider.swift in Sources */,
+				B4FDF3BB27B2ED5900D3C570 /* PodcatsProvider.swift in Sources */,
+				B4FDF3BC27B2ED5900D3C570 /* PodcatsCoordinator.swift in Sources */,
 				B485D3AA27ADA94C00C07C35 /* BaseVIPER.swift in Sources */,
 				B485D3CA27ADC13900C07C35 /* Utils.swift in Sources */,
-				B4226FFC27B1BFC800DFFD1D /* TestInteractor.swift in Sources */,
-				B4226FF827B1BFC800DFFD1D /* TestRouter.swift in Sources */,
+				B4FDF3AE27B2ED4700D3C570 /* MusicPresenter.swift in Sources */,
+				B4FDF3DB27B30D4A00D3C570 /* MusicCell.swift in Sources */,
+				B4FDF3CC27B2ED7300D3C570 /* BookPresenter.swift in Sources */,
+				B4FDF3CD27B2ED7300D3C570 /* BookInteractor.swift in Sources */,
 				B485D3A627ADA7B500C07C35 /* AppCoreCoordinator.swift in Sources */,
 				B485D3B027ADAC0000C07C35 /* SplashViewController.swift in Sources */,
 				B485D3C627ADC0A100C07C35 /* NetworkError.swift in Sources */,
+				B4FDF3BD27B2ED5900D3C570 /* PodcatsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

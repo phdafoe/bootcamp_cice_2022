@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum HTTPMethods: String {
     case get = "GET"
@@ -35,7 +36,7 @@ struct RequestDTO {
 }
 
 struct URLEnpoint {
-    static let baseUrl = "https://rss.applemarketingtools.com/api/v2/us/"
+    static let baseUrl = "https://rss.applemarketingtools.com/api/v2/%@/"
     static let music = "music/most-played/%@/songs.json"
     static let podcast = "podcasts/top/%@/podcast-episodes.json"
     static let books = "books/top-free/%@/books.json"
@@ -51,3 +52,14 @@ class Utils {
         let kPrefer = UserDefaults.standard
     }
 }
+
+protocol ReuseIdentifierProtocol: AnyObject {
+    static var defaultReuseIdentifier: String { get }
+}
+
+extension ReuseIdentifierProtocol where Self: UIView {
+    static var defaultReuseIdentifier: String {
+        return NSStringFromClass(self).components(separatedBy: ".").last!
+    }
+}
+
