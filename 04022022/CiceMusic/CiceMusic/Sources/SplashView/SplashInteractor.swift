@@ -26,7 +26,7 @@ extension SplashInteractor: SplashInteractorInputProtocol {
             case .success(let modelData):
                 self.presenter?.setDataFromWebInteractor(data: modelData.feed?.results)
             case .failure(let error):
-                debugPrint(error)
+                self.presenter?.setAlertMessage(error: error)
             }
         }
     }

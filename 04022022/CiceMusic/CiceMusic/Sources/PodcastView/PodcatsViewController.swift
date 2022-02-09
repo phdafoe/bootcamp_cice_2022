@@ -35,7 +35,7 @@ class PodcatsViewController: BaseView<PodcatsPresenterInputProtocol> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        self.presenter?.fetchPodcastFromWebService()
     }
 
 }

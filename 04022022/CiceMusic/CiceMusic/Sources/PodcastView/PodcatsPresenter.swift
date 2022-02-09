@@ -27,7 +27,7 @@ import Foundation
 
 // Input del Presenter
 protocol PodcatsPresenterInputProtocol {
-    
+    func fetchPodcastFromWebService()
 }
 
 // Output del Interactor
@@ -44,6 +44,9 @@ final class PodcatsPresenter: BasePresenter<PodcatsPresenterOutputProtocol, Podc
 // Input del Presenter
 extension PodcatsPresenter: PodcatsPresenterInputProtocol {
     
+    func fetchPodcastFromWebService() {
+        self.interactor?.fetchPodcastFromWebServiceInteractor()
+    }
 }
 
 // Output del Interactor

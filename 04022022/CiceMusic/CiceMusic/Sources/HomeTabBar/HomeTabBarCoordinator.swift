@@ -22,10 +22,10 @@ final class HomeTabBarCoordinator {
         let iconMusic = UITabBarItem(title: "Music",
                                      image: UIImage(systemName: "music.note.list"),
                                      selectedImage: UIImage(systemName: "music.note.list"))
-        let iconPodcats = UITabBarItem(title: "Music",
+        let iconPodcats = UITabBarItem(title: "Podcats",
                                      image: UIImage(systemName: "music.note.house.fill"),
                                      selectedImage: UIImage(systemName: "music.note.house.fill"))
-        let iconBooks = UITabBarItem(title: "Music",
+        let iconBooks = UITabBarItem(title: "Books",
                                      image: UIImage(systemName: "book"),
                                      selectedImage: UIImage(systemName: "book.fill"))
         

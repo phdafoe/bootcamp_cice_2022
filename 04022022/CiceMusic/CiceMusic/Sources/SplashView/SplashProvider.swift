@@ -16,7 +16,7 @@ final class SplashProvider: SplashProviderInputProtocol {
     let networkservice: NetworkServiceProtocol = NetworkService()
     
     func fetchData(completioHadler: @escaping (Result<MusicServerModel, NetworkError>) -> Void) {
-        self.networkservice.requestGeneric(requestPayload: SplashRequestDTO.requestData(numeroItems: "10"),
+        self.networkservice.requestGeneric(requestPayload: SplashRequestDTO.requestData(numeroItems: "99"),
                                            entityClass: MusicServerModel.self) { [weak self] (result) in
             guard self != nil else { return }
             guard let resultUnw = result else { return }

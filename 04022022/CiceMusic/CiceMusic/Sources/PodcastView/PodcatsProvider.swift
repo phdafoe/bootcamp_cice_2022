@@ -27,12 +27,16 @@ import Foundation
 
 // Input Protocol
 protocol PodcatsProviderInputProtocol {
-    
+    func fetchPodcastFromWebServiceProvider()
 }
 
 final class PodcatsProvider: PodcatsProviderInputProtocol {
     
     let networkService: NetworkServiceProtocol = NetworkService()
+    
+    func fetchPodcastFromWebServiceProvider() {
+        
+    }
     
 }
 
@@ -40,7 +44,7 @@ struct PodcatsRequestDTO {
     
     static func requestData(numeroItems: String) -> RequestDTO {
         let argument: [CVarArg] = [numeroItems]
-        let urlComplete = String(format: URLEnpoint.music, arguments: argument)
+        let urlComplete = String(format: URLEnpoint.podcast, arguments: argument)
         let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete)
         return request
     }

@@ -29,7 +29,7 @@ import Foundation
 final class MusicCoordinator {
 
     static func navigation(dto: MusicCoordinatorDTO? = nil) -> BaseNavigation {
-        BaseNavigation(rootViewController: view())
+        BaseNavigation(rootViewController: view(dto: dto))
     }
     
     static func view(dto: MusicCoordinatorDTO? = nil) -> MusicViewController & MusicPresenterOutputProtocol {
