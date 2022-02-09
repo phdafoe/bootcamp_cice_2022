@@ -27,15 +27,23 @@ import Foundation
 
 // Input Protocol
 protocol PodcatsProviderInputProtocol {
-    func fetchPodcastFromWebServiceProvider()
+    func fetchPodcastFromWebServiceProvider(completioHadler: @escaping (Result<PodcatsServerModel, NetworkError>) -> Void)
 }
 
 final class PodcatsProvider: PodcatsProviderInputProtocol {
     
     let networkService: NetworkServiceProtocol = NetworkService()
     
-    func fetchPodcastFromWebServiceProvider() {
+    func fetchPodcastFromWebServiceProvider(completioHadler: @escaping (Result<PodcatsServerModel, NetworkError>) -> Void) {
         
+        self.networkService.requestGeneric(requestPayload: PodcatsRequestDTO.requestData(numeroItems: "99"),
+                                           entityClass: PodcatsServerModel.self) { [weak self] (result) in
+            guard self != nil else { return }
+            guard let resultUnw = result else { return }
+            completioHadler(.success(resultUnw))
+        } failure: { (error) in
+            completioHadler(.failure(error))
+        }
     }
     
 }

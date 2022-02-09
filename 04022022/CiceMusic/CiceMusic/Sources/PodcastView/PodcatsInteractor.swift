@@ -34,6 +34,22 @@ final class PodcatsInteractor: BaseInteractor<PodcatsInteractorOutputProtocol> {
     
     let provider: PodcatsProviderInputProtocol = PodcatsProvider()
 
+    func transformDataFromPodcatsServerModelToArrayGenericResult(data: PodcatsServerModel) -> [GenericResult] {
+        var arrayGenericResult: [GenericResult] = []
+        if let dataUnw = data.feed?.results {
+            for item in dataUnw {
+                let objc = GenericResult(artistName: item.artistName,
+                                         id: item.id,
+                                         name: item.name,
+                                         kind: item.kind,
+                                         artworkUrl100: item.artworkUrl100,
+                                         url: item.url,
+                                         releaseDate: nil)
+                arrayGenericResult.append(objc)
+            }
+        }
+        return arrayGenericResult
+    }
     
 }
 
@@ -41,7 +57,16 @@ final class PodcatsInteractor: BaseInteractor<PodcatsInteractorOutputProtocol> {
 extension PodcatsInteractor: PodcatsInteractorInputProtocol {
     
     func fetchPodcastFromWebServiceInteractor() {
-        self.provider.fetchPodcastFromWebServiceProvider()
+        self.provider.fetchPodcastFromWebServiceProvider { [weak self] (result) in
+            guard self != nil else { return }
+            switch result{
+            case let .success(model):
+                self?.presenter?.setDataFromWebInteractor(data: self?.transformDataFromPodcatsServerModelToArrayGenericResult(data: model))
+            case let .failure(error):
+                debugPrint(error)
+                //self.presenter?.setAlertMessage(error: error)
+            }
+        }
     }
     
 }

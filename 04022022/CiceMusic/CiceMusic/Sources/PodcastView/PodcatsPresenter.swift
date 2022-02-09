@@ -28,16 +28,19 @@ import Foundation
 // Input del Presenter
 protocol PodcatsPresenterInputProtocol {
     func fetchPodcastFromWebService()
+    func numberOfRows() -> Int?
+    func informationForCell(indexPath: Int) -> GenericResult?
 }
 
 // Output del Interactor
 protocol PodcatsInteractorOutputProtocol {
-    
+    func setDataFromWebInteractor(data: [GenericResult]?)
 }
 
 final class PodcatsPresenter: BasePresenter<PodcatsPresenterOutputProtocol, PodcatsInteractorInputProtocol, PodcatsRouterInputProtocol> {
     
    
+    var dataSourceViewModel: [GenericResult] = []
     
 }
 
@@ -47,11 +50,25 @@ extension PodcatsPresenter: PodcatsPresenterInputProtocol {
     func fetchPodcastFromWebService() {
         self.interactor?.fetchPodcastFromWebServiceInteractor()
     }
+    
+    func numberOfRows() -> Int? {
+        return self.dataSourceViewModel.count
+    }
+    
+    func informationForCell(indexPath: Int) -> GenericResult? {
+        return self.dataSourceViewModel[indexPath]
+    }
 }
 
 // Output del Interactor
 extension PodcatsPresenter: PodcatsInteractorOutputProtocol {
     
+    func setDataFromWebInteractor(data: [GenericResult]?) {
+        guard let dataUnw = data else { return }
+        self.dataSourceViewModel.removeAll()
+        self.dataSourceViewModel = dataUnw
+        self.viewController?.reloadInformationInView()
+    }
 }
 
 

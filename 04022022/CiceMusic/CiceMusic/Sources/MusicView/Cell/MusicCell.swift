@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 protocol MusicCellInputProtocol {
-    func setupCell(data:ResultMusic)
+    func setupCell(data: GenericResult)
 }
 
 class MusicCell: UITableViewCell, ReuseIdentifierProtocol {
@@ -35,7 +35,7 @@ class MusicCell: UITableViewCell, ReuseIdentifierProtocol {
 }
 
 extension MusicCell: MusicCellInputProtocol {
-    func setupCell(data: ResultMusic) {
+    func setupCell(data: GenericResult) {
         
         let url = URL(string: data.artworkUrl100 ?? "")
         let processor = DownsamplingImageProcessor(size: artistWorkimageView.bounds.size)
