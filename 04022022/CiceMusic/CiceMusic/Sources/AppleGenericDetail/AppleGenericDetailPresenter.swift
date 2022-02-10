@@ -26,50 +26,42 @@ POSSIBILITY OF SUCH DAMAGE.
 import Foundation
 
 // Input del Presenter
-protocol MusicPresenterInputProtocol {
-    func loadDataFromInteractor()
-    func numberOfRows() -> Int?
-    func informationForCell(indexPath: Int) -> GenericResult?
-    func didSelectRow(data: GenericResult)
+protocol AppleGenericDetailPresenterInputProtocol {
+    var dataModel: GenericResult? { get set }
+    func showAppleStore()
+    func fetchDataFromWebService()
 }
 
 // Output del Interactor
-protocol MusicInteractorOutputProtocol {
-    func dataTransformedFromInteractor(data: [GenericResult]?)
+protocol AppleGenericDetailInteractorOutputProtocol {
+    func setDataFromWebInteractor(data: [GenericResult]?)
 }
 
-final class MusicPresenter: BasePresenter<MusicPresenterOutputProtocol, MusicInteractorInputProtocol, MusicRouterInputProtocol> {
+final class AppleGenericDetailPresenter: BasePresenter<AppleGenericDetailPresenterOutputProtocol, AppleGenericDetailInteractorInputProtocol, AppleGenericDetailRouterInputProtocol> {
     
-    // MARK: - Variables globales
-    var dataSourceViewModel: [GenericResult] = []
+    var dataModel: GenericResult?
+    var arrayDataModel: [GenericResult] = []
     
 }
 
 // Input del Presenter
-extension MusicPresenter: MusicPresenterInputProtocol {
-    func loadDataFromInteractor() {
-        self.interactor?.transformDataFromInteractor()
+extension AppleGenericDetailPresenter: AppleGenericDetailPresenterInputProtocol {
+    func showAppleStore(){
+        guard let dataModeUnw = self.dataModel else { return }
+        self.router?.showAppleStoreRouter(data: dataModeUnw)
     }
     
-    func numberOfRows() -> Int? {
-        return self.dataSourceViewModel.count
-    }
-    
-    func informationForCell(indexPath: Int) -> GenericResult? {
-        return self.dataSourceViewModel[indexPath]
-    }
-    
-    func didSelectRow(data: GenericResult){
-        self.router?.didSelectRowRouter(data: data)
+    func fetchDataFromWebService() {
+        self.interactor?.fetchDataFromWebServiceInteractor()
     }
 }
 
 // Output del Interactor
-extension MusicPresenter: MusicInteractorOutputProtocol {
-    func dataTransformedFromInteractor(data: [GenericResult]?) {
-        self.dataSourceViewModel.removeAll()
-        guard let dataSourceUnw = data else { return }
-        self.dataSourceViewModel = dataSourceUnw
+extension AppleGenericDetailPresenter: AppleGenericDetailInteractorOutputProtocol {
+    func setDataFromWebInteractor(data: [GenericResult]?) {
+        self.arrayDataModel.removeAll()
+        guard let arrayDataModelUnw = data else { return }
+        self.arrayDataModel = arrayDataModelUnw
         self.viewController?.reloadInformationInView()
     }
 }

@@ -16,7 +16,7 @@ final class SplashInteractor: BaseInteractor<SplashInteractorOutputProtocol> {
     
     let splashProvider: SplashProviderInputProtocol = SplashProvider()
     
-    func transformDataFromMusicServerModelToArrayGenericResult(data: MusicServerModel) -> [GenericResult] {
+    func transformDataFromAppleServerModelToArrayGenericResult(data: AppleServerModel) -> [GenericResult] {
         var arrayGenericResult: [GenericResult] = []
         if let dataUnw = data.feed?.results {
             for item in dataUnw {
@@ -38,12 +38,13 @@ final class SplashInteractor: BaseInteractor<SplashInteractorOutputProtocol> {
 // Input del Interactor
 extension SplashInteractor: SplashInteractorInputProtocol {
     func fetchDataFromWebServiceInteractor() {
-        self.splashProvider.fetchData { (result) in
+        self.splashProvider.fetchData { [weak self] (result) in
+            guard self != nil else { return }
             switch result {
             case .success(let modelData):
-                self.presenter?.setDataFromWebInteractor(data: self.transformDataFromMusicServerModelToArrayGenericResult(data: modelData))
+                self?.presenter?.setDataFromWebInteractor(data: self?.transformDataFromAppleServerModelToArrayGenericResult(data: modelData))
             case .failure(let error):
-                self.presenter?.setAlertMessage(error: error)
+                self?.presenter?.setAlertMessage(error: error)
             }
         }
     }

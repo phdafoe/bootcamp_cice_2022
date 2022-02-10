@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4226FD927B19DD800DFFD1D /* MusicServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4226FD827B19DD800DFFD1D /* MusicServerModel.swift */; };
+		B4226FD927B19DD800DFFD1D /* AppleServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4226FD827B19DD800DFFD1D /* AppleServerModel.swift */; };
+		B43E6E5027B59898009C889B /* AppleGenericDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B43E6E4927B59898009C889B /* AppleGenericDetailViewController.xib */; };
+		B43E6E5127B59898009C889B /* AppleGenericDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E6E4A27B59898009C889B /* AppleGenericDetailViewController.swift */; };
+		B43E6E5227B59898009C889B /* AppleGenericDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E6E4B27B59898009C889B /* AppleGenericDetailRouter.swift */; };
+		B43E6E5327B59898009C889B /* AppleGenericDetailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E6E4C27B59898009C889B /* AppleGenericDetailProvider.swift */; };
+		B43E6E5427B59898009C889B /* AppleGenericDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E6E4D27B59898009C889B /* AppleGenericDetailCoordinator.swift */; };
+		B43E6E5527B59898009C889B /* AppleGenericDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E6E4E27B59898009C889B /* AppleGenericDetailPresenter.swift */; };
+		B43E6E5627B59898009C889B /* AppleGenericDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E6E4F27B59898009C889B /* AppleGenericDetailInteractor.swift */; };
+		B43E6E5927B5AF2B009C889B /* AppServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E6E5827B5AF2B009C889B /* AppServerModel.swift */; };
 		B485D38D27ADA66300C07C35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D38C27ADA66300C07C35 /* AppDelegate.swift */; };
 		B485D39627ADA66500C07C35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B485D39527ADA66500C07C35 /* Assets.xcassets */; };
 		B485D39927ADA66500C07C35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B485D39727ADA66500C07C35 /* LaunchScreen.storyboard */; };
@@ -55,7 +63,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B4226FD827B19DD800DFFD1D /* MusicServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicServerModel.swift; sourceTree = "<group>"; };
+		B4226FD827B19DD800DFFD1D /* AppleServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleServerModel.swift; sourceTree = "<group>"; };
+		B43E6E4927B59898009C889B /* AppleGenericDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppleGenericDetailViewController.xib; sourceTree = "<group>"; };
+		B43E6E4A27B59898009C889B /* AppleGenericDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGenericDetailViewController.swift; sourceTree = "<group>"; };
+		B43E6E4B27B59898009C889B /* AppleGenericDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGenericDetailRouter.swift; sourceTree = "<group>"; };
+		B43E6E4C27B59898009C889B /* AppleGenericDetailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGenericDetailProvider.swift; sourceTree = "<group>"; };
+		B43E6E4D27B59898009C889B /* AppleGenericDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGenericDetailCoordinator.swift; sourceTree = "<group>"; };
+		B43E6E4E27B59898009C889B /* AppleGenericDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGenericDetailPresenter.swift; sourceTree = "<group>"; };
+		B43E6E4F27B59898009C889B /* AppleGenericDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleGenericDetailInteractor.swift; sourceTree = "<group>"; };
+		B43E6E5827B5AF2B009C889B /* AppServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServerModel.swift; sourceTree = "<group>"; };
 		B485D38927ADA66300C07C35 /* CiceMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiceMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B485D38C27ADA66300C07C35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B485D39527ADA66500C07C35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,10 +134,25 @@
 		B4226FD727B19DC800DFFD1D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B4226FD827B19DD800DFFD1D /* MusicServerModel.swift */,
+				B4226FD827B19DD800DFFD1D /* AppleServerModel.swift */,
 				B48C4B5B27B44B36009BB5EE /* PodcastServerModel.swift */,
+				B43E6E5827B5AF2B009C889B /* AppServerModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B43E6E4827B59870009C889B /* AppleGenericDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B43E6E4927B59898009C889B /* AppleGenericDetailViewController.xib */,
+				B43E6E4A27B59898009C889B /* AppleGenericDetailViewController.swift */,
+				B43E6E4B27B59898009C889B /* AppleGenericDetailRouter.swift */,
+				B43E6E4C27B59898009C889B /* AppleGenericDetailProvider.swift */,
+				B43E6E4D27B59898009C889B /* AppleGenericDetailCoordinator.swift */,
+				B43E6E4E27B59898009C889B /* AppleGenericDetailPresenter.swift */,
+				B43E6E4F27B59898009C889B /* AppleGenericDetailInteractor.swift */,
+			);
+			path = AppleGenericDetail;
 			sourceTree = "<group>";
 		};
 		B485D38027ADA66300C07C35 = {
@@ -177,6 +208,7 @@
 		B485D3AC27ADABD700C07C35 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B43E6E4827B59870009C889B /* AppleGenericDetail */,
 				B4FDF3A127B2ED1C00D3C570 /* BooksView */,
 				B4FDF3A027B2ED0E00D3C570 /* PodcastView */,
 				B4FDF39F27B2ED0800D3C570 /* MusicView */,
@@ -356,6 +388,7 @@
 				B485D39627ADA66500C07C35 /* Assets.xcassets in Resources */,
 				B4FDF3B827B2ED5900D3C570 /* PodcatsViewController.xib in Resources */,
 				B4FDF3C727B2ED7300D3C570 /* BookViewController.xib in Resources */,
+				B43E6E5027B59898009C889B /* AppleGenericDetailViewController.xib in Resources */,
 				B4FDF3D227B2F02700D3C570 /* HomeTabBarViewController.xib in Resources */,
 				B4FDF3DC27B30D4A00D3C570 /* MusicCell.xib in Resources */,
 			);
@@ -368,23 +401,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4226FD927B19DD800DFFD1D /* MusicServerModel.swift in Sources */,
+				B4226FD927B19DD800DFFD1D /* AppleServerModel.swift in Sources */,
 				B485D38D27ADA66300C07C35 /* AppDelegate.swift in Sources */,
 				B485D3CD27ADC95700C07C35 /* SplashProvider.swift in Sources */,
 				B4FDF3D527B2F04200D3C570 /* HomeTabBarCoordinator.swift in Sources */,
+				B43E6E5227B59898009C889B /* AppleGenericDetailRouter.swift in Sources */,
 				B485D3BE27ADB1D000C07C35 /* SplashCoordinator.swift in Sources */,
 				B485D3B827ADADC700C07C35 /* SplashInteractor.swift in Sources */,
 				B485D3BB27ADADD600C07C35 /* SplashRouter.swift in Sources */,
+				B43E6E5927B5AF2B009C889B /* AppServerModel.swift in Sources */,
+				B43E6E5327B59898009C889B /* AppleGenericDetailProvider.swift in Sources */,
 				B4FDF3BE27B2ED5900D3C570 /* PodcatsInteractor.swift in Sources */,
+				B43E6E5627B59898009C889B /* AppleGenericDetailInteractor.swift in Sources */,
 				B4FDF3CB27B2ED7300D3C570 /* BookCoordinator.swift in Sources */,
 				B4FDF3BA27B2ED5900D3C570 /* PodcatsRouter.swift in Sources */,
 				B485D3C227ADBF5900C07C35 /* NetworkService.swift in Sources */,
+				B43E6E5127B59898009C889B /* AppleGenericDetailViewController.swift in Sources */,
 				B4FDF3C827B2ED7300D3C570 /* BookViewController.swift in Sources */,
 				B485D3B527ADAC5E00C07C35 /* SplashPresenter.swift in Sources */,
 				B4FDF3CA27B2ED7300D3C570 /* BookProvider.swift in Sources */,
 				B48C4B5C27B44B36009BB5EE /* PodcastServerModel.swift in Sources */,
 				B4FDF3D127B2F02700D3C570 /* HomeTabBarViewController.swift in Sources */,
 				B4FDF3AA27B2ED4600D3C570 /* MusicViewController.swift in Sources */,
+				B43E6E5427B59898009C889B /* AppleGenericDetailCoordinator.swift in Sources */,
 				B4FDF3AD27B2ED4700D3C570 /* MusicCoordinator.swift in Sources */,
 				B4FDF3C927B2ED7300D3C570 /* BookRouter.swift in Sources */,
 				B4FDF3AB27B2ED4600D3C570 /* MusicRouter.swift in Sources */,
@@ -403,6 +442,7 @@
 				B485D3A627ADA7B500C07C35 /* AppCoreCoordinator.swift in Sources */,
 				B485D3B027ADAC0000C07C35 /* SplashViewController.swift in Sources */,
 				B485D3C627ADC0A100C07C35 /* NetworkError.swift in Sources */,
+				B43E6E5527B59898009C889B /* AppleGenericDetailPresenter.swift in Sources */,
 				B4FDF3BD27B2ED5900D3C570 /* PodcatsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

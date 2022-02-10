@@ -24,35 +24,25 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 import Foundation
+import UIKit
+import SafariServices
 
-// Input Protocol
-protocol BookProviderInputProtocol {
-    func fetchData(completioHadler: @escaping (Result<AppleServerModel, NetworkError>) -> Void)
+// Input del Router
+protocol AppleGenericDetailRouterInputProtocol {
+    func showAppleStoreRouter(data: GenericResult)
 }
 
-final class BookProvider: BookProviderInputProtocol {
-    
-    let networkService: NetworkServiceProtocol = NetworkService()
-    
-    func fetchData(completioHadler: @escaping (Result<AppleServerModel, NetworkError>) -> Void) {
-        self.networkService.requestGeneric(requestPayload: BookRequestDTO.requestData(numeroItems: "99"),
-                                           entityClass: AppleServerModel.self) { [weak self] (result) in
-            guard self != nil else { return }
-            guard let resultUnw = result else { return }
-            completioHadler(.success(resultUnw))
-        } failure: { (error) in
-            completioHadler(.failure(error))
+final class AppleGenericDetailRouter: BaseRouter<AppleGenericDetailViewController> {
+        
+}
+
+// Input del Router
+extension AppleGenericDetailRouter: AppleGenericDetailRouterInputProtocol {
+    func showAppleStoreRouter(data: GenericResult){
+        DispatchQueue.main.async {
+            guard let urlUnw = URL(string: data.url ?? "") else { return }
+            let vc = SFSafariViewController(url: urlUnw)
+            self.viewController?.present(vc, animated: true, completion: nil)
         }
-    }
-    
-}
-
-struct BookRequestDTO {
-    
-    static func requestData(numeroItems: String) -> RequestDTO {
-        let argument: [CVarArg] = [numeroItems]
-        let urlComplete = String(format: URLEnpoint.books, arguments: argument)
-        let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete)
-        return request
     }
 }

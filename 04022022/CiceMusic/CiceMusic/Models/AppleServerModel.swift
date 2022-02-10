@@ -1,5 +1,5 @@
 //
-//  MusicServerModel.swift
+//  AppleServerModel.swift
 //  CiceMusic
 //
 //  Created by Andres Felipe Ocampo Eljaiek on 7/2/22.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-// MARK: - MusicServerModel
-struct MusicServerModel: Codable {
+// MARK: - AppleServerModel
+struct AppleServerModel: Codable {
     let feed: Feed?
 
     enum CodingKeys: String, CodingKey {

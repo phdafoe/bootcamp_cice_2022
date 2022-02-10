@@ -26,15 +26,16 @@ POSSIBILITY OF SUCH DAMAGE.
 import Foundation
 
 // Input del Interactor
-protocol BookInteractorInputProtocol {
+protocol AppleGenericDetailInteractorInputProtocol {
     func fetchDataFromWebServiceInteractor()
 }
 
-final class BookInteractor: BaseInteractor<BookInteractorOutputProtocol> {
+final class AppleGenericDetailInteractor: BaseInteractor<AppleGenericDetailInteractorOutputProtocol> {
     
-    let provider: BookProviderInputProtocol = BookProvider()
+    let provider: AppleGenericDetailProviderInputProtocol = AppleGenericDetailProvider()
+
     
-    func transformDataFromAppleServerModelToArrayGenericResult(data: AppleServerModel) -> [GenericResult] {
+    func transformDataFromAppsServerModelToArrayGenericResult(data: AppServerModel) -> [GenericResult] {
         var arrayGenericResult: [GenericResult] = []
         if let dataUnw = data.feed?.results {
             for item in dataUnw {
@@ -50,21 +51,19 @@ final class BookInteractor: BaseInteractor<BookInteractorOutputProtocol> {
         }
         return arrayGenericResult
     }
-
     
 }
 
 // Input del Interactor
-extension BookInteractor: BookInteractorInputProtocol {
+extension AppleGenericDetailInteractor: AppleGenericDetailInteractorInputProtocol {
     func fetchDataFromWebServiceInteractor() {
         self.provider.fetchData { [weak self] (result) in
             guard self != nil else { return }
-            switch result {
-            case .success(let modelData):
-                self?.presenter?.setDataFromWebInteractor(data: self?.transformDataFromAppleServerModelToArrayGenericResult(data: modelData))
+            switch result{
+            case let .success(model):
+                self?.presenter?.setDataFromWebInteractor(data: self?.transformDataFromAppsServerModelToArrayGenericResult(data: model))
             case .failure(let error):
-                debugPrint(error)
-                //self.presenter?.setAlertMessage(error: error)
+               debugPrint(error)
             }
         }
     }

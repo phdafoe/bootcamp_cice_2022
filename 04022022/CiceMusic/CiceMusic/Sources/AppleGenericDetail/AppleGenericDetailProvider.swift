@@ -26,32 +26,34 @@ POSSIBILITY OF SUCH DAMAGE.
 import Foundation
 
 // Input Protocol
-protocol BookProviderInputProtocol {
-    func fetchData(completioHadler: @escaping (Result<AppleServerModel, NetworkError>) -> Void)
+protocol AppleGenericDetailProviderInputProtocol {
+    func fetchData(completioHadler: @escaping (Result<AppServerModel, NetworkError>) -> Void)
 }
 
-final class BookProvider: BookProviderInputProtocol {
+final class AppleGenericDetailProvider: AppleGenericDetailProviderInputProtocol {
     
     let networkService: NetworkServiceProtocol = NetworkService()
     
-    func fetchData(completioHadler: @escaping (Result<AppleServerModel, NetworkError>) -> Void) {
-        self.networkService.requestGeneric(requestPayload: BookRequestDTO.requestData(numeroItems: "99"),
-                                           entityClass: AppleServerModel.self) { [weak self] (result) in
+    func fetchData(completioHadler: @escaping (Result<AppServerModel, NetworkError>) -> Void) {
+        
+        self.networkService.requestGeneric(requestPayload: AppleGenericDetailRequestDTO.requestData(numeroItems: "10"),
+                                           entityClass: AppServerModel.self) { [weak self] (result) in
             guard self != nil else { return }
             guard let resultUnw = result else { return }
             completioHadler(.success(resultUnw))
         } failure: { (error) in
             completioHadler(.failure(error))
         }
+
     }
     
 }
 
-struct BookRequestDTO {
+struct AppleGenericDetailRequestDTO {
     
     static func requestData(numeroItems: String) -> RequestDTO {
         let argument: [CVarArg] = [numeroItems]
-        let urlComplete = String(format: URLEnpoint.books, arguments: argument)
+        let urlComplete = String(format: URLEnpoint.apps, arguments: argument)
         let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete)
         return request
     }
