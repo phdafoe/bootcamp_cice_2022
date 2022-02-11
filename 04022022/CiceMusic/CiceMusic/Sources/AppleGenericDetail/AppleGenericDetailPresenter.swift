@@ -30,6 +30,8 @@ protocol AppleGenericDetailPresenterInputProtocol {
     var dataModel: GenericResult? { get set }
     func showAppleStore()
     func fetchDataFromWebService()
+    func numberOfRows() -> Int
+    func informationForIndexPath(indexpath: Int) -> GenericResult?
 }
 
 // Output del Interactor
@@ -53,6 +55,13 @@ extension AppleGenericDetailPresenter: AppleGenericDetailPresenterInputProtocol 
     
     func fetchDataFromWebService() {
         self.interactor?.fetchDataFromWebServiceInteractor()
+    }
+    
+    func numberOfRows() -> Int {
+        return self.arrayDataModel.count
+    }
+    func informationForIndexPath(indexpath: Int) -> GenericResult? {
+        return self.arrayDataModel[indexpath]
     }
 }
 

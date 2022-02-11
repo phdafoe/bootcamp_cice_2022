@@ -40,6 +40,7 @@ class PodcatsViewController: BaseView<PodcatsPresenterInputProtocol> {
         super.viewDidLoad()
         self.presenter?.fetchPodcastFromWebService()
         self.configuracionTV()
+        self.menuButton()
     }
     
     private func configuracionTV() {
