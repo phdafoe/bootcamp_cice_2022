@@ -9,7 +9,7 @@ import UIKit
 
 protocol AppCoreCoordinatorProtocol {
     func initialViewController(window: UIWindow)
-    func createSlidingMenu(window: UIWindow, vc: UIViewController)
+    func createSlidingMenu(window: UIWindow, vc: UIViewController, menuDto: [MenuResponse])
 }
 
 final class AppCoreCoordinator {
@@ -23,9 +23,9 @@ extension AppCoreCoordinator: AppCoreCoordinatorProtocol {
         window.makeKeyAndVisible()
     }
     
-    func createSlidingMenu(window: UIWindow, vc: UIViewController) {
+    func createSlidingMenu(window: UIWindow, vc: UIViewController, menuDto: [MenuResponse]) {
         let frontViewController = vc
-        let rearViewController = MenuCoordinator.view()
+        let rearViewController = MenuCoordinator.view(dto: MenuCoordinatorDTO(dataModel: menuDto))
         let swRevealVC = SWRevealViewController(rearViewController: rearViewController, frontViewController: frontViewController)
         swRevealVC?.toggleAnimationType = SWRevealToggleAnimationType.easeOut
         swRevealVC?.toggleAnimationDuration = 0.30

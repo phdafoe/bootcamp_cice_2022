@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController">
             <connections>
+                <outlet property="menuTableview" destination="sr8-fZ-o7u" id="CKF-Rj-YPp"/>
                 <outlet property="view" destination="iN0-l3-epB" id="0KK-4V-vEI"/>
             </connections>
         </placeholder>

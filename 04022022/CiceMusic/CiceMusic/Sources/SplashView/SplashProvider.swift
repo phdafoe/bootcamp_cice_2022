@@ -8,32 +8,32 @@
 import Foundation
 
 protocol SplashProviderInputProtocol {
-    func fetchData(completioHadler: @escaping (Result<AppleServerModel, NetworkError>) -> Void)
+    func fetchData(completioHadler: @escaping (Result<MenuServerModel, NetworkError>) -> Void)
 }
 
 final class SplashProvider: SplashProviderInputProtocol {
     
     let networkservice: NetworkServiceProtocol = NetworkService()
     
-    func fetchData(completioHadler: @escaping (Result<AppleServerModel, NetworkError>) -> Void) {
-        self.networkservice.requestGeneric(requestPayload: SplashRequestDTO.requestData(numeroItems: "99"),
-                                           entityClass: AppleServerModel.self) { [weak self] (result) in
+    func fetchData(completioHadler: @escaping (Result<MenuServerModel, NetworkError>) -> Void) {
+        self.networkservice.requestGeneric(requestPayload: SplashRequestDTO.requestData(),
+                                           entityClass: MenuServerModel.self) { [weak self] (result) in
             guard self != nil else { return }
             guard let resultUnw = result else { return }
             completioHadler(.success(resultUnw))
-        } failure: { (error) in
+        } failure: { [weak self] (error) in
+            guard self != nil else { return }
             completioHadler(.failure(error))
         }
     }
+    
 }
 
 
 struct SplashRequestDTO {
     
-    static func requestData(numeroItems: String) -> RequestDTO {
-        let argument: [CVarArg] = [numeroItems]
-        let urlComplete = String(format: URLEnpoint.music, arguments: argument)
-        let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete, urlContext: .webService)
+    static func requestData() -> RequestDTO {
+        let request = RequestDTO(params: nil, method: .get, endpoint: URLEnpoint.menu, urlContext: .heroku)
         return request
     }
 }

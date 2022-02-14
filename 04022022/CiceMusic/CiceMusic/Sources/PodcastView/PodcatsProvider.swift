@@ -51,7 +51,7 @@ final class PodcatsProvider: PodcatsProviderInputProtocol {
 struct PodcatsRequestDTO {
     
     static func requestData(numeroItems: String) -> RequestDTO {
-        let argument: [CVarArg] = [numeroItems]
+        let argument: [CVarArg] = [NSLocale.current.languageCode ?? "us",numeroItems]
         let urlComplete = String(format: URLEnpoint.podcast, arguments: argument)
         let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete, urlContext: .webService)
         return request

@@ -15,23 +15,6 @@ protocol SplashInteractorInputProtocol {
 final class SplashInteractor: BaseInteractor<SplashInteractorOutputProtocol> {
     
     let splashProvider: SplashProviderInputProtocol = SplashProvider()
-    
-    func transformDataFromAppleServerModelToArrayGenericResult(data: AppleServerModel) -> [GenericResult] {
-        var arrayGenericResult: [GenericResult] = []
-        if let dataUnw = data.feed?.results {
-            for item in dataUnw {
-                let objc = GenericResult(artistName: item.artistName,
-                                         id: item.id,
-                                         name: item.name,
-                                         kind: item.kind,
-                                         artworkUrl100: item.artworkUrl100,
-                                         url: item.url,
-                                         releaseDate: item.releaseDate)
-                arrayGenericResult.append(objc)
-            }
-        }
-        return arrayGenericResult
-    }
    
 }
 
@@ -41,8 +24,8 @@ extension SplashInteractor: SplashInteractorInputProtocol {
         self.splashProvider.fetchData { [weak self] (result) in
             guard self != nil else { return }
             switch result {
-            case .success(let modelData):
-                self?.presenter?.setDataFromWebInteractor(data: self?.transformDataFromAppleServerModelToArrayGenericResult(data: modelData))
+            case let .success(model):
+                self?.presenter?.setDataFromWebInteractor(data: model.menuResponse)
             case .failure(let error):
                 self?.presenter?.setAlertMessage(error: error)
             }

@@ -14,7 +14,7 @@ final class HomeTabBarCoordinator {
         let tbc = HomeTabBarViewController()
         
         // Controllers
-        let musicVC = MusicCoordinator.navigation(dto: MusicCoordinatorDTO(model: dto?.data))
+        let musicVC = MusicCoordinator.navigation()
         let podcastVC = PodcatsCoordinator.navigation()
         let booksVC = BookCoordinator.navigation()
         
@@ -42,5 +42,5 @@ final class HomeTabBarCoordinator {
 }
 
 struct HomeTabBarCoordinatorDTO {
-    var data: [GenericResult]?
+    
 }

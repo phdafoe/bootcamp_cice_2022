@@ -60,6 +60,9 @@
 		B4FDF3D527B2F04200D3C570 /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3D427B2F04200D3C570 /* HomeTabBarCoordinator.swift */; };
 		B4FDF3DB27B30D4A00D3C570 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDF3D927B30D4A00D3C570 /* MusicCell.swift */; };
 		B4FDF3DC27B30D4A00D3C570 /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4FDF3DA27B30D4A00D3C570 /* MusicCell.xib */; };
+		F6674D0527BAD6F7007C7D93 /* MenuServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D0427BAD6F7007C7D93 /* MenuServerModel.swift */; };
+		F6674D0927BAECBC007C7D93 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D0727BAECBC007C7D93 /* MenuCell.swift */; };
+		F6674D0A27BAECBC007C7D93 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6674D0827BAECBC007C7D93 /* MenuCell.xib */; };
 		F6FADEA827B6DF8D00C0F225 /* AppsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FADEA627B6DF8D00C0F225 /* AppsCell.swift */; };
 		F6FADEA927B6DF8D00C0F225 /* AppsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6FADEA727B6DF8D00C0F225 /* AppsCell.xib */; };
 		F6FADEAE27B6E5B800C0F225 /* SWRevealViewController .m in Sources */ = {isa = PBXBuildFile; fileRef = F6FADEAD27B6E5B800C0F225 /* SWRevealViewController .m */; };
@@ -127,6 +130,9 @@
 		B4FDF3D427B2F04200D3C570 /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
 		B4FDF3D927B30D4A00D3C570 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 		B4FDF3DA27B30D4A00D3C570 /* MusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
+		F6674D0427BAD6F7007C7D93 /* MenuServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuServerModel.swift; sourceTree = "<group>"; };
+		F6674D0727BAECBC007C7D93 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		F6674D0827BAECBC007C7D93 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		F6FADEA627B6DF8D00C0F225 /* AppsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsCell.swift; sourceTree = "<group>"; };
 		F6FADEA727B6DF8D00C0F225 /* AppsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppsCell.xib; sourceTree = "<group>"; };
 		F6FADEAB27B6E5B700C0F225 /* CiceMusic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CiceMusic-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -159,6 +165,7 @@
 				B4226FD827B19DD800DFFD1D /* AppleServerModel.swift */,
 				B48C4B5B27B44B36009BB5EE /* PodcastServerModel.swift */,
 				B43E6E5827B5AF2B009C889B /* AppServerModel.swift */,
+				F6674D0427BAD6F7007C7D93 /* MenuServerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -344,6 +351,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		F6674D0627BAECA1007C7D93 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F6674D0727BAECBC007C7D93 /* MenuCell.swift */,
+				F6674D0827BAECBC007C7D93 /* MenuCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		F6FADEA527B6DF5000C0F225 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +382,7 @@
 		F6FADEAF27B6EEA900C0F225 /* MenuView */ = {
 			isa = PBXGroup;
 			children = (
+				F6674D0627BAECA1007C7D93 /* Cell */,
 				F6FADEB027B6EF1000C0F225 /* MenuViewController.xib */,
 				F6FADEB127B6EF1000C0F225 /* MenuViewController.swift */,
 				F6FADEB227B6EF1000C0F225 /* MenuRouter.swift */,
@@ -447,6 +464,7 @@
 				B485D39627ADA66500C07C35 /* Assets.xcassets in Resources */,
 				B4FDF3B827B2ED5900D3C570 /* PodcatsViewController.xib in Resources */,
 				F6FADEA927B6DF8D00C0F225 /* AppsCell.xib in Resources */,
+				F6674D0A27BAECBC007C7D93 /* MenuCell.xib in Resources */,
 				B4FDF3C727B2ED7300D3C570 /* BookViewController.xib in Resources */,
 				F6FADEB727B6EF1000C0F225 /* MenuViewController.xib in Resources */,
 				B43E6E5027B59898009C889B /* AppleGenericDetailViewController.xib in Resources */,
@@ -464,6 +482,7 @@
 			files = (
 				B4226FD927B19DD800DFFD1D /* AppleServerModel.swift in Sources */,
 				B485D38D27ADA66300C07C35 /* AppDelegate.swift in Sources */,
+				F6674D0927BAECBC007C7D93 /* MenuCell.swift in Sources */,
 				B485D3CD27ADC95700C07C35 /* SplashProvider.swift in Sources */,
 				B4FDF3D527B2F04200D3C570 /* HomeTabBarCoordinator.swift in Sources */,
 				B43E6E5227B59898009C889B /* AppleGenericDetailRouter.swift in Sources */,
@@ -491,6 +510,7 @@
 				F6FADEB927B6EF1000C0F225 /* MenuRouter.swift in Sources */,
 				F6FADEBD27B6EF1000C0F225 /* MenuInteractor.swift in Sources */,
 				B4FDF3AB27B2ED4600D3C570 /* MusicRouter.swift in Sources */,
+				F6674D0527BAD6F7007C7D93 /* MenuServerModel.swift in Sources */,
 				B4FDF3B927B2ED5900D3C570 /* PodcatsViewController.swift in Sources */,
 				B4FDF3AF27B2ED4700D3C570 /* MusicInteractor.swift in Sources */,
 				B4FDF3AC27B2ED4600D3C570 /* MusicProvider.swift in Sources */,

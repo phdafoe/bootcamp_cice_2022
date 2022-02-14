@@ -60,10 +60,10 @@ struct URLEnpoint {
         case heroku
     }
     
-    static let music = "music/most-played/%@/songs.json"
-    static let podcast = "podcasts/top/%@/podcast-episodes.json"
-    static let books = "books/top-free/%@/books.json"
-    static let apps = "apps/top-free/%@/apps.json"
+    static let music = "%@/music/most-played/%@/songs.json"
+    static let podcast = "%@/podcasts/top/%@/podcast-episodes.json"
+    static let books = "%@/books/top-free/%@/books.json"
+    static let apps = "%@/apps/top-free/%@/apps.json"
     
     static let menu = "iCoMenuResponse"
 }
@@ -83,20 +83,20 @@ extension URLEnpoint{
         case .webService:
             switch self.environmentDefault{
             case .DEV:
-                return ""
+                return "https://rss.applemarketingtools.com/api/v2/"
             case .PRE:
                 return ""
             case .PRO:
-                return "https://rss.applemarketingtools.com/api/v2/us/"
+                return ""
             }
         case .heroku:
             switch self.environmentDefault{
             case .DEV:
-                return ""
+                return "https://icospartan-app.herokuapp.com/"
             case .PRE:
                 return ""
             case .PRO:
-                return "https://icospartan-app.herokuapp.com/"
+                return ""
             }
         }
     }
@@ -109,6 +109,8 @@ class Utils {
         let kPassword = "PASSWORD"
         let kUsuarioLogado = "USUARIO_LOGADO"
         let kPrefer = UserDefaults.standard
+        let BearerAuthetication = "Bearer 123456789"
+        let Authetication = "Authorization"
     }
     
     static func showAlert(title: String, message: String) -> UIAlertController {
