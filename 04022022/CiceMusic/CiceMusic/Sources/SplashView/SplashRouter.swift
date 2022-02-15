@@ -11,6 +11,7 @@ import Foundation
 protocol SplashRouterInputProtocol {
     func showHometabBarRouter(dataSource: [MenuResponse])
     func showAlert(title: String, message: String)
+    func showLoginViewRouter(dataSource: [MenuResponse])
 }
 
 final class SplashRouter: BaseRouter<SplashViewController>{
@@ -38,4 +39,14 @@ extension SplashRouter: SplashRouterInputProtocol {
             self.viewController?.present(Utils.showAlert(title: title, message: message), animated: true, completion: nil)
         }
     }
+    
+    func showLoginViewRouter(dataSource: [MenuResponse]) {
+        DispatchQueue.main.async {
+            let vc = LoginCoordinator.view()
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .fullScreen
+            self.viewController?.present(vc, animated: true, completion: nil)
+        }
+    }
+    
 }

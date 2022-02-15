@@ -63,6 +63,13 @@
 		F6674D0527BAD6F7007C7D93 /* MenuServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D0427BAD6F7007C7D93 /* MenuServerModel.swift */; };
 		F6674D0927BAECBC007C7D93 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D0727BAECBC007C7D93 /* MenuCell.swift */; };
 		F6674D0A27BAECBC007C7D93 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6674D0827BAECBC007C7D93 /* MenuCell.xib */; };
+		F6674D1327BAF551007C7D93 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6674D0C27BAF551007C7D93 /* LoginViewController.xib */; };
+		F6674D1427BAF551007C7D93 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D0D27BAF551007C7D93 /* LoginViewController.swift */; };
+		F6674D1527BAF551007C7D93 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D0E27BAF551007C7D93 /* LoginRouter.swift */; };
+		F6674D1627BAF551007C7D93 /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D0F27BAF551007C7D93 /* LoginProvider.swift */; };
+		F6674D1727BAF551007C7D93 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D1027BAF551007C7D93 /* LoginCoordinator.swift */; };
+		F6674D1827BAF551007C7D93 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D1127BAF551007C7D93 /* LoginPresenter.swift */; };
+		F6674D1927BAF551007C7D93 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D1227BAF551007C7D93 /* LoginInteractor.swift */; };
 		F6FADEA827B6DF8D00C0F225 /* AppsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FADEA627B6DF8D00C0F225 /* AppsCell.swift */; };
 		F6FADEA927B6DF8D00C0F225 /* AppsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6FADEA727B6DF8D00C0F225 /* AppsCell.xib */; };
 		F6FADEAE27B6E5B800C0F225 /* SWRevealViewController .m in Sources */ = {isa = PBXBuildFile; fileRef = F6FADEAD27B6E5B800C0F225 /* SWRevealViewController .m */; };
@@ -133,6 +140,13 @@
 		F6674D0427BAD6F7007C7D93 /* MenuServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuServerModel.swift; sourceTree = "<group>"; };
 		F6674D0727BAECBC007C7D93 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		F6674D0827BAECBC007C7D93 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		F6674D0C27BAF551007C7D93 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		F6674D0D27BAF551007C7D93 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F6674D0E27BAF551007C7D93 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		F6674D0F27BAF551007C7D93 /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
+		F6674D1027BAF551007C7D93 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		F6674D1127BAF551007C7D93 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		F6674D1227BAF551007C7D93 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		F6FADEA627B6DF8D00C0F225 /* AppsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsCell.swift; sourceTree = "<group>"; };
 		F6FADEA727B6DF8D00C0F225 /* AppsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppsCell.xib; sourceTree = "<group>"; };
 		F6FADEAB27B6E5B700C0F225 /* CiceMusic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CiceMusic-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -239,6 +253,7 @@
 		B485D3AC27ADABD700C07C35 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F6674D0B27BAF52A007C7D93 /* Login */,
 				F6FADEAF27B6EEA900C0F225 /* MenuView */,
 				B43E6E4827B59870009C889B /* AppleGenericDetail */,
 				B4FDF3A127B2ED1C00D3C570 /* BooksView */,
@@ -360,6 +375,20 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		F6674D0B27BAF52A007C7D93 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F6674D0C27BAF551007C7D93 /* LoginViewController.xib */,
+				F6674D0D27BAF551007C7D93 /* LoginViewController.swift */,
+				F6674D0E27BAF551007C7D93 /* LoginRouter.swift */,
+				F6674D0F27BAF551007C7D93 /* LoginProvider.swift */,
+				F6674D1027BAF551007C7D93 /* LoginCoordinator.swift */,
+				F6674D1127BAF551007C7D93 /* LoginPresenter.swift */,
+				F6674D1227BAF551007C7D93 /* LoginInteractor.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		F6FADEA527B6DF5000C0F225 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +496,7 @@
 				F6674D0A27BAECBC007C7D93 /* MenuCell.xib in Resources */,
 				B4FDF3C727B2ED7300D3C570 /* BookViewController.xib in Resources */,
 				F6FADEB727B6EF1000C0F225 /* MenuViewController.xib in Resources */,
+				F6674D1327BAF551007C7D93 /* LoginViewController.xib in Resources */,
 				B43E6E5027B59898009C889B /* AppleGenericDetailViewController.xib in Resources */,
 				B4FDF3D227B2F02700D3C570 /* HomeTabBarViewController.xib in Resources */,
 				B4FDF3DC27B30D4A00D3C570 /* MusicCell.xib in Resources */,
@@ -480,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6674D1427BAF551007C7D93 /* LoginViewController.swift in Sources */,
 				B4226FD927B19DD800DFFD1D /* AppleServerModel.swift in Sources */,
 				B485D38D27ADA66300C07C35 /* AppDelegate.swift in Sources */,
 				F6674D0927BAECBC007C7D93 /* MenuCell.swift in Sources */,
@@ -487,15 +518,19 @@
 				B4FDF3D527B2F04200D3C570 /* HomeTabBarCoordinator.swift in Sources */,
 				B43E6E5227B59898009C889B /* AppleGenericDetailRouter.swift in Sources */,
 				B485D3BE27ADB1D000C07C35 /* SplashCoordinator.swift in Sources */,
+				F6674D1527BAF551007C7D93 /* LoginRouter.swift in Sources */,
 				B485D3B827ADADC700C07C35 /* SplashInteractor.swift in Sources */,
 				B485D3BB27ADADD600C07C35 /* SplashRouter.swift in Sources */,
 				B43E6E5927B5AF2B009C889B /* AppServerModel.swift in Sources */,
 				B43E6E5327B59898009C889B /* AppleGenericDetailProvider.swift in Sources */,
+				F6674D1927BAF551007C7D93 /* LoginInteractor.swift in Sources */,
 				B4FDF3BE27B2ED5900D3C570 /* PodcatsInteractor.swift in Sources */,
 				B43E6E5627B59898009C889B /* AppleGenericDetailInteractor.swift in Sources */,
 				B4FDF3CB27B2ED7300D3C570 /* BookCoordinator.swift in Sources */,
 				F6FADEBC27B6EF1000C0F225 /* MenuPresenter.swift in Sources */,
 				B4FDF3BA27B2ED5900D3C570 /* PodcatsRouter.swift in Sources */,
+				F6674D1827BAF551007C7D93 /* LoginPresenter.swift in Sources */,
+				F6674D1727BAF551007C7D93 /* LoginCoordinator.swift in Sources */,
 				B485D3C227ADBF5900C07C35 /* NetworkService.swift in Sources */,
 				B43E6E5127B59898009C889B /* AppleGenericDetailViewController.swift in Sources */,
 				B4FDF3C827B2ED7300D3C570 /* BookViewController.swift in Sources */,
@@ -520,6 +555,7 @@
 				B485D3AA27ADA94C00C07C35 /* BaseVIPER.swift in Sources */,
 				B485D3CA27ADC13900C07C35 /* Utils.swift in Sources */,
 				B4FDF3AE27B2ED4700D3C570 /* MusicPresenter.swift in Sources */,
+				F6674D1627BAF551007C7D93 /* LoginProvider.swift in Sources */,
 				B4FDF3DB27B30D4A00D3C570 /* MusicCell.swift in Sources */,
 				B48C4B6127B45257009BB5EE /* AppleViewModel.swift in Sources */,
 				B4FDF3CC27B2ED7300D3C570 /* BookPresenter.swift in Sources */,
