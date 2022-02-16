@@ -71,6 +71,10 @@
 		F6674D1827BAF551007C7D93 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D1127BAF551007C7D93 /* LoginPresenter.swift */; };
 		F6674D1927BAF551007C7D93 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D1227BAF551007C7D93 /* LoginInteractor.swift */; };
 		F6C30EB127BD7E32003B4A1C /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = F6C30EB027BD7E32003B4A1C /* PKHUD */; };
+		F6C30EB527BD9116003B4A1C /* GenericWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C30EB327BD9116003B4A1C /* GenericWebViewController.swift */; };
+		F6C30EB627BD9116003B4A1C /* GenericWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6C30EB427BD9116003B4A1C /* GenericWebViewController.xib */; };
+		F6C30EB827BD912D003B4A1C /* GenericWebPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C30EB727BD912D003B4A1C /* GenericWebPresenter.swift */; };
+		F6C30EBA27BD9139003B4A1C /* GenericWebCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C30EB927BD9139003B4A1C /* GenericWebCoordinator.swift */; };
 		F6E8168927BC2F8000EA0A84 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6E8168B27BC2F8000EA0A84 /* Localizable.strings */; };
 		F6E8169327BC31E300EA0A84 /* AlertDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8169127BC31E300EA0A84 /* AlertDefaultViewController.swift */; };
 		F6E8169427BC31E300EA0A84 /* AlertDefaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E8169227BC31E300EA0A84 /* AlertDefaultViewController.xib */; };
@@ -153,6 +157,10 @@
 		F6674D1027BAF551007C7D93 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		F6674D1127BAF551007C7D93 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		F6674D1227BAF551007C7D93 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		F6C30EB327BD9116003B4A1C /* GenericWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericWebViewController.swift; sourceTree = "<group>"; };
+		F6C30EB427BD9116003B4A1C /* GenericWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericWebViewController.xib; sourceTree = "<group>"; };
+		F6C30EB727BD912D003B4A1C /* GenericWebPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericWebPresenter.swift; sourceTree = "<group>"; };
+		F6C30EB927BD9139003B4A1C /* GenericWebCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericWebCoordinator.swift; sourceTree = "<group>"; };
 		F6E8168A27BC2F8000EA0A84 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F6E8168C27BC2F8600EA0A84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F6E8168D27BC2F8800EA0A84 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -271,6 +279,7 @@
 		B485D3AC27ADABD700C07C35 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F6C30EB227BD90E6003B4A1C /* WebView */,
 				F6674D0B27BAF52A007C7D93 /* Login */,
 				F6FADEAF27B6EEA900C0F225 /* MenuView */,
 				B43E6E4827B59870009C889B /* AppleGenericDetail */,
@@ -405,6 +414,17 @@
 				F6674D1227BAF551007C7D93 /* LoginInteractor.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		F6C30EB227BD90E6003B4A1C /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				F6C30EB327BD9116003B4A1C /* GenericWebViewController.swift */,
+				F6C30EB427BD9116003B4A1C /* GenericWebViewController.xib */,
+				F6C30EB727BD912D003B4A1C /* GenericWebPresenter.swift */,
+				F6C30EB927BD9139003B4A1C /* GenericWebCoordinator.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		F6E8168127BC2E6100EA0A84 /* Localizables */ = {
@@ -551,6 +571,7 @@
 				B485D39627ADA66500C07C35 /* Assets.xcassets in Resources */,
 				B4FDF3B827B2ED5900D3C570 /* PodcatsViewController.xib in Resources */,
 				F6FADEA927B6DF8D00C0F225 /* AppsCell.xib in Resources */,
+				F6C30EB627BD9116003B4A1C /* GenericWebViewController.xib in Resources */,
 				F6674D0A27BAECBC007C7D93 /* MenuCell.xib in Resources */,
 				B4FDF3C727B2ED7300D3C570 /* BookViewController.xib in Resources */,
 				F6FADEB727B6EF1000C0F225 /* MenuViewController.xib in Resources */,
@@ -576,6 +597,7 @@
 				B485D3CD27ADC95700C07C35 /* SplashProvider.swift in Sources */,
 				B4FDF3D527B2F04200D3C570 /* HomeTabBarCoordinator.swift in Sources */,
 				B43E6E5227B59898009C889B /* AppleGenericDetailRouter.swift in Sources */,
+				F6C30EB827BD912D003B4A1C /* GenericWebPresenter.swift in Sources */,
 				B485D3BE27ADB1D000C07C35 /* SplashCoordinator.swift in Sources */,
 				F6674D1527BAF551007C7D93 /* LoginRouter.swift in Sources */,
 				B485D3B827ADADC700C07C35 /* SplashInteractor.swift in Sources */,
@@ -593,6 +615,7 @@
 				B485D3C227ADBF5900C07C35 /* NetworkService.swift in Sources */,
 				B43E6E5127B59898009C889B /* AppleGenericDetailViewController.swift in Sources */,
 				B4FDF3C827B2ED7300D3C570 /* BookViewController.swift in Sources */,
+				F6C30EB527BD9116003B4A1C /* GenericWebViewController.swift in Sources */,
 				B485D3B527ADAC5E00C07C35 /* SplashPresenter.swift in Sources */,
 				B4FDF3CA27B2ED7300D3C570 /* BookProvider.swift in Sources */,
 				B48C4B5C27B44B36009BB5EE /* PodcastServerModel.swift in Sources */,
@@ -615,6 +638,7 @@
 				F6E8169727BC3C1400EA0A84 /* CusomAlertManager.swift in Sources */,
 				B485D3AA27ADA94C00C07C35 /* BaseVIPER.swift in Sources */,
 				B485D3CA27ADC13900C07C35 /* Utils.swift in Sources */,
+				F6C30EBA27BD9139003B4A1C /* GenericWebCoordinator.swift in Sources */,
 				B4FDF3AE27B2ED4700D3C570 /* MusicPresenter.swift in Sources */,
 				F6674D1627BAF551007C7D93 /* LoginProvider.swift in Sources */,
 				F6E8169327BC31E300EA0A84 /* AlertDefaultViewController.swift in Sources */,

@@ -61,7 +61,7 @@ extension MenuPresenter: MenuPresenterInputProtocol {
         return self.dataSourceMenu[indexPath]
     }
     func showWebSite() {
-        
+        self.router?.showCustomAlert(delegate: self, model: CustomAlertManager(type: .generalConfirmation))
     }
     func showMusicViewController() {
         
@@ -76,7 +76,7 @@ extension MenuPresenter: MenuPresenterInputProtocol {
         if canSendMail{
             self.router?.canSendMail(delegate: delegate)
         } else {
-            self.router?.cantSendMail(model: CustomAlertManager(type: .cantSendMail))
+            self.router?.showCustomAlert(delegate: nil, model: CustomAlertManager(type: .cantSendMail))
         }
     }
 }
@@ -87,6 +87,15 @@ extension MenuPresenter: MenuInteractorOutputProtocol {
         self.dataSourceMenu.removeAll()
         self.dataSourceMenu = data
         self.viewController?.reloadInformationInView()
+    }
+}
+
+extension MenuPresenter: AlertDefaultViewControllerDelegate{
+    func primaryButtonPressed() {
+        self.router?.showGenericWebView()
+    }
+    func secondButtonPresses() {
+        //
     }
 }
 
