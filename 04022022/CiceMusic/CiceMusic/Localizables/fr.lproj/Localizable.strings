@@ -1,0 +1,18 @@
+// GENERAL
+"general_accept" = "Accepter";
+"general_cancel" = "Annuler";
+
+
+// LOGIN
+"title_my_alert_login_success" = "Félicitations!";
+"message_my_alert_login_success" = "Vous aurez désormais accès au portail musical iTunes, aux podcasts et aux livres";
+"title_my_alert_login_failure" = "Vous avez un échec";
+"message_my_alert_login_failure" = "Vous devez remplir les champs nom d'utilisateur et mot de password";
+
+
+// REGISTRO
+
+
+
+
+// BUROFAX

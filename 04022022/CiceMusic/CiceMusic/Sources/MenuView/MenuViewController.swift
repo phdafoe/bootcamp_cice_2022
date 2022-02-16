@@ -24,6 +24,7 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 
 import UIKit
+import MessageUI
 
 // Output del Presenter
 protocol MenuPresenterOutputProtocol {
@@ -75,6 +76,27 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return menuCell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            self.presenter?.showWebSite()
+        case 1:
+            self.presenter?.showMusicViewController()
+        case 2:
+            self.presenter?.showCalendarViewController()
+        case 3:
+            self.presenter?.showTipsViewController()
+        default:
+            self.presenter?.sendMail(canSendMail: MFMailComposeViewController.canSendMail() ? true : false,
+                                     delegate: self)
+        }
+    }
+    
+
+}
+
+extension MenuViewController: MFMailComposeViewControllerDelegate {
     
 }
 

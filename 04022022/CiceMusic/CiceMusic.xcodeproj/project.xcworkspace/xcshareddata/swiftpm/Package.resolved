@@ -9,6 +9,15 @@
           "revision": "0c02c46cfdc0656ce74fd0963a75e5000a0b7f23",
           "version": "7.1.2"
         }
+      },
+      {
+        "package": "PKHUD",
+        "repositoryURL": "https://github.com/pkluz/PKHUD.git",
+        "state": {
+          "branch": null,
+          "revision": "8fd26f23057c6bebd6695524b1c3e05e93aba571",
+          "version": "5.4.0"
+        }
       }
     ]
   },

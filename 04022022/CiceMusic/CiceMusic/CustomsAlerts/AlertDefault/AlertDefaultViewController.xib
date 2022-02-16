@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,8 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertDefaultViewController" customModule="CiceMusic" customModuleProvider="target">
             <connections>
+                <outlet property="alertContentView" destination="dZP-Ij-TLu" id="jo4-sr-6dg"/>
                 <outlet property="backgroundContentView" destination="UWy-CN-rHv" id="fA7-z0-Rc4"/>
                 <outlet property="closeBTN" destination="vIT-pv-XJ8" id="Q64-ys-qZZ"/>
+                <outlet property="constHeightAcceptButton" destination="0in-wN-Sqg" id="3cT-ff-Eor"/>
                 <outlet property="constHeightButtonClose" destination="LbQ-EI-1su" id="uMF-Ej-NL7"/>
                 <outlet property="constHeightCancelButton" destination="kcK-FG-oML" id="ssp-Nc-Gde"/>
                 <outlet property="messageAlertLBL" destination="w1B-Yt-hZp" id="Ycw-yW-cVR"/>
@@ -37,14 +38,15 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIT-pv-XJ8">
                             <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
-                            <color key="backgroundColor" name="AccentColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="44" id="0kD-YZ-yKQ"/>
                                 <constraint firstAttribute="height" constant="44" id="LbQ-EI-1su"/>
                             </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="X">
-                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="27"/>
                             </buttonConfiguration>
                             <connections>
                                 <action selector="closeACTION:" destination="-1" eventType="touchUpInside" id="rIN-cM-ohB"/>
@@ -52,14 +54,16 @@
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Titulo del Alert View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygl-kF-hFy">
                             <rect key="frame" x="8" y="55" width="327" height="21"/>
-                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1B-Yt-hZp">
                             <rect key="frame" x="8" y="89" width="327" height="125.33333333333331"/>
-                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <string key="text">_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View</string>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                             <nil key="textColor"/>
@@ -128,14 +132,8 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

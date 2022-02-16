@@ -38,6 +38,7 @@ class PodcatsViewController: BaseView<PodcatsPresenterInputProtocol> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.showLoading()
         self.presenter?.fetchPodcastFromWebService()
         self.configuracionTV()
         self.menuButton()
@@ -56,6 +57,7 @@ extension PodcatsViewController: PodcatsPresenterOutputProtocol {
 
     func reloadInformationInView() {
         self.podcatsTableView.reloadData()
+        self.hideLoading()
     }
 }
 

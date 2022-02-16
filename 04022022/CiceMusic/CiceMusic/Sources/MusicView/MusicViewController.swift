@@ -37,6 +37,7 @@ class MusicViewController: BaseView<MusicPresenterInputProtocol> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.showLoading()
         self.presenter?.loadDataFromInteractor()
         self.configuracionTV()
         self.menuButton()
@@ -55,6 +56,7 @@ extension MusicViewController: MusicPresenterOutputProtocol {
 
     func reloadInformationInView() {
         self.musicTableView.reloadData()
+        self.hideLoading()
     }
 }
 

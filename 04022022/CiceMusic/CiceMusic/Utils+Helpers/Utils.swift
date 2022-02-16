@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MessageUI
 
 enum HTTPMethods: String {
     case get = "GET"
@@ -117,6 +118,16 @@ class Utils {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         return alertVC
+    }
+    
+    static func configuracionMailCompose(delegate: MFMailComposeViewControllerDelegate, data: [String]) -> MFMailComposeViewController {
+        let mailCompo = MFMailComposeViewController()
+        mailCompo.mailComposeDelegate = delegate
+        mailCompo.setToRecipients(["info@mail.com", "masinfo@mail.es"])
+        mailCompo.setSubject("este es en mensaje para el equipo de soporte")
+        let emailBody = "Los datos del formualario de registro son \(data)"
+        mailCompo.setMessageBody(emailBody, isHTML: false)
+        return mailCompo
     }
 }
 

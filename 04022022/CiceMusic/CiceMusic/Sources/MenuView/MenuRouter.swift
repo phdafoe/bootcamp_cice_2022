@@ -25,10 +25,12 @@ POSSIBILITY OF SUCH DAMAGE.
 
 import Foundation
 import UIKit
+import MessageUI
 
 // Input del Router
 protocol MenuRouterInputProtocol {
-
+    func canSendMail(delegate: MFMailComposeViewControllerDelegate)
+    func cantSendMail(model: CustomAlertManager)
 }
 
 final class MenuRouter: BaseRouter<MenuViewController> {
@@ -37,5 +39,24 @@ final class MenuRouter: BaseRouter<MenuViewController> {
 
 // Input del Router
 extension MenuRouter: MenuRouterInputProtocol {
-    
+    func canSendMail(delegate: MFMailComposeViewControllerDelegate){
+        DispatchQueue.main.async {
+            self.viewController?.present(Utils.configuracionMailCompose(delegate: delegate,
+                                                                        data: []),
+                                         animated: true,
+                                         completion: nil)
+        }
+    }
+    func cantSendMail(model: CustomAlertManager){
+        DispatchQueue.main.async {
+            let vc = AlertDefaultViewController()
+            //vc.delegate = delegate
+            vc.alertManager = model
+            vc.modalPresentationStyle = .overFullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            self.viewController?.present(vc, animated: true, completion: nil)
+        }
+    }
 }
+
+

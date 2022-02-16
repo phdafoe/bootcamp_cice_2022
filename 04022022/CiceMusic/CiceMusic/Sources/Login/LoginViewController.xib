@@ -84,7 +84,7 @@
                                 <constraint firstAttribute="height" constant="34" id="Xuv-jB-D6t"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OUa-Or-5Zx">
                             <rect key="frame" x="19" y="18" width="31" height="38"/>
@@ -101,9 +101,23 @@
                                 <constraint firstAttribute="height" constant="1" id="D73-pz-0ID"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejH-Ls-s8I">
+                            <rect key="frame" x="312" y="17" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="UIb-zc-5Ei"/>
+                                <constraint firstAttribute="width" constant="40" id="nzD-Nc-fsE"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
+                            <connections>
+                                <action selector="showOrNotPassword:" destination="-1" eventType="touchUpInside" id="UVN-z5-nGd"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <constraints>
+                        <constraint firstItem="ejH-Ls-s8I" firstAttribute="trailing" secondItem="sn4-Co-RwD" secondAttribute="trailing" id="01d-zp-yCc"/>
                         <constraint firstAttribute="height" constant="74" id="3Ll-am-z2b"/>
                         <constraint firstItem="OUa-Or-5Zx" firstAttribute="top" secondItem="glk-Sm-Coj" secondAttribute="top" constant="17.5" id="8oD-cB-uQR"/>
                         <constraint firstAttribute="trailing" secondItem="JFo-pv-gZ3" secondAttribute="trailing" constant="22" id="ECn-55-y9g"/>
@@ -111,6 +125,7 @@
                         <constraint firstItem="sn4-Co-RwD" firstAttribute="top" secondItem="JFo-pv-gZ3" secondAttribute="bottom" constant="10.5" id="Xfs-2j-giB"/>
                         <constraint firstItem="JFo-pv-gZ3" firstAttribute="leading" secondItem="OUa-Or-5Zx" secondAttribute="trailing" constant="15" id="gdF-js-kW1"/>
                         <constraint firstItem="JFo-pv-gZ3" firstAttribute="top" secondItem="OUa-Or-5Zx" secondAttribute="top" id="mIM-qt-Fwh"/>
+                        <constraint firstItem="ejH-Ls-s8I" firstAttribute="centerY" secondItem="glk-Sm-Coj" secondAttribute="centerY" id="sfQ-mV-dP3"/>
                         <constraint firstItem="sn4-Co-RwD" firstAttribute="trailing" secondItem="JFo-pv-gZ3" secondAttribute="trailing" id="su5-xS-dn8"/>
                         <constraint firstItem="sn4-Co-RwD" firstAttribute="leading" secondItem="JFo-pv-gZ3" secondAttribute="leading" id="vvI-re-taE"/>
                     </constraints>
@@ -163,6 +178,7 @@
         </view>
     </objects>
     <resources>
+        <image name="eye" catalog="system" width="128" height="81"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

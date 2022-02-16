@@ -70,6 +70,7 @@
 		F6674D1727BAF551007C7D93 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D1027BAF551007C7D93 /* LoginCoordinator.swift */; };
 		F6674D1827BAF551007C7D93 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D1127BAF551007C7D93 /* LoginPresenter.swift */; };
 		F6674D1927BAF551007C7D93 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D1227BAF551007C7D93 /* LoginInteractor.swift */; };
+		F6C30EB127BD7E32003B4A1C /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = F6C30EB027BD7E32003B4A1C /* PKHUD */; };
 		F6E8168927BC2F8000EA0A84 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6E8168B27BC2F8000EA0A84 /* Localizable.strings */; };
 		F6E8169327BC31E300EA0A84 /* AlertDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8169127BC31E300EA0A84 /* AlertDefaultViewController.swift */; };
 		F6E8169427BC31E300EA0A84 /* AlertDefaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E8169227BC31E300EA0A84 /* AlertDefaultViewController.xib */; };
@@ -180,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B48C4B5827B43A92009BB5EE /* Kingfisher in Frameworks */,
+				F6C30EB127BD7E32003B4A1C /* PKHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +493,7 @@
 			name = CiceMusic;
 			packageProductDependencies = (
 				B48C4B5727B43A92009BB5EE /* Kingfisher */,
+				F6C30EB027BD7E32003B4A1C /* PKHUD */,
 			);
 			productName = CiceMusic;
 			productReference = B485D38927ADA66300C07C35 /* CiceMusic.app */;
@@ -525,6 +528,7 @@
 			mainGroup = B485D38027ADA66300C07C35;
 			packageReferences = (
 				B48C4B5627B43A92009BB5EE /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				F6C30EAF27BD7E32003B4A1C /* XCRemoteSwiftPackageReference "PKHUD" */,
 			);
 			productRefGroup = B485D38A27ADA66300C07C35 /* Products */;
 			projectDirPath = "";
@@ -930,6 +934,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		F6C30EAF27BD7E32003B4A1C /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -937,6 +949,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B48C4B5627B43A92009BB5EE /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		F6C30EB027BD7E32003B4A1C /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6C30EAF27BD7E32003B4A1C /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

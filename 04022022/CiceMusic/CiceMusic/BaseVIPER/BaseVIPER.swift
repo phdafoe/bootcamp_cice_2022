@@ -6,10 +6,18 @@
 //
 
 import UIKit
+import PKHUD
 
 // MARK: - ViewController
 class BaseView<P>: UIViewController {
     var presenter: P?
+    
+    func showLoading() {
+        HUD.show(.progress)
+    }
+    func hideLoading(){
+        HUD.hide()
+    }
 }
 // MARK: - Presenter
 class BasePresenter<V, I, R> {
