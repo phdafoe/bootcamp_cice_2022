@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertDefaultViewController" customModule="CiceMusic" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundContentView" destination="UWy-CN-rHv" id="fA7-z0-Rc4"/>
+                <outlet property="closeBTN" destination="vIT-pv-XJ8" id="Q64-ys-qZZ"/>
+                <outlet property="constHeightButtonClose" destination="LbQ-EI-1su" id="uMF-Ej-NL7"/>
+                <outlet property="constHeightCancelButton" destination="kcK-FG-oML" id="ssp-Nc-Gde"/>
+                <outlet property="messageAlertLBL" destination="w1B-Yt-hZp" id="Ycw-yW-cVR"/>
+                <outlet property="primaryBTN" destination="FKO-LR-IVP" id="Z30-0t-JqO"/>
+                <outlet property="secondaryBTN" destination="kNm-dn-v7o" id="YMf-Xd-qD7"/>
+                <outlet property="titleAlertLBL" destination="ygl-kF-hFy" id="g6N-1u-yL7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.75" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWy-CN-rHv" userLabel="Background">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZP-Ij-TLu" userLabel="AlertView">
+                    <rect key="frame" x="16" y="221.99999999999997" width="343" height="368.33333333333326"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIT-pv-XJ8">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <color key="backgroundColor" name="AccentColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="0kD-YZ-yKQ"/>
+                                <constraint firstAttribute="height" constant="44" id="LbQ-EI-1su"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="X">
+                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="closeACTION:" destination="-1" eventType="touchUpInside" id="rIN-cM-ohB"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Titulo del Alert View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygl-kF-hFy">
+                            <rect key="frame" x="8" y="55" width="327" height="21"/>
+                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1B-Yt-hZp">
+                            <rect key="frame" x="8" y="89" width="327" height="125.33333333333331"/>
+                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <string key="text">_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View_Mensaje del Alert View</string>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKO-LR-IVP">
+                            <rect key="frame" x="8" y="232.33333333333331" width="327" height="50"/>
+                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="0in-wN-Sqg"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="_ Aceptar"/>
+                            <connections>
+                                <action selector="primaryButtonACTION:" destination="-1" eventType="touchUpInside" id="7AY-ub-z0i"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNm-dn-v7o">
+                            <rect key="frame" x="8" y="300.33333333333337" width="327" height="50"/>
+                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="kcK-FG-oML"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="_ Cancelar"/>
+                            <connections>
+                                <action selector="secondaryButtonACTION:" destination="-1" eventType="touchUpInside" id="Xuv-I9-XIx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="w1B-Yt-hZp" firstAttribute="trailing" secondItem="ygl-kF-hFy" secondAttribute="trailing" id="17f-7i-Pg9"/>
+                        <constraint firstAttribute="trailing" secondItem="kNm-dn-v7o" secondAttribute="trailing" constant="8" id="6NT-t3-A5r"/>
+                        <constraint firstItem="FKO-LR-IVP" firstAttribute="leading" secondItem="kNm-dn-v7o" secondAttribute="leading" id="7rZ-UO-Lyk"/>
+                        <constraint firstItem="vIT-pv-XJ8" firstAttribute="leading" secondItem="dZP-Ij-TLu" secondAttribute="leading" id="9xR-y7-c4x"/>
+                        <constraint firstAttribute="bottom" secondItem="kNm-dn-v7o" secondAttribute="bottom" constant="18" id="J7h-Wb-WCt"/>
+                        <constraint firstItem="FKO-LR-IVP" firstAttribute="trailing" secondItem="kNm-dn-v7o" secondAttribute="trailing" id="L5w-Ab-wKv"/>
+                        <constraint firstItem="FKO-LR-IVP" firstAttribute="top" secondItem="w1B-Yt-hZp" secondAttribute="bottom" constant="18" id="Lg0-Kz-uBX"/>
+                        <constraint firstItem="ygl-kF-hFy" firstAttribute="leading" secondItem="dZP-Ij-TLu" secondAttribute="leading" constant="8" id="Mfr-H2-kAK"/>
+                        <constraint firstItem="kNm-dn-v7o" firstAttribute="leading" secondItem="dZP-Ij-TLu" secondAttribute="leading" constant="8" id="QYc-OP-s04"/>
+                        <constraint firstItem="vIT-pv-XJ8" firstAttribute="top" secondItem="dZP-Ij-TLu" secondAttribute="top" id="aP9-i1-YOQ"/>
+                        <constraint firstAttribute="trailing" secondItem="ygl-kF-hFy" secondAttribute="trailing" constant="8" id="hyf-ql-w2W"/>
+                        <constraint firstItem="kNm-dn-v7o" firstAttribute="top" secondItem="FKO-LR-IVP" secondAttribute="bottom" constant="18" id="uIv-9S-q5k"/>
+                        <constraint firstItem="w1B-Yt-hZp" firstAttribute="top" secondItem="ygl-kF-hFy" secondAttribute="bottom" constant="13" id="uZT-W9-XeO"/>
+                        <constraint firstItem="ygl-kF-hFy" firstAttribute="top" secondItem="vIT-pv-XJ8" secondAttribute="bottom" constant="11" id="vL3-8E-AX5"/>
+                        <constraint firstItem="w1B-Yt-hZp" firstAttribute="leading" secondItem="ygl-kF-hFy" secondAttribute="leading" id="xHh-Of-j9c"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="dZP-Ij-TLu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Env-e9-eHz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dZP-Ij-TLu" secondAttribute="trailing" constant="16" id="Pi6-Xx-hiy"/>
+                <constraint firstItem="UWy-CN-rHv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TGz-U6-uKj"/>
+                <constraint firstItem="UWy-CN-rHv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ULn-cN-kUQ"/>
+                <constraint firstItem="dZP-Ij-TLu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cmB-BV-JNm"/>
+                <constraint firstAttribute="bottom" secondItem="UWy-CN-rHv" secondAttribute="bottom" id="dwj-hC-8fa"/>
+                <constraint firstItem="dZP-Ij-TLu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="e1s-bh-AFm"/>
+                <constraint firstItem="UWy-CN-rHv" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="kdX-GR-GJu"/>
+            </constraints>
+            <point key="canvasLocation" x="138.40000000000001" y="111.57635467980296"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

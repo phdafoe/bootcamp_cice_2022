@@ -70,6 +70,11 @@
 		F6674D1727BAF551007C7D93 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D1027BAF551007C7D93 /* LoginCoordinator.swift */; };
 		F6674D1827BAF551007C7D93 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D1127BAF551007C7D93 /* LoginPresenter.swift */; };
 		F6674D1927BAF551007C7D93 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6674D1227BAF551007C7D93 /* LoginInteractor.swift */; };
+		F6E8168927BC2F8000EA0A84 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6E8168B27BC2F8000EA0A84 /* Localizable.strings */; };
+		F6E8169327BC31E300EA0A84 /* AlertDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8169127BC31E300EA0A84 /* AlertDefaultViewController.swift */; };
+		F6E8169427BC31E300EA0A84 /* AlertDefaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E8169227BC31E300EA0A84 /* AlertDefaultViewController.xib */; };
+		F6E8169727BC3C1400EA0A84 /* CusomAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8169627BC3C1400EA0A84 /* CusomAlertManager.swift */; };
+		F6E8169927BC3D6200EA0A84 /* LocalizedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8169827BC3D6200EA0A84 /* LocalizedKeys.swift */; };
 		F6FADEA827B6DF8D00C0F225 /* AppsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FADEA627B6DF8D00C0F225 /* AppsCell.swift */; };
 		F6FADEA927B6DF8D00C0F225 /* AppsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6FADEA727B6DF8D00C0F225 /* AppsCell.xib */; };
 		F6FADEAE27B6E5B800C0F225 /* SWRevealViewController .m in Sources */ = {isa = PBXBuildFile; fileRef = F6FADEAD27B6E5B800C0F225 /* SWRevealViewController .m */; };
@@ -147,6 +152,14 @@
 		F6674D1027BAF551007C7D93 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		F6674D1127BAF551007C7D93 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		F6674D1227BAF551007C7D93 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		F6E8168A27BC2F8000EA0A84 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6E8168C27BC2F8600EA0A84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6E8168D27BC2F8800EA0A84 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6E8168E27BC2F8900EA0A84 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6E8169127BC31E300EA0A84 /* AlertDefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDefaultViewController.swift; sourceTree = "<group>"; };
+		F6E8169227BC31E300EA0A84 /* AlertDefaultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertDefaultViewController.xib; sourceTree = "<group>"; };
+		F6E8169627BC3C1400EA0A84 /* CusomAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CusomAlertManager.swift; sourceTree = "<group>"; };
+		F6E8169827BC3D6200EA0A84 /* LocalizedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKeys.swift; sourceTree = "<group>"; };
 		F6FADEA627B6DF8D00C0F225 /* AppsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsCell.swift; sourceTree = "<group>"; };
 		F6FADEA727B6DF8D00C0F225 /* AppsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppsCell.xib; sourceTree = "<group>"; };
 		F6FADEAB27B6E5B700C0F225 /* CiceMusic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CiceMusic-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -218,6 +231,9 @@
 		B485D38B27ADA66300C07C35 /* CiceMusic */ = {
 			isa = PBXGroup;
 			children = (
+				F6E8169527BC3BFD00EA0A84 /* Managers */,
+				F6E8168F27BC31A100EA0A84 /* CustomsAlerts */,
+				F6E8168127BC2E6100EA0A84 /* Localizables */,
 				F6FADEAA27B6E55F00C0F225 /* MenuLateral */,
 				B48C4B5F27B45238009BB5EE /* ViewModels */,
 				B4226FD727B19DC800DFFD1D /* Models */,
@@ -389,6 +405,40 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		F6E8168127BC2E6100EA0A84 /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				F6E8168B27BC2F8000EA0A84 /* Localizable.strings */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
+		F6E8168F27BC31A100EA0A84 /* CustomsAlerts */ = {
+			isa = PBXGroup;
+			children = (
+				F6E8169027BC31B700EA0A84 /* AlertDefault */,
+			);
+			path = CustomsAlerts;
+			sourceTree = "<group>";
+		};
+		F6E8169027BC31B700EA0A84 /* AlertDefault */ = {
+			isa = PBXGroup;
+			children = (
+				F6E8169127BC31E300EA0A84 /* AlertDefaultViewController.swift */,
+				F6E8169227BC31E300EA0A84 /* AlertDefaultViewController.xib */,
+			);
+			path = AlertDefault;
+			sourceTree = "<group>";
+		};
+		F6E8169527BC3BFD00EA0A84 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F6E8169627BC3C1400EA0A84 /* CusomAlertManager.swift */,
+				F6E8169827BC3D6200EA0A84 /* LocalizedKeys.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		F6FADEA527B6DF5000C0F225 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +518,9 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				es,
+				de,
 			);
 			mainGroup = B485D38027ADA66300C07C35;
 			packageReferences = (
@@ -490,6 +543,7 @@
 				B4FDF3A927B2ED4600D3C570 /* MusicViewController.xib in Resources */,
 				B485D39927ADA66500C07C35 /* LaunchScreen.storyboard in Resources */,
 				B485D3B127ADAC0000C07C35 /* SplashViewController.xib in Resources */,
+				F6E8168927BC2F8000EA0A84 /* Localizable.strings in Resources */,
 				B485D39627ADA66500C07C35 /* Assets.xcassets in Resources */,
 				B4FDF3B827B2ED5900D3C570 /* PodcatsViewController.xib in Resources */,
 				F6FADEA927B6DF8D00C0F225 /* AppsCell.xib in Resources */,
@@ -500,6 +554,7 @@
 				B43E6E5027B59898009C889B /* AppleGenericDetailViewController.xib in Resources */,
 				B4FDF3D227B2F02700D3C570 /* HomeTabBarViewController.xib in Resources */,
 				B4FDF3DC27B30D4A00D3C570 /* MusicCell.xib in Resources */,
+				F6E8169427BC31E300EA0A84 /* AlertDefaultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,11 +606,14 @@
 				B4FDF3AC27B2ED4600D3C570 /* MusicProvider.swift in Sources */,
 				B4FDF3BB27B2ED5900D3C570 /* PodcatsProvider.swift in Sources */,
 				B4FDF3BC27B2ED5900D3C570 /* PodcatsCoordinator.swift in Sources */,
+				F6E8169927BC3D6200EA0A84 /* LocalizedKeys.swift in Sources */,
 				F6FADEAE27B6E5B800C0F225 /* SWRevealViewController .m in Sources */,
+				F6E8169727BC3C1400EA0A84 /* CusomAlertManager.swift in Sources */,
 				B485D3AA27ADA94C00C07C35 /* BaseVIPER.swift in Sources */,
 				B485D3CA27ADC13900C07C35 /* Utils.swift in Sources */,
 				B4FDF3AE27B2ED4700D3C570 /* MusicPresenter.swift in Sources */,
 				F6674D1627BAF551007C7D93 /* LoginProvider.swift in Sources */,
+				F6E8169327BC31E300EA0A84 /* AlertDefaultViewController.swift in Sources */,
 				B4FDF3DB27B30D4A00D3C570 /* MusicCell.swift in Sources */,
 				B48C4B6127B45257009BB5EE /* AppleViewModel.swift in Sources */,
 				B4FDF3CC27B2ED7300D3C570 /* BookPresenter.swift in Sources */,
@@ -583,6 +641,17 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		F6E8168B27BC2F8000EA0A84 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6E8168A27BC2F8000EA0A84 /* fr */,
+				F6E8168C27BC2F8600EA0A84 /* en */,
+				F6E8168D27BC2F8800EA0A84 /* de */,
+				F6E8168E27BC2F8900EA0A84 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -590,6 +659,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -651,6 +721,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -751,6 +822,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
