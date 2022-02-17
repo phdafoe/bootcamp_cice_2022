@@ -75,6 +75,16 @@
 		F6C30EB627BD9116003B4A1C /* GenericWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6C30EB427BD9116003B4A1C /* GenericWebViewController.xib */; };
 		F6C30EB827BD912D003B4A1C /* GenericWebPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C30EB727BD912D003B4A1C /* GenericWebPresenter.swift */; };
 		F6C30EBA27BD9139003B4A1C /* GenericWebCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C30EB927BD9139003B4A1C /* GenericWebCoordinator.swift */; };
+		F6D3C58627BED15400B68486 /* TipsTrainingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D3C57F27BED15400B68486 /* TipsTrainingViewController.xib */; };
+		F6D3C58727BED15400B68486 /* TipsTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3C58027BED15400B68486 /* TipsTrainingViewController.swift */; };
+		F6D3C58827BED15400B68486 /* TipsTrainingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3C58127BED15400B68486 /* TipsTrainingRouter.swift */; };
+		F6D3C58927BED15400B68486 /* TipsTrainingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3C58227BED15400B68486 /* TipsTrainingProvider.swift */; };
+		F6D3C58A27BED15400B68486 /* TipsTrainingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3C58327BED15400B68486 /* TipsTrainingCoordinator.swift */; };
+		F6D3C58B27BED15400B68486 /* TipsTrainingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3C58427BED15400B68486 /* TipsTrainingPresenter.swift */; };
+		F6D3C58C27BED15400B68486 /* TipsTrainingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3C58527BED15400B68486 /* TipsTrainingInteractor.swift */; };
+		F6D3C58E27BED2D900B68486 /* TipsServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3C58D27BED2D900B68486 /* TipsServerModel.swift */; };
+		F6D3C59227BED60300B68486 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D3C59027BED60300B68486 /* TipsCell.swift */; };
+		F6D3C59327BED60300B68486 /* TipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D3C59127BED60300B68486 /* TipsCell.xib */; };
 		F6E8168927BC2F8000EA0A84 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6E8168B27BC2F8000EA0A84 /* Localizable.strings */; };
 		F6E8169327BC31E300EA0A84 /* AlertDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8169127BC31E300EA0A84 /* AlertDefaultViewController.swift */; };
 		F6E8169427BC31E300EA0A84 /* AlertDefaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E8169227BC31E300EA0A84 /* AlertDefaultViewController.xib */; };
@@ -161,6 +171,16 @@
 		F6C30EB427BD9116003B4A1C /* GenericWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericWebViewController.xib; sourceTree = "<group>"; };
 		F6C30EB727BD912D003B4A1C /* GenericWebPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericWebPresenter.swift; sourceTree = "<group>"; };
 		F6C30EB927BD9139003B4A1C /* GenericWebCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericWebCoordinator.swift; sourceTree = "<group>"; };
+		F6D3C57F27BED15400B68486 /* TipsTrainingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsTrainingViewController.xib; sourceTree = "<group>"; };
+		F6D3C58027BED15400B68486 /* TipsTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTrainingViewController.swift; sourceTree = "<group>"; };
+		F6D3C58127BED15400B68486 /* TipsTrainingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTrainingRouter.swift; sourceTree = "<group>"; };
+		F6D3C58227BED15400B68486 /* TipsTrainingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTrainingProvider.swift; sourceTree = "<group>"; };
+		F6D3C58327BED15400B68486 /* TipsTrainingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTrainingCoordinator.swift; sourceTree = "<group>"; };
+		F6D3C58427BED15400B68486 /* TipsTrainingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTrainingPresenter.swift; sourceTree = "<group>"; };
+		F6D3C58527BED15400B68486 /* TipsTrainingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsTrainingInteractor.swift; sourceTree = "<group>"; };
+		F6D3C58D27BED2D900B68486 /* TipsServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsServerModel.swift; sourceTree = "<group>"; };
+		F6D3C59027BED60300B68486 /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
+		F6D3C59127BED60300B68486 /* TipsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsCell.xib; sourceTree = "<group>"; };
 		F6E8168A27BC2F8000EA0A84 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F6E8168C27BC2F8600EA0A84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F6E8168D27BC2F8800EA0A84 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -203,6 +223,7 @@
 				B48C4B5B27B44B36009BB5EE /* PodcastServerModel.swift */,
 				B43E6E5827B5AF2B009C889B /* AppServerModel.swift */,
 				F6674D0427BAD6F7007C7D93 /* MenuServerModel.swift */,
+				F6D3C58D27BED2D900B68486 /* TipsServerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -279,6 +300,7 @@
 		B485D3AC27ADABD700C07C35 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F6D3C57E27BED13D00B68486 /* TipsTrainingView */,
 				F6C30EB227BD90E6003B4A1C /* WebView */,
 				F6674D0B27BAF52A007C7D93 /* Login */,
 				F6FADEAF27B6EEA900C0F225 /* MenuView */,
@@ -425,6 +447,30 @@
 				F6C30EB927BD9139003B4A1C /* GenericWebCoordinator.swift */,
 			);
 			path = WebView;
+			sourceTree = "<group>";
+		};
+		F6D3C57E27BED13D00B68486 /* TipsTrainingView */ = {
+			isa = PBXGroup;
+			children = (
+				F6D3C58F27BED5E900B68486 /* Cell */,
+				F6D3C57F27BED15400B68486 /* TipsTrainingViewController.xib */,
+				F6D3C58027BED15400B68486 /* TipsTrainingViewController.swift */,
+				F6D3C58127BED15400B68486 /* TipsTrainingRouter.swift */,
+				F6D3C58227BED15400B68486 /* TipsTrainingProvider.swift */,
+				F6D3C58327BED15400B68486 /* TipsTrainingCoordinator.swift */,
+				F6D3C58427BED15400B68486 /* TipsTrainingPresenter.swift */,
+				F6D3C58527BED15400B68486 /* TipsTrainingInteractor.swift */,
+			);
+			path = TipsTrainingView;
+			sourceTree = "<group>";
+		};
+		F6D3C58F27BED5E900B68486 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F6D3C59027BED60300B68486 /* TipsCell.swift */,
+				F6D3C59127BED60300B68486 /* TipsCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F6E8168127BC2E6100EA0A84 /* Localizables */ = {
@@ -577,7 +623,9 @@
 				F6FADEB727B6EF1000C0F225 /* MenuViewController.xib in Resources */,
 				F6674D1327BAF551007C7D93 /* LoginViewController.xib in Resources */,
 				B43E6E5027B59898009C889B /* AppleGenericDetailViewController.xib in Resources */,
+				F6D3C58627BED15400B68486 /* TipsTrainingViewController.xib in Resources */,
 				B4FDF3D227B2F02700D3C570 /* HomeTabBarViewController.xib in Resources */,
+				F6D3C59327BED60300B68486 /* TipsCell.xib in Resources */,
 				B4FDF3DC27B30D4A00D3C570 /* MusicCell.xib in Resources */,
 				F6E8169427BC31E300EA0A84 /* AlertDefaultViewController.xib in Resources */,
 			);
@@ -590,14 +638,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D3C58E27BED2D900B68486 /* TipsServerModel.swift in Sources */,
 				F6674D1427BAF551007C7D93 /* LoginViewController.swift in Sources */,
 				B4226FD927B19DD800DFFD1D /* AppleServerModel.swift in Sources */,
 				B485D38D27ADA66300C07C35 /* AppDelegate.swift in Sources */,
 				F6674D0927BAECBC007C7D93 /* MenuCell.swift in Sources */,
 				B485D3CD27ADC95700C07C35 /* SplashProvider.swift in Sources */,
 				B4FDF3D527B2F04200D3C570 /* HomeTabBarCoordinator.swift in Sources */,
+				F6D3C59227BED60300B68486 /* TipsCell.swift in Sources */,
 				B43E6E5227B59898009C889B /* AppleGenericDetailRouter.swift in Sources */,
 				F6C30EB827BD912D003B4A1C /* GenericWebPresenter.swift in Sources */,
+				F6D3C58B27BED15400B68486 /* TipsTrainingPresenter.swift in Sources */,
 				B485D3BE27ADB1D000C07C35 /* SplashCoordinator.swift in Sources */,
 				F6674D1527BAF551007C7D93 /* LoginRouter.swift in Sources */,
 				B485D3B827ADADC700C07C35 /* SplashInteractor.swift in Sources */,
@@ -607,12 +658,14 @@
 				F6674D1927BAF551007C7D93 /* LoginInteractor.swift in Sources */,
 				B4FDF3BE27B2ED5900D3C570 /* PodcatsInteractor.swift in Sources */,
 				B43E6E5627B59898009C889B /* AppleGenericDetailInteractor.swift in Sources */,
+				F6D3C58A27BED15400B68486 /* TipsTrainingCoordinator.swift in Sources */,
 				B4FDF3CB27B2ED7300D3C570 /* BookCoordinator.swift in Sources */,
 				F6FADEBC27B6EF1000C0F225 /* MenuPresenter.swift in Sources */,
 				B4FDF3BA27B2ED5900D3C570 /* PodcatsRouter.swift in Sources */,
 				F6674D1827BAF551007C7D93 /* LoginPresenter.swift in Sources */,
 				F6674D1727BAF551007C7D93 /* LoginCoordinator.swift in Sources */,
 				B485D3C227ADBF5900C07C35 /* NetworkService.swift in Sources */,
+				F6D3C58C27BED15400B68486 /* TipsTrainingInteractor.swift in Sources */,
 				B43E6E5127B59898009C889B /* AppleGenericDetailViewController.swift in Sources */,
 				B4FDF3C827B2ED7300D3C570 /* BookViewController.swift in Sources */,
 				F6C30EB527BD9116003B4A1C /* GenericWebViewController.swift in Sources */,
@@ -620,6 +673,7 @@
 				B4FDF3CA27B2ED7300D3C570 /* BookProvider.swift in Sources */,
 				B48C4B5C27B44B36009BB5EE /* PodcastServerModel.swift in Sources */,
 				B4FDF3D127B2F02700D3C570 /* HomeTabBarViewController.swift in Sources */,
+				F6D3C58727BED15400B68486 /* TipsTrainingViewController.swift in Sources */,
 				B4FDF3AA27B2ED4600D3C570 /* MusicViewController.swift in Sources */,
 				B43E6E5427B59898009C889B /* AppleGenericDetailCoordinator.swift in Sources */,
 				B4FDF3AD27B2ED4700D3C570 /* MusicCoordinator.swift in Sources */,
@@ -629,6 +683,8 @@
 				B4FDF3AB27B2ED4600D3C570 /* MusicRouter.swift in Sources */,
 				F6674D0527BAD6F7007C7D93 /* MenuServerModel.swift in Sources */,
 				B4FDF3B927B2ED5900D3C570 /* PodcatsViewController.swift in Sources */,
+				F6D3C58927BED15400B68486 /* TipsTrainingProvider.swift in Sources */,
+				F6D3C58827BED15400B68486 /* TipsTrainingRouter.swift in Sources */,
 				B4FDF3AF27B2ED4700D3C570 /* MusicInteractor.swift in Sources */,
 				B4FDF3AC27B2ED4600D3C570 /* MusicProvider.swift in Sources */,
 				B4FDF3BB27B2ED5900D3C570 /* PodcatsProvider.swift in Sources */,

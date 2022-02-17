@@ -70,7 +70,7 @@ extension MenuPresenter: MenuPresenterInputProtocol {
         
     }
     func showTipsViewController() {
-        
+        self.router?.showTipsTrainingView()
     }
     func sendMail(canSendMail: Bool, delegate: MFMailComposeViewControllerDelegate) {
         if canSendMail{

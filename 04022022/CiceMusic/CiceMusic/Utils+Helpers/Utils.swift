@@ -67,6 +67,8 @@ struct URLEnpoint {
     static let apps = "%@/apps/top-free/%@/apps.json"
     
     static let menu = "iCoMenuResponse"
+    static let tipsTraining = "iCoResponseConsejos"
+    
 }
 
 extension URLEnpoint{
