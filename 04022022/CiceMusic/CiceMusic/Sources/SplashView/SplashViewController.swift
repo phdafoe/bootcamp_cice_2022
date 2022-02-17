@@ -48,8 +48,10 @@ extension SplashViewController: SplashPresenterOutputProtocol{
     func launchAnimation() {
         self.viewAnimator = UIViewPropertyAnimator(duration: 1.0, curve: .easeInOut, animations: nil)
         self.viewAnimator?.addAnimations {
-            self.customSplashImageView.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
-            self.unblockedGR = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.automaticHandler), userInfo: nil, repeats: false)
+            DispatchQueue.main.async {
+                self.customSplashImageView.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+                self.unblockedGR = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.automaticHandler), userInfo: nil, repeats: false)
+            }
         }
         self.viewAnimator?.startAnimation()
     }
