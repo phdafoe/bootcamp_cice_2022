@@ -398,32 +398,123 @@ struct CurvesAnimationsViewDos: View {
 }
 
 struct MenuAnimationView: View {
+    
+    @State private var showButtonMenu = false
+    @State private var showButton1 = false // 0x000010 Read and Write
+    
     var body: some View {
-        ZStack(alignment: .bottomTrailing) {
-            VStack(spacing: 20){
-                Text("Menu Flotante").font(.title)
-                Text("Como les gusta a los Androides").font(.callout)
-                Spacer()
-            }
+        NavigationView{
             
-            Group{
-                Button(action: {
-                    
-                }, label: {
-                    Image(systemName: "bag.badge.plus")
-                        .foregroundColor(.white)
-                        .padding(24)
-                        .rotationEffect(Angle.degrees(0))
-                })
-                    .background(
-                        Circle()
-                            .fill(Color.green)
-                            .shadow(color: Color.black.opacity(0.3), radius: 10, x: 4, y: 4)
-                    )
-                    .offset(x: 0, y: 0)
-                    .opacity(1)
+            ZStack(alignment: .bottomTrailing) {
+                
+                ScrollView{
+                    VStack(spacing: 20){
+                        Text("Menu Flotante").font(.title)
+                        Text("Como les gusta a los Androides").font(.callout)
+                        Spacer()
+                        ShapesView()
+                        CurvesAnimationsView()
+                        CurvesAnimationsViewDos()
+                        Spacer()
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                
+                Group{
+                    boton1
+                    boton2
+                    boton3
+                    botonMenu
+                }
+                .padding()
+                .foregroundColor(.white)
+                .animation(.default, value: self.showButtonMenu)
+                
+                Group{
+                    NavigationLink(isActive: self.$showButton1) {
+                        ScrollView{
+                            VStack{
+                                CurvesAnimationsView()
+                                BasicChangedCircle()
+                                Spacer()
+                                ShapesView()
+                            }
+                        }
+                    } label: {
+                        Text("")
+                    }
+
+                }
+                
             }
+            .frame(maxWidth: .infinity)
+            .navigationTitle("Test Navegacion")
         }
+        
+    }
+    
+    var boton1: some View {
+        Button(action: {
+            self.showButton1.toggle()
+            self.showButtonMenu.toggle()
+        }, label: {
+            Image(systemName: "bag.badge.plus")
+                .padding(24)
+                .rotationEffect(Angle.degrees(self.showButtonMenu ? 0 : -90))
+        })
+            .background(
+                Circle()
+                    .fill(Color.green)
+                    .shadow(color: Color.black.opacity(0.3), radius: 10, x: 4, y: 4)
+            )
+            .offset(x: 0, y: self.showButtonMenu ? -150 : 0)
+            .opacity(self.showButtonMenu ? 1 : 0)
+    }
+    var boton2: some View {
+        Button(action: {
+            self.showButtonMenu.toggle()
+        }, label: {
+            Image(systemName: "bag.badge.plus")
+                .padding(24)
+                .rotationEffect(Angle.degrees(self.showButtonMenu ? 0 : -90))
+        })
+            .background(
+                Circle()
+                    .fill(Color.green)
+                    .shadow(color: Color.black.opacity(0.3), radius: 10, x: 4, y: 4)
+            )
+            .offset(x: self.showButtonMenu ? -150 : 0, y: 0)
+            .opacity(self.showButtonMenu ? 1 : 0)
+    }
+    var boton3: some View {
+        Button(action: {
+            self.showButtonMenu.toggle()
+        }, label: {
+            Image(systemName: "bag.badge.plus")
+                .padding(24)
+                .rotationEffect(Angle.degrees(self.showButtonMenu ? 0 : -90))
+        })
+            .background(
+                Circle()
+                    .fill(Color.green)
+                    .shadow(color: Color.black.opacity(0.3), radius: 10, x: 4, y: 4)
+            )
+            .offset(x: self.showButtonMenu ? -100 : 0, y: self.showButtonMenu ? -100 : 0)
+            .opacity(self.showButtonMenu ? 1 : 0)
+    }
+    var botonMenu: some View {
+        Button(action: {
+            self.showButtonMenu.toggle()
+        }, label: {
+            Image(systemName: "plus")
+                .padding(24)
+                .rotationEffect(Angle.degrees(self.showButtonMenu ? 45 : 0))
+        })
+            .background(
+                Circle()
+                    .fill(Color.green)
+                    .shadow(color: Color.black.opacity(0.3), radius: 10, x: 4, y: 4)
+            )
     }
 }
 
