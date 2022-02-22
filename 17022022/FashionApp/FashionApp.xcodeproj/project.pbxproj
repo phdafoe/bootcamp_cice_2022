@@ -16,6 +16,7 @@
 		F6628FF027C4179F00806B05 /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6628FEF27C4179F00806B05 /* CustomNavigationView.swift */; };
 		F6628FF227C4194100806B05 /* CustomBodyMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6628FF127C4194100806B05 /* CustomBodyMainView.swift */; };
 		F685C58227C42D5E002AB659 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685C58127C42D5E002AB659 /* CustomAlertView.swift */; };
+		F697F78027C5601900641438 /* DetailFashionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F77F27C5601900641438 /* DetailFashionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		F6628FEF27C4179F00806B05 /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
 		F6628FF127C4194100806B05 /* CustomBodyMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBodyMainView.swift; sourceTree = "<group>"; };
 		F685C58127C42D5E002AB659 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		F697F77F27C5601900641438 /* DetailFashionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFashionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +63,9 @@
 		F648A4B827BEE5A000B65082 /* FashionApp */ = {
 			isa = PBXGroup;
 			children = (
+				F697F77E27C5600000641438 /* Sources */,
 				F648A4C727BEEB6A00B65082 /* Components */,
 				F648A4B927BEE5A100B65082 /* FashionAppApp.swift */,
-				F6628FED27C4172200806B05 /* FashionView.swift */,
 				F648A4BD27BEE5A200B65082 /* Assets.xcassets */,
 				F648A4BF27BEE5A200B65082 /* Preview Content */,
 			);
@@ -88,6 +90,15 @@
 				F685C58127C42D5E002AB659 /* CustomAlertView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		F697F77E27C5600000641438 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F6628FED27C4172200806B05 /* FashionView.swift */,
+				F697F77F27C5601900641438 /* DetailFashionView.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F697F78027C5601900641438 /* DetailFashionView.swift in Sources */,
 				F648A4BC27BEE5A100B65082 /* ContentView.swift in Sources */,
 				F685C58227C42D5E002AB659 /* CustomAlertView.swift in Sources */,
 				F648A4BA27BEE5A100B65082 /* FashionAppApp.swift in Sources */,
