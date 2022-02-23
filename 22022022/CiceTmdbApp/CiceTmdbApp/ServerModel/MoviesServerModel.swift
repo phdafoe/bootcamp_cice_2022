@@ -23,7 +23,7 @@ struct MoviesServerModel: Codable {
 }
 
 // MARK: - Result
-struct ResultNowPlaying: Codable {
+struct ResultNowPlaying: Codable, Identifiable {
     let adult: Bool?
     let backdropPath: String?
     let genreIDS: [Int]?
@@ -54,6 +54,13 @@ struct ResultNowPlaying: Codable {
         case video = "video"
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
+    }
+    
+    var posterUrl: URL {
+        return URL(string: "https://image.tmdb.org/t/p/w500/\(posterPath ?? "")")!
+    }
+    var backdropUrl: URL{
+        return URL(string: "https://image.tmdb.org/t/p/w500/\(backdropPath ?? "")")!
     }
 }
 
