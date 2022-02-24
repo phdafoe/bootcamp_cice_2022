@@ -55,13 +55,6 @@ struct ResultNowPlaying: Codable, Identifiable {
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
-    
-    var posterUrl: URL {
-        return URL(string: "https://image.tmdb.org/t/p/w500/\(posterPath ?? "")")!
-    }
-    var backdropUrl: URL{
-        return URL(string: "https://image.tmdb.org/t/p/w500/\(backdropPath ?? "")")!
-    }
 }
 
 extension MoviesServerModel {

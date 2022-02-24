@@ -20,6 +20,27 @@ struct MoviesView: View {
                                           isPoster: false)
                 }
             }
+            Group{
+                if !self.viewModel.dataSourcePopular.isEmpty {
+                    MoviesPosterCarrousel(title: "Popular",
+                                          moviesModel: self.viewModel.dataSourcePopular,
+                                          isPoster: true)
+                }
+            }
+            Group{
+                if !self.viewModel.dataSourceTopRate.isEmpty {
+                    MoviesPosterCarrousel(title: "Top Rate",
+                                          moviesModel: self.viewModel.dataSourceTopRate,
+                                          isPoster: false)
+                }
+            }
+            Group{
+                if !self.viewModel.dataSourceUpcoming.isEmpty {
+                    MoviesPosterCarrousel(title: "UpComing",
+                                          moviesModel: self.viewModel.dataSourceUpcoming,
+                                          isPoster: true)
+                }
+            }
         }
         .listStyle(PlainListStyle())
         .navigationTitle(Text("Movies"))

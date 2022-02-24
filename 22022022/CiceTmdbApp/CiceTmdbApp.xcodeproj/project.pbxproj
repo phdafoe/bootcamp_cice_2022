@@ -14,6 +14,9 @@
 		F61FB65A27C6B8AC009B3F45 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61FB65927C6B8AC009B3F45 /* NetworkError.swift */; };
 		F61FB65D27C6CC62009B3F45 /* MoviesPosterCarrousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61FB65C27C6CC62009B3F45 /* MoviesPosterCarrousel.swift */; };
 		F61FB65F27C6CEC3009B3F45 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61FB65E27C6CEC3009B3F45 /* ImageLoader.swift */; };
+		F67A916527C801810082544F /* MoviesTVModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A916427C801810082544F /* MoviesTVModelView.swift */; };
+		F67A916827C80E730082544F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A916727C80E730082544F /* HomeView.swift */; };
+		F67A916A27C80E820082544F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A916927C80E820082544F /* HomeViewModel.swift */; };
 		F697F78E27C56FB300641438 /* CiceTmdbAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F78D27C56FB300641438 /* CiceTmdbAppApp.swift */; };
 		F697F79027C56FB300641438 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F78F27C56FB300641438 /* ContentView.swift */; };
 		F697F79227C56FB500641438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F697F79127C56FB500641438 /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 		F61FB65927C6B8AC009B3F45 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkError.swift; path = ../../../../04022022/CiceMusic/CiceMusic/NetworkService/NetworkError.swift; sourceTree = "<group>"; };
 		F61FB65C27C6CC62009B3F45 /* MoviesPosterCarrousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesPosterCarrousel.swift; sourceTree = "<group>"; };
 		F61FB65E27C6CEC3009B3F45 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		F67A916427C801810082544F /* MoviesTVModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTVModelView.swift; sourceTree = "<group>"; };
+		F67A916727C80E730082544F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F67A916927C80E820082544F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F697F78A27C56FB300641438 /* CiceTmdbApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiceTmdbApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F697F78D27C56FB300641438 /* CiceTmdbAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiceTmdbAppApp.swift; sourceTree = "<group>"; };
 		F697F78F27C56FB300641438 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +85,23 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		F67A916327C8014D0082544F /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				F67A916427C801810082544F /* MoviesTVModelView.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		F67A916627C80E530082544F /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				F67A916727C80E730082544F /* HomeView.swift */,
+				F67A916927C80E820082544F /* HomeViewModel.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		F697F78127C56FB300641438 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +121,7 @@
 		F697F78C27C56FB300641438 /* CiceTmdbApp */ = {
 			isa = PBXGroup;
 			children = (
+				F67A916327C8014D0082544F /* ModelView */,
 				F61FB65B27C6CC46009B3F45 /* Components */,
 				F61FB65627C6B768009B3F45 /* WebService */,
 				F697F7CE27C584D600641438 /* Sources */,
@@ -167,6 +191,7 @@
 		F697F7CE27C584D600641438 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F67A916627C80E530082544F /* HomeView */,
 				F697F7CF27C584DE00641438 /* MoviesView */,
 			);
 			path = Sources;
@@ -255,14 +280,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67A916A27C80E820082544F /* HomeViewModel.swift in Sources */,
 				F697F7CD27C5816800641438 /* MoviesServerModel.swift in Sources */,
 				F61FB65A27C6B8AC009B3F45 /* NetworkError.swift in Sources */,
 				F61FB65327C6B19E009B3F45 /* MoviesProvider.swift in Sources */,
 				F697F7D127C584F200641438 /* MoviesView.swift in Sources */,
 				F697F79027C56FB300641438 /* ContentView.swift in Sources */,
+				F67A916527C801810082544F /* MoviesTVModelView.swift in Sources */,
 				F61FB65127C6AF8C009B3F45 /* MoviesInteractor.swift in Sources */,
 				F61FB65F27C6CEC3009B3F45 /* ImageLoader.swift in Sources */,
 				F61FB65D27C6CC62009B3F45 /* MoviesPosterCarrousel.swift in Sources */,
+				F67A916827C80E730082544F /* HomeView.swift in Sources */,
 				F697F78E27C56FB300641438 /* CiceTmdbAppApp.swift in Sources */,
 				F697F7D327C585E200641438 /* MoviesViewModel.swift in Sources */,
 				F697F79D27C5700E00641438 /* BaseVIP.swift in Sources */,
