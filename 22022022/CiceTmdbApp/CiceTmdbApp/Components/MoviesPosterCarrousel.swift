@@ -29,7 +29,13 @@ struct MoviesPosterCarrousel: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 20) {
                     ForEach(self.moviesModel){ movie in
-                        MoviePosterCell(model: movie, isPoster: self.isPoster)
+                        NavigationLink {
+                            //DetailMovieCoordinator.view(dto: DetailMovieCoordinatorDTO(dataId: movie.id ?? 0))
+                            DetailMovieView(viewModel: DetailMovieServerModel.stubbedDetailMovie!)
+                        } label: {
+                            MoviePosterCell(model: movie, isPoster: self.isPoster)
+                        }
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
             }
