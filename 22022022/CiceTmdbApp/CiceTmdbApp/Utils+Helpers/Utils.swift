@@ -60,10 +60,16 @@ struct URLEnpoint {
     }
     
     // Endpoint's of movies
-    static let endpointMoviesNowPlaying = "movie/now_playing?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
-    static let endpointMoviesPopular = "movie/popular?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
-    static let endpointMoviesTopRate = "movie/top_rated?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
-    static let endpointMoviesUpcoming = "movie/upcoming?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))"
+    static let endpointMoviesNowPlaying = "movie/now_playing?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))&language=\(NSLocale.current.languageCode ?? "ES")"
+    static let endpointMoviesPopular = "movie/popular?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))&language=\(NSLocale.current.languageCode ?? "ES")"
+    static let endpointMoviesTopRate = "movie/top_rated?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))&language=\(NSLocale.current.languageCode ?? "ES")"
+    static let endpointMoviesUpcoming = "movie/upcoming?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))&language=\(NSLocale.current.languageCode ?? "ES")"
+    
+    // Endpoint's of tvshows
+    static let endpointTVAiringToday = "tv/airing_today?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))&language=\(NSLocale.current.languageCode ?? "ES")"
+    static let endpointTVOnTheAir = "tv/on_the_air?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))&language=\(NSLocale.current.languageCode ?? "ES")"
+    static let endpointTVPopular = "tv/popular?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))&language=\(NSLocale.current.languageCode ?? "ES")"
+    static let endpointTVTopRated = "tv/top_rated?api_key=\(Obfuscator().reveal(key: Constants.Api.apiKey))&language=\(NSLocale.current.languageCode ?? "ES")"
     
 }
 
@@ -98,5 +104,14 @@ extension URLEnpoint{
                 return ""
             }
         }
+    }
+}
+
+extension Bundle {
+    func loadAndDecodeJSON<D: Decodable>(filename: String) throws -> D? {
+        guard let url = self.url(forResource: filename, withExtension: ".json") else { return nil }
+        let data = try Data(contentsOf: url)
+        let decodeModel = try JSONDecoder().decode(D.self, from: data)
+        return decodeModel
     }
 }
