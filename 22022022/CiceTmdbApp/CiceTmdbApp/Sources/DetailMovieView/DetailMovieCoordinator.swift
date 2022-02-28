@@ -45,12 +45,7 @@ final class DetailMovieCoordinator: BaseCoordinator {
                                               interactor: Interactor.self,
                                               provider: Provider.self)
         vip.provider.dataDTO = dto
-        //let view = ContentView(viewModel: vip.viewModel)
-        
-//        guard let dataUnw = DetailMovieServerModel.stubbedDetailMovie else {
-//            return nil
-//        }
-        let view = ContentView(viewModel: DetailMovieServerModel.stubbedDetailMovie!)
+        let view = ContentView(viewModel: vip.viewModel)
         return view
     }
     

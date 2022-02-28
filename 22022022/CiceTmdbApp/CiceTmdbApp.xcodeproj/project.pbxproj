@@ -34,6 +34,8 @@
 		F697F7CD27C5816800641438 /* MoviesServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F7CC27C5816800641438 /* MoviesServerModel.swift */; };
 		F697F7D127C584F200641438 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F7D027C584F200641438 /* MoviesView.swift */; };
 		F697F7D327C585E200641438 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F697F7D227C585E200641438 /* MoviesViewModel.swift */; };
+		F69A3B7627CD588200E452CC /* MovieCastCarrouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A3B7527CD588200E452CC /* MovieCastCarrouselView.swift */; };
+		F69A3B7927CD67FF00E452CC /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A3B7827CD67FF00E452CC /* SafariView.swift */; };
 		F6F19FB227C956E5004591C8 /* ShowsModel.json in Resources */ = {isa = PBXBuildFile; fileRef = F6F19FB127C956E5004591C8 /* ShowsModel.json */; };
 		F6F19FB427C9570E004591C8 /* ShowsServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F19FB327C9570E004591C8 /* ShowsServerModel.swift */; };
 		F6F19FBC27C9642A004591C8 /* DetailMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F19FB727C9642A004591C8 /* DetailMovieViewModel.swift */; };
@@ -79,6 +81,8 @@
 		F697F7CC27C5816800641438 /* MoviesServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesServerModel.swift; sourceTree = "<group>"; };
 		F697F7D027C584F200641438 /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 		F697F7D227C585E200641438 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		F69A3B7527CD588200E452CC /* MovieCastCarrouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCastCarrouselView.swift; sourceTree = "<group>"; };
+		F69A3B7827CD67FF00E452CC /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		F6F19FB127C956E5004591C8 /* ShowsModel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShowsModel.json; sourceTree = "<group>"; };
 		F6F19FB327C9570E004591C8 /* ShowsServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsServerModel.swift; sourceTree = "<group>"; };
 		F6F19FB727C9642A004591C8 /* DetailMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewModel.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				F61FB65C27C6CC62009B3F45 /* MoviesPosterCarrousel.swift */,
+				F69A3B7527CD588200E452CC /* MovieCastCarrouselView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 		F697F78C27C56FB300641438 /* CiceTmdbApp */ = {
 			isa = PBXGroup;
 			children = (
+				F69A3B7727CD67E400E452CC /* UIKitViews */,
 				F67A916327C8014D0082544F /* ModelView */,
 				F61FB65B27C6CC46009B3F45 /* Components */,
 				F61FB65627C6B768009B3F45 /* WebService */,
@@ -264,6 +270,14 @@
 				F61FB65427C6B499009B3F45 /* MoviesCoordinator.swift */,
 			);
 			path = MoviesView;
+			sourceTree = "<group>";
+		};
+		F69A3B7727CD67E400E452CC /* UIKitViews */ = {
+			isa = PBXGroup;
+			children = (
+				F69A3B7827CD67FF00E452CC /* SafariView.swift */,
+			);
+			path = UIKitViews;
 			sourceTree = "<group>";
 		};
 		F6F19FB527C9625B004591C8 /* DetailShowView */ = {
@@ -375,9 +389,11 @@
 				F67A916527C801810082544F /* MoviesTVModelView.swift in Sources */,
 				F61FB65127C6AF8C009B3F45 /* MoviesInteractor.swift in Sources */,
 				F6F19FBE27C9642A004591C8 /* DetailMovieView.swift in Sources */,
+				F69A3B7927CD67FF00E452CC /* SafariView.swift in Sources */,
 				F6F19FBC27C9642A004591C8 /* DetailMovieViewModel.swift in Sources */,
 				F61FB65F27C6CEC3009B3F45 /* ImageLoader.swift in Sources */,
 				F61FB65D27C6CC62009B3F45 /* MoviesPosterCarrousel.swift in Sources */,
+				F69A3B7627CD588200E452CC /* MovieCastCarrouselView.swift in Sources */,
 				F67A916827C80E730082544F /* HomeView.swift in Sources */,
 				F67A917227C821DD0082544F /* ShowsProvider.swift in Sources */,
 				F697F78E27C56FB300641438 /* CiceTmdbAppApp.swift in Sources */,

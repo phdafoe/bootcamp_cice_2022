@@ -28,7 +28,7 @@ import Combine
 
 // Input Protocol
 protocol DetailMovieProviderInputProtocol: BaseProviderInputProtocol {
-    
+    func fetchDataDetailMovieProvider()
 }
 
 final class DetailMovieProvider: BaseProvider {
@@ -46,40 +46,33 @@ final class DetailMovieProvider: BaseProvider {
 }
 
 extension DetailMovieProvider: DetailMovieProviderInputProtocol {
-    /*
-     // ->Este metodo nos muestra la forma de suscripcion del metodo al AnyPublisher
-     
-     func fetchDataNowPlayingProvider() {
-        let request = RequestDTO(params: nil,
-                                method: .get,
-                                endpoint: URLEnpoint.endpointMoviesNowPlaying,
-                                urlContext: .webService)
-        self.networkService.requestGeneric(payloadRequest: request, entityClass: MoviesServerModel.self)
+    
+    func fetchDataDetailMovieProvider(){
+        self.networkService.requestGeneric(payloadRequest: DetailMovieRequestDTO.requestDataDetail(idMovie: "\(dataDTO?.dataId ?? 0)"),
+                                           entityClass: DetailMovieServerModel.self)
             .sink { [weak self] completion in
                 guard self != nil else { return }
                 switch completion{
                 case .finished:
                     debugPrint("finished")
                 case let .failure(error):
-                    self?.interactor?.setInformationNowPlaying(completion: .failure(error))
+                    self?.interactor?.setInformationDetailMovie(completion: .failure(error))
                 }
             } receiveValue: { [weak self] resultData in
                 guard self != nil else { return }
-                self?.interactor?.setInformationNowPlaying(completion: .success(resultData.results))
+                self?.interactor?.setInformationDetailMovie(completion: .success(resultData))
             }
             .store(in: &cancellable)
     }
-     
-     */
 }
 
 // MARK: - Request de apoyo
 struct DetailMovieRequestDTO {
     
-    /*static func requestData(numeroItems: String) -> RequestDTO {
-        let argument: [CVarArg] = [numeroItems]
-        let urlComplete = String(format: URLEnpoint.music, arguments: argument)
+    static func requestDataDetail(idMovie: String) -> RequestDTO {
+        let argument: [CVarArg] = [idMovie]
+        let urlComplete = String(format: URLEnpoint.endpointDetailMovie, arguments: argument)
         let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete, urlContext: .webService)
         return request
-    }*/
+    }
 }

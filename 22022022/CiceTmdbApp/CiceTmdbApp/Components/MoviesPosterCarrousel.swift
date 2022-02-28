@@ -30,8 +30,7 @@ struct MoviesPosterCarrousel: View {
                 HStack(alignment: .top, spacing: 20) {
                     ForEach(self.moviesModel){ movie in
                         NavigationLink {
-                            //DetailMovieCoordinator.view(dto: DetailMovieCoordinatorDTO(dataId: movie.id ?? 0))
-                            DetailMovieView(viewModel: DetailMovieServerModel.stubbedDetailMovie!)
+                            DetailMovieCoordinator.view(dto: DetailMovieCoordinatorDTO(dataId: movie.id ?? 0))
                         } label: {
                             MoviePosterCell(model: movie, isPoster: self.isPoster)
                         }
