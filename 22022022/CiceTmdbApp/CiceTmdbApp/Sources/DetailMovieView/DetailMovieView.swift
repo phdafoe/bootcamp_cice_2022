@@ -40,6 +40,15 @@ struct DetailMovieView: View {
                 bodyView
             }
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+        .edgesIgnoringSafeArea(.all)
+        .sheet(item: self.$selectedTrailer) { myTrailer in
+            SafariView(url: myTrailer.youtubeURL!)
+        }
+        .onAppear {
+            self.viewModel.fetchData()
+        }
     }
     
     var headerView: some View {
@@ -77,7 +86,6 @@ struct DetailMovieView: View {
             .foregroundColor(Color.red)
         }
     }
-    
     var bodyView: some View {
         VStack(alignment: .leading, spacing: 30) {
             HStack{
@@ -166,15 +174,6 @@ struct DetailMovieView: View {
                     }
                 }
             }
-        }
-        .navigationBarHidden(true)
-        .navigationBarBackButtonHidden(true)
-        .edgesIgnoringSafeArea(.all)
-        .sheet(item: self.$selectedTrailer) { myTrailer in
-            SafariView(url: myTrailer.youtubeURL!)
-        }
-        .onAppear {
-            self.viewModel.fetchData()
         }
     }
 

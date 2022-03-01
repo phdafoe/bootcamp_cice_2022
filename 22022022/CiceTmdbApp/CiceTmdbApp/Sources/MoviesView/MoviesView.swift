@@ -17,28 +17,32 @@ struct MoviesView: View {
                 if !self.viewModel.dataSourceNowPlaying.isEmpty {
                     MoviesPosterCarrousel(title: "Now Playing",
                                           moviesModel: self.viewModel.dataSourceNowPlaying,
-                                          isPoster: false)
+                                          isPoster: false,
+                                          isMovie: true)
                 }
             }
             Group{
                 if !self.viewModel.dataSourcePopular.isEmpty {
                     MoviesPosterCarrousel(title: "Popular",
                                           moviesModel: self.viewModel.dataSourcePopular,
-                                          isPoster: true)
+                                          isPoster: true,
+                                          isMovie: true)
                 }
             }
             Group{
                 if !self.viewModel.dataSourceTopRate.isEmpty {
                     MoviesPosterCarrousel(title: "Top Rate",
                                           moviesModel: self.viewModel.dataSourceTopRate,
-                                          isPoster: false)
+                                          isPoster: false,
+                                          isMovie: true)
                 }
             }
             Group{
                 if !self.viewModel.dataSourceUpcoming.isEmpty {
                     MoviesPosterCarrousel(title: "UpComing",
                                           moviesModel: self.viewModel.dataSourceUpcoming,
-                                          isPoster: true)
+                                          isPoster: true,
+                                          isMovie: true)
                 }
             }
         }

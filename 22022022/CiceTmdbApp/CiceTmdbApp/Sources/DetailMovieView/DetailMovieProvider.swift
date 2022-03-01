@@ -48,7 +48,8 @@ final class DetailMovieProvider: BaseProvider {
 extension DetailMovieProvider: DetailMovieProviderInputProtocol {
     
     func fetchDataDetailMovieProvider(){
-        self.networkService.requestGeneric(payloadRequest: DetailMovieRequestDTO.requestDataDetail(idMovie: "\(dataDTO?.dataId ?? 0)"),
+        self.networkService.requestGeneric(payloadRequest: DetailMovieRequestDTO.requestDataDetail(idMovie: "\(dataDTO?.dataId ?? 0)",
+                                                                                                   moreParams: "credits,videos"),
                                            entityClass: DetailMovieServerModel.self)
             .sink { [weak self] completion in
                 guard self != nil else { return }
@@ -69,8 +70,8 @@ extension DetailMovieProvider: DetailMovieProviderInputProtocol {
 // MARK: - Request de apoyo
 struct DetailMovieRequestDTO {
     
-    static func requestDataDetail(idMovie: String) -> RequestDTO {
-        let argument: [CVarArg] = [idMovie]
+    static func requestDataDetail(idMovie: String, moreParams: String) -> RequestDTO {
+        let argument: [CVarArg] = [idMovie, moreParams]
         let urlComplete = String(format: URLEnpoint.endpointDetailMovie, arguments: argument)
         let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete, urlContext: .webService)
         return request
