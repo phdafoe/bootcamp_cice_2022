@@ -46,6 +46,66 @@ final class DetailMovieInteractor: BaseInteractor {
     var provider: DetailMovieProviderInputProtocol? {
         super.baseProvider as? DetailMovieProviderInputProtocol
     }
+    
+    func transformDataDetailMovieServerModelToDetailMovieTVModelView(data: DetailMovieServerModel?) -> DetailMovieTVModelView? {
+        var myData: DetailMovieTVModelView?
+        guard let dataUnw = data else { return nil }
+        guard let videoUnw = dataUnw.videos?.results else { return nil }
+        guard let castUnw = dataUnw.credits?.cast else { return nil }
+        guard let crewUnw = dataUnw.credits?.crew else { return nil }
+        let credits = CreditsViewModel(cast: self.transformDataDetailMovieServerModelToCastViewModel(data: castUnw) ?? [],
+                                       crew: self.transformDataDetailMovieServerModelToCrewViewModel(data: crewUnw) ?? [])
+        let objc = DetailMovieTVModelView(posterPath: dataUnw.posterPath,
+                                          genres: dataUnw.genres,
+                                          releaseDate: dataUnw.releaseDate,
+                                          runtime: dataUnw.runtime,
+                                          voteAverage: dataUnw.voteAverage,
+                                          credits: credits,
+                                          lastEpisodeToAir: nil,
+                                          seasons: nil,
+                                          overview: dataUnw.overview,
+                                          resultsVideoYoutube: self.transformDataDetailMovieServerModelToVideosYouTubeViewModel(data: videoUnw))
+        myData = objc
+        
+        return myData
+    }
+    
+    func transformDataDetailMovieServerModelToCastViewModel(data: [Cast]?) -> [CastViewModel]? {
+        var datasourceCastViewModel: [CastViewModel] = []
+        guard let castUnw = data else { return [] }
+        for item in 0..<castUnw.count {
+            let objc = CastViewModel(id: castUnw[item].id,
+                                     profilePath: castUnw[item].profilePath,
+                                     name: castUnw[item].name)
+            datasourceCastViewModel.append(objc)
+        }
+        return datasourceCastViewModel
+    }
+    
+    func transformDataDetailMovieServerModelToCrewViewModel(data: [Crew]?) -> [CrewViewModel]? {
+        var datasourceCrewViewModel: [CrewViewModel] = []
+        guard let crewUnw = data else { return [] }
+        for item in 0..<crewUnw.count {
+            let objc = CrewViewModel(id: crewUnw[item].id,
+                                     job: crewUnw[item].job,
+                                     name: crewUnw[item].name)
+            datasourceCrewViewModel.append(objc)
+        }
+        return datasourceCrewViewModel
+    }
+    
+    func transformDataDetailMovieServerModelToVideosYouTubeViewModel(data: [ResultVideo]?) -> [VideosYouTubeViewModel]? {
+        var datasourceYouTubeViewModel: [VideosYouTubeViewModel] = []
+        guard let videosUnw = data else { return [] }
+        for item in 0..<videosUnw.count {
+            let objc = VideosYouTubeViewModel(id: videosUnw[item].id,
+                                              key: videosUnw[item].key,
+                                              site: videosUnw[item].site,
+                                              name: videosUnw[item].name)
+            datasourceYouTubeViewModel.append(objc)
+        }
+        return datasourceYouTubeViewModel
+    }
 
     
 }
@@ -62,7 +122,7 @@ extension DetailMovieInteractor: DetailMovieProviderOutputProtocol {
     func setInformationDetailMovie(completion: Result<DetailMovieServerModel?, NetworkError>){
         switch completion{
         case .success(let data):
-            self.viewModel?.setInformationDetail(data: data)
+            self.viewModel?.setInformationDetail(data: self.transformDataDetailMovieServerModelToDetailMovieTVModelView(data: data))
         case .failure(let error):
             debugPrint(error)
         }

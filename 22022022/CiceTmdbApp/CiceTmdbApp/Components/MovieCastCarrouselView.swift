@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MovieCastCarrouselView: View {
     
-    let model: [Cast]
+    let model: [CastViewModel]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
@@ -26,10 +26,10 @@ struct MovieCastCarrouselView: View {
 
 struct MovieCastCell: View {
     
-    let model: Cast
+    let model: CastViewModel
     @ObservedObject var imageLoaderVM = ImageLoader()
     
-    init(model: Cast){
+    init(model: CastViewModel){
         self.model = model
         self.imageLoaderVM.loadImage(whit: self.model.profilePathUrl)
     }
@@ -60,39 +60,8 @@ struct MovieCastCell: View {
 
 struct MovieCastCarrouselView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieCastCarrouselView(model: [Cast(adult: false,
-                                            gender: 2,
-                                            id: 1136406,
-                                            knownForDepartment: "Acting",
-                                            name: "Tom Holland",
-                                            originalName: "Tom Holland",
-                                            popularity: 109.485,
-                                            profilePath: "/2qhIDp44cAqP2clOgt2afQI07X8.jpg",
-                                            castID: 1,
-                                            character: "Peter Parker / Spider-Man",
-                                            creditID: "5d8e28d38289a0000fcc32f9",
-                                            order: 0), Cast(adult: false,
-                                                            gender: 2,
-                                                            id: 1136406,
-                                                            knownForDepartment: "Acting",
-                                                            name: "Tom Holland",
-                                                            originalName: "Tom Holland",
-                                                            popularity: 109.485,
-                                                            profilePath: "/2qhIDp44cAqP2clOgt2afQI07X8.jpg",
-                                                            castID: 1,
-                                                            character: "Peter Parker / Spider-Man",
-                                                            creditID: "5d8e28d38289a0000fcc32f9",
-                                                            order: 0), Cast(adult: false,
-                                                                            gender: 2,
-                                                                            id: 1136406,
-                                                                            knownForDepartment: "Acting",
-                                                                            name: "Tom Holland",
-                                                                            originalName: "Tom Holland",
-                                                                            popularity: 109.485,
-                                                                            profilePath: "/2qhIDp44cAqP2clOgt2afQI07X8.jpg",
-                                                                            castID: 1,
-                                                                            character: "Peter Parker / Spider-Man",
-                                                                            creditID: "5d8e28d38289a0000fcc32f9",
-                                                                            order: 0)])
+        MovieCastCarrouselView(model: [CastViewModel(id: 0,
+                                                     profilePath: "/2qhIDp44cAqP2clOgt2afQI07X8.jpg",
+                                                     name: "Tomas")])
     }
 }

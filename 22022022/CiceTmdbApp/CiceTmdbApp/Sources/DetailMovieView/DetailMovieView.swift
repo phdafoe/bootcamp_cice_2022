@@ -31,7 +31,7 @@ struct DetailMovieView: View {
     //var viewModel: DetailMovieServerModel
     @SwiftUI.Environment(\.presentationMode) var presenterMode
     //private var imageLoader = ImageLoader()
-    @State private var selectedTrailer: ResultVideo?
+    @State private var selectedTrailer: VideosYouTubeViewModel?
     
     var body: some View {
         ScrollView{
@@ -170,13 +170,11 @@ struct DetailMovieView: View {
                             }
                         }
                         .buttonStyle(PlainButtonStyle())
-
                     }
                 }
             }
         }
     }
-
 }
 
 struct MovieDetailImage: View {
