@@ -24,6 +24,7 @@
 		F651093D27CFF184001E8AE7 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F651093C27CFF184001E8AE7 /* PeopleViewModel.swift */; };
 		F651093F27CFF642001E8AE7 /* PeopleCarrousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F651093E27CFF642001E8AE7 /* PeopleCarrousel.swift */; };
 		F651094227CFF97B001E8AE7 /* DetailPersonPopular.swift in Sources */ = {isa = PBXBuildFile; fileRef = F651094127CFF97B001E8AE7 /* DetailPersonPopular.swift */; };
+		F651094527D006EF001E8AE7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F651094427D006EF001E8AE7 /* OnboardingView.swift */; };
 		F67A916527C801810082544F /* MoviesTVModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A916427C801810082544F /* MoviesTVModelView.swift */; };
 		F67A916827C80E730082544F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A916727C80E730082544F /* HomeView.swift */; };
 		F67A916A27C80E820082544F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67A916927C80E820082544F /* HomeViewModel.swift */; };
@@ -83,6 +84,7 @@
 		F651093C27CFF184001E8AE7 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		F651093E27CFF642001E8AE7 /* PeopleCarrousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCarrousel.swift; sourceTree = "<group>"; };
 		F651094127CFF97B001E8AE7 /* DetailPersonPopular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPersonPopular.swift; sourceTree = "<group>"; };
+		F651094427D006EF001E8AE7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		F67A916427C801810082544F /* MoviesTVModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTVModelView.swift; sourceTree = "<group>"; };
 		F67A916727C80E730082544F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F67A916927C80E820082544F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -173,6 +175,14 @@
 				F651094127CFF97B001E8AE7 /* DetailPersonPopular.swift */,
 			);
 			path = DetailPopularPersonView;
+			sourceTree = "<group>";
+		};
+		F651094327D006DB001E8AE7 /* OnBoardingView */ = {
+			isa = PBXGroup;
+			children = (
+				F651094427D006EF001E8AE7 /* OnboardingView.swift */,
+			);
+			path = OnBoardingView;
 			sourceTree = "<group>";
 		};
 		F67A916327C8014D0082544F /* ModelView */ = {
@@ -304,6 +314,7 @@
 		F697F7CE27C584D600641438 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F651094327D006DB001E8AE7 /* OnBoardingView */,
 				F651094027CFF959001E8AE7 /* DetailPopularPersonView */,
 				F651092D27CFEC67001E8AE7 /* PeoplePopularView */,
 				F6F19FB627C96407004591C8 /* DetailMovieView */,
@@ -477,6 +488,7 @@
 				F651093B27CFEDE6001E8AE7 /* PeoplePopularServerModel.swift in Sources */,
 				F6F19FCA27C9643B004591C8 /* DetailShowInteractor.swift in Sources */,
 				F61FB65827C6B780009B3F45 /* NetworkService.swift in Sources */,
+				F651094527D006EF001E8AE7 /* OnboardingView.swift in Sources */,
 				F697F7A827C57E4F00641438 /* Constants.swift in Sources */,
 				F651093427CFEC89001E8AE7 /* PeoplePopularProvider.swift in Sources */,
 				F6F19FBD27C9642A004591C8 /* DetailMovieProvider.swift in Sources */,
