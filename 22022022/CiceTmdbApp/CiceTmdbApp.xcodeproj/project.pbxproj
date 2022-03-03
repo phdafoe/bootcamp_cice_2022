@@ -20,6 +20,7 @@
 		F62906F127D155AC0013AF2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F62906F027D155AC0013AF2C /* GoogleService-Info.plist */; };
 		F62906F427D157140013AF2C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F62906F327D157140013AF2C /* FirebaseAuth */; };
 		F62906F627D157140013AF2C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F62906F527D157140013AF2C /* FirebaseFirestore */; };
+		F62906F927D1611F0013AF2C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62906F827D1611F0013AF2C /* ProfileView.swift */; };
 		F651093327CFEC89001E8AE7 /* PeoplePopularViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F651092E27CFEC89001E8AE7 /* PeoplePopularViewModel.swift */; };
 		F651093427CFEC89001E8AE7 /* PeoplePopularProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F651092F27CFEC89001E8AE7 /* PeoplePopularProvider.swift */; };
 		F651093527CFEC89001E8AE7 /* PeoplePopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F651093027CFEC89001E8AE7 /* PeoplePopularView.swift */; };
@@ -84,6 +85,7 @@
 		F62906EC27D141F90013AF2C /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		F62906EE27D14B310013AF2C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		F62906F027D155AC0013AF2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F62906F827D1611F0013AF2C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F651092E27CFEC89001E8AE7 /* PeoplePopularViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePopularViewModel.swift; sourceTree = "<group>"; };
 		F651092F27CFEC89001E8AE7 /* PeoplePopularProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePopularProvider.swift; sourceTree = "<group>"; };
 		F651093027CFEC89001E8AE7 /* PeoplePopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePopularView.swift; sourceTree = "<group>"; };
@@ -177,6 +179,14 @@
 				F62906EE27D14B310013AF2C /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		F62906F727D160E10013AF2C /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				F62906F827D1611F0013AF2C /* ProfileView.swift */,
+			);
+			path = ProfileView;
 			sourceTree = "<group>";
 		};
 		F651092D27CFEC67001E8AE7 /* PeoplePopularView */ = {
@@ -337,6 +347,7 @@
 		F697F7CE27C584D600641438 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F62906F727D160E10013AF2C /* ProfileView */,
 				F62906E727D13D900013AF2C /* Login */,
 				F651094327D006DB001E8AE7 /* OnBoardingView */,
 				F651094027CFF959001E8AE7 /* DetailPopularPersonView */,
@@ -505,6 +516,7 @@
 				F69A3B7627CD588200E452CC /* MovieCastCarrouselView.swift in Sources */,
 				F67A916827C80E730082544F /* HomeView.swift in Sources */,
 				F67A917227C821DD0082544F /* ShowsProvider.swift in Sources */,
+				F62906F927D1611F0013AF2C /* ProfileView.swift in Sources */,
 				F697F78E27C56FB300641438 /* CiceTmdbAppApp.swift in Sources */,
 				F62906E927D13D9B0013AF2C /* LoginView.swift in Sources */,
 				F697F7D327C585E200641438 /* MoviesViewModel.swift in Sources */,

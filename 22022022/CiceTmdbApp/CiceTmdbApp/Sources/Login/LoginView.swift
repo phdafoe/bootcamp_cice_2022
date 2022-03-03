@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     
-    
+    @EnvironmentObject var viewModelSession: LoginViewModel
     @State var authType: AuthenticationType
     
     @State var email = ""
@@ -24,7 +24,7 @@ struct LoginView: View {
                 helloApp
                 imageAppLogo
                 // Haremos una comprobacion para saber si el usuarioa esta autenticado en Firebase
-                if true{
+                if !self.viewModelSession.userAutheticated {
                     VStack(spacing: 20){
                         CustomTextField(placeholder: "email",
                                         title: "email",
@@ -167,7 +167,12 @@ struct LoginView: View {
     }
     
     private func authEmailTouched() {
-        
+        switch authType{
+        case .signIn:
+            self.viewModelSession.sigIn(with: .emailAndPassword(email: self.email, password: self.password))
+        case .signUp:
+            self.viewModelSession.signUp(email: self.email, password: self.password, passwordConfirmation: self.confirmationPassword)
+        }
     }
     
     private func footerTouched() {
@@ -177,6 +182,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(authType: .signIn)
+        LoginView(authType: .signUp)
     }
 }

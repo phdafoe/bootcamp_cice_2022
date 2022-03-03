@@ -15,7 +15,7 @@ struct CiceTmdbAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(LoginViewModel())
         }
     }
 }
