@@ -20,7 +20,7 @@ struct ProfileView: View {
                     } label: {
                         Text("Logout")
                     }
-                    .font(.title3)
+                    .buttonStyleH1()
                 }
             }
         } else {
