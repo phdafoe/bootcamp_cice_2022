@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D49" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Contactos" representedClassName=".Contactos" syncable="YES">
+        <attribute name="apellido" optional="YES" attributeType="String"/>
+        <attribute name="direccion" optional="YES" attributeType="String"/>
+        <attribute name="edad" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="genero" optional="YES" attributeType="String"/>
+        <attribute name="iniciales" optional="YES" attributeType="String"/>
+        <attribute name="nombre" optional="YES" attributeType="String"/>
+        <attribute name="telefono" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Contactos" positionX="-63" positionY="-18" width="128" height="149"/>
+    </elements>
+</model>
