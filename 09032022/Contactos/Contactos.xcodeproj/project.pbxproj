@@ -17,6 +17,9 @@
 		F6ABB78F27D9485F00952943 /* AgregarContactoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABB78E27D9485F00952943 /* AgregarContactoView.swift */; };
 		F6ABB79227D9490D00952943 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABB79127D9490D00952943 /* TextFieldModifier.swift */; };
 		F6C0250327DA766B00DA23D5 /* PersistanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C0250227DA766B00DA23D5 /* PersistanceViewModel.swift */; };
+		F6C0250527DA8B4000DA23D5 /* DetalleContactoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C0250427DA8B4000DA23D5 /* DetalleContactoView.swift */; };
+		F6C0250727DA8BB500DA23D5 /* BotonCircularModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C0250627DA8BB500DA23D5 /* BotonCircularModifier.swift */; };
+		F6C0250927DA99C500DA23D5 /* emoji.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F6C0250827DA99C500DA23D5 /* emoji.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		F6ABB78E27D9485F00952943 /* AgregarContactoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgregarContactoView.swift; sourceTree = "<group>"; };
 		F6ABB79127D9490D00952943 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
 		F6C0250227DA766B00DA23D5 /* PersistanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceViewModel.swift; sourceTree = "<group>"; };
+		F6C0250427DA8B4000DA23D5 /* DetalleContactoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleContactoView.swift; sourceTree = "<group>"; };
+		F6C0250627DA8BB500DA23D5 /* BotonCircularModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotonCircularModifier.swift; sourceTree = "<group>"; };
+		F6C0250827DA99C500DA23D5 /* emoji.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = emoji.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,7 @@
 				F6ABB78527D9448300952943 /* Modelos */,
 				F6ABB78127D9428E00952943 /* CoreApp */,
 				F6ABB77727D9426500952943 /* Assets.xcassets */,
+				F6C0250827DA99C500DA23D5 /* emoji.jpeg */,
 				F6ABB77927D9426500952943 /* Preview Content */,
 				F6ABB78227D942B600952943 /* Contactos.xcdatamodeld */,
 			);
@@ -113,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				F6ABB78E27D9485F00952943 /* AgregarContactoView.swift */,
+				F6C0250427DA8B4000DA23D5 /* DetalleContactoView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -121,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				F6ABB79127D9490D00952943 /* TextFieldModifier.swift */,
+				F6C0250627DA8BB500DA23D5 /* BotonCircularModifier.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -184,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6ABB77B27D9426500952943 /* Preview Assets.xcassets in Resources */,
+				F6C0250927DA99C500DA23D5 /* emoji.jpeg in Resources */,
 				F6ABB77827D9426500952943 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +206,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6ABB78727D9449100952943 /* Contactos.swift in Sources */,
+				F6C0250527DA8B4000DA23D5 /* DetalleContactoView.swift in Sources */,
+				F6C0250727DA8BB500DA23D5 /* BotonCircularModifier.swift in Sources */,
 				F6ABB77627D9426300952943 /* ContentView.swift in Sources */,
 				F6C0250327DA766B00DA23D5 /* PersistanceViewModel.swift in Sources */,
 				F6ABB78427D942B600952943 /* Contactos.xcdatamodeld in Sources */,

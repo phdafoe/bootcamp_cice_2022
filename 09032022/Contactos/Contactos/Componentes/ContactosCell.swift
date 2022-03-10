@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContactosCell: View {
     
-    var contactos: Contactos
+    @ObservedObject var contactos: Contactos
 
     var body: some View {
         HStack{
@@ -30,7 +30,6 @@ struct ContactosCell: View {
                     .font(.caption)
                     .foregroundColor(.gray)
             }
-            
         }
     }
 }

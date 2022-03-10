@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct AgregarContactoView: View {
     
@@ -22,6 +23,8 @@ struct AgregarContactoView: View {
     @State private var telefono = ""
     @State private var iniciales = ""
     
+    var esEdicion = false
+    var data: Contactos?
     
     var body: some View {
         ScrollView{
@@ -45,13 +48,18 @@ struct AgregarContactoView: View {
                     .keyboardType(.phonePad)
                 
                 Button {
-                    self.salvarContacto()
+                    if esEdicion{
+                        self.editarContacto()
+                    } else {
+                        self.salvarContacto()
+                        self.localNotification()
+                    }
                 } label: {
                     HStack(spacing: 20){
-                        Image(systemName: "person.crop.circle")
+                        Image(systemName: esEdicion ? "pencil" : "person.crop.circle")
                             .foregroundColor(.white)
                             .font(.title)
-                        Text("Guargar contacto")
+                        Text(esEdicion ? "Editar contacto" : "Guargar contacto")
                             .foregroundColor(.white)
                             .font(.title2)
                     }
@@ -60,6 +68,17 @@ struct AgregarContactoView: View {
                     .clipShape(Capsule())
                 }
             }
+            .onAppear(perform: {
+                if esEdicion{
+                    self.nombre = data?.nombre ?? ""
+                    self.apellido = data?.apellido ?? ""
+                    self.direccion = data?.direccion ?? ""
+                    self.email = data?.email ?? ""
+                    self.telefono = data?.telefono ?? ""
+                    self.genero = data?.genero ?? ""
+                    self.edad = data?.edad ?? ""
+                }
+            })
             .padding(10)
         }
         .navigationTitle("Agregar Contacto")
@@ -89,10 +108,71 @@ struct AgregarContactoView: View {
             print("Error al salvar los datos", error.localizedDescription)
         }
     }
+    
+    private func editarContacto() {
+        let inicialN = String(self.nombre.first ?? "A")
+        let inicialA = String(self.apellido.first ?? "A")
+        
+        self.data?.nombre = self.nombre
+        self.data?.apellido = self.apellido
+        self.data?.direccion = self.direccion
+        self.data?.email = self.email
+        self.data?.telefono = self.telefono
+        self.data?.genero = self.genero
+        self.data?.edad = self.edad
+        self.data?.iniciales = inicialN +  inicialA
+        
+        do {
+            try self.viewContext.save()
+            print("Salvado correctamente")
+            self.presentedMode.wrappedValue.dismiss()
+        }catch let error as NSError {
+            print("Error al salvar los datos", error.localizedDescription)
+        }
+    }
+    
+    private func localNotification() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { _, _ in
+            //
+        }
+        
+        // contenido
+        let contendo = UNMutableNotificationContent()
+        contendo.title = "Mi Notificacion"
+        contendo.subtitle = "Mi Subtitulo de notificacion"
+        contendo.body = "Esta es mi primera notificacion local en SwiftUI"
+        contendo.sound = .defaultCritical
+        contendo.badge = 1
+        
+        // imagen
+        if let path = Bundle.main.path(forResource: "emoji", ofType:"jpeg"){
+            let url = URL(fileURLWithPath: path)
+            do {
+                let image = try UNNotificationAttachment(identifier: "emoji", url: url, options: nil)
+                contendo.attachments = [image]
+            }catch{
+                print("no carga la imagen")
+            }
+        }
+        
+        // botones
+        let boton1 = UNNotificationAction(identifier: "boton1", title: "Abrir la vista Detalle", options: .foreground)
+        let cancel = UNNotificationAction(identifier: "cancelar", title: "Cancelar", options: .destructive)
+        
+        let categoria = UNNotificationCategory(identifier: "acciones", actions: [boton1, cancel], intentIdentifiers: [])
+        UNUserNotificationCenter.current().setNotificationCategories([categoria])
+        contendo.categoryIdentifier = "acciones"
+        
+        // disparador
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: "noti", content: contendo, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        
+    }
 }
 
 struct AgregarContactoView_Previews: PreviewProvider {
     static var previews: some View {
-        AgregarContactoView()
+        AgregarContactoView(data: Contactos())
     }
 }

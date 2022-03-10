@@ -25,7 +25,11 @@ struct ContentView: View {
             VStack{
                 List{
                     ForEach(self.contactos){ item in
-                        ContactosCell(contactos: item)
+                        NavigationLink {
+                            DetalleContactoView(data: item)
+                        } label: {
+                            ContactosCell(contactos: item)
+                        }
                     }.onDelete { index in
                         self.borrarRegistros(data: index)
                     }
