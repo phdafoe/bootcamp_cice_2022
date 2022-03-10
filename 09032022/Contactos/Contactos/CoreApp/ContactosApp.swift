@@ -39,6 +39,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         if response.actionIdentifier == "boton1"{
             NotificationCenter.default.post(name: NSNotification.Name("accionEjecutar"), object: nil)
         }
+        UIApplication.shared.applicationIconBadgeNumber = -1
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter,
