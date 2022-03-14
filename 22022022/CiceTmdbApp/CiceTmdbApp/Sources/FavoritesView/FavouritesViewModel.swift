@@ -27,55 +27,33 @@ import Foundation
 
 
 // Output del Interactor
-protocol DetailMovieInteractorOutputProtocol: BaseInteractorOutputProtocol {
-    func setInformationDetail(data: DetailMovieTVModelView?)
-    func setInformationSavedCorrectly()
+protocol FavouritesInteractorOutputProtocol: BaseInteractorOutputProtocol {
+    func setInformationFavourites(data: [DetailMovieTVModelView]?)
 }
 
-final class DetailMovieViewModel: BaseViewModel, ObservableObject  {
+final class FavouritesViewModel: BaseViewModel, ObservableObject  {
     
     // MARK: - DI
-    var interactor: DetailMovieInteractorInputProtocol?{
-        super.baseInteractor as? DetailMovieInteractorInputProtocol
+    var interactor: FavouritesInteractorInputProtocol?{
+        super.baseInteractor as? FavouritesInteractorInputProtocol
     }
     
     // MARK: - Variables @Published
-    @Published var data: DetailMovieTVModelView?
-    @Published var isSaved = false
+    @Published var dataSource: [DetailMovieTVModelView]? = []
+    
     
     // MARK: - Métodos publicos para View
     func fetchData() {
-        self.interactor?.fetchDataDetailMovieInteractor()
-    }
-    
-    func saveDataAsFavourites(){
-        self.interactor?.saveDataAsFavouritesInteractor()
+        self.interactor?.fetchDataFromDBInteractor()
     }
     
 }
 
 // Output del Interactor
-extension DetailMovieViewModel: DetailMovieInteractorOutputProtocol {
-    func setInformationDetail(data: DetailMovieTVModelView?) {
-        guard let dataUnw = data else {
-            return
-        }
-        self.data = dataUnw
-        DDBB.shared.getAllLocal { result in
-            result?.downloads.map{ item in
-                item.map{ itemX in
-                    if "\(dataUnw.id ?? 0)" == itemX.id {
-                        self.isSaved = true
-                    }
-                }
-            }
-        } failure: { error in
-            debugPrint(error)
-        }
-    }
-    
-    func setInformationSavedCorrectly() {
-        self.isSaved = true
+extension FavouritesViewModel: FavouritesInteractorOutputProtocol {
+    func setInformationFavourites(data: [DetailMovieTVModelView]?) {
+        self.dataSource?.removeAll()
+        self.dataSource = data ?? []
     }
 }
 

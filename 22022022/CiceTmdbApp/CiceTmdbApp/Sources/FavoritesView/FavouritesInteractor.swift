@@ -26,35 +26,35 @@ POSSIBILITY OF SUCH DAMAGE.
 import Foundation
 
 // Input del Interactor
-protocol DetailMovieInteractorInputProtocol: BaseInteractorInputProtocol {
-    func fetchDataDetailMovieInteractor()
-    func saveDataAsFavouritesInteractor()
+protocol FavouritesInteractorInputProtocol: BaseInteractorInputProtocol {
+    func fetchDataFromDBInteractor()
 }
 
 // Output Provider
-protocol DetailMovieProviderOutputProtocol: BaseProviderOutputProtocol{
-    func setInformationDetailMovie(completion: Result<DetailMovieServerModel?, NetworkError>)
-    func savedCorrectly()
+protocol FavouritesProviderOutputProtocol: BaseProviderOutputProtocol{
+    func setInformationFavourites(completion: Result<DetailMovieServerModel, NetworkError>)
 }
 
-final class DetailMovieInteractor: BaseInteractor {
+final class FavouritesInteractor: BaseInteractor {
     
     // MARK: - DI
-    weak var viewModel: DetailMovieInteractorOutputProtocol? {
-        super.baseViewModel as? DetailMovieInteractorOutputProtocol
+    weak var viewModel: FavouritesInteractorOutputProtocol? {
+        super.baseViewModel as? FavouritesInteractorOutputProtocol
     }
     
     // MARK: - DI
-    var provider: DetailMovieProviderInputProtocol? {
-        super.baseProvider as? DetailMovieProviderInputProtocol
+    var provider: FavouritesProviderInputProtocol? {
+        super.baseProvider as? FavouritesProviderInputProtocol
     }
     
-    func transformDataDetailMovieServerModelToDetailMovieTVModelView(data: DetailMovieServerModel?) -> DetailMovieTVModelView? {
-        var myData: DetailMovieTVModelView?
-        guard let dataUnw = data else { return nil }
-        guard let videoUnw = dataUnw.videos?.results else { return nil }
-        guard let castUnw = dataUnw.credits?.cast else { return nil }
-        guard let crewUnw = dataUnw.credits?.crew else { return nil }
+    var dataSource: [DetailMovieTVModelView] = []
+    
+    func transformDataDetailMovieServerModelToDetailMovieTVModelView(data: DetailMovieServerModel?) {
+        
+        guard let dataUnw = data else { return }
+        guard let videoUnw = dataUnw.videos?.results else { return }
+        guard let castUnw = dataUnw.credits?.cast else { return }
+        guard let crewUnw = dataUnw.credits?.crew else { return }
         let credits = CreditsViewModel(cast: self.transformDataDetailMovieServerModelToCastViewModel(data: castUnw) ?? [],
                                        crew: self.transformDataDetailMovieServerModelToCrewViewModel(data: crewUnw) ?? [])
         let objc = DetailMovieTVModelView(id: dataUnw.id,
@@ -69,9 +69,8 @@ final class DetailMovieInteractor: BaseInteractor {
                                           seasons: nil,
                                           overview: dataUnw.overview,
                                           resultsVideoYoutube: self.transformDataDetailMovieServerModelToVideosYouTubeViewModel(data: videoUnw))
-        myData = objc
+        self.dataSource.append(objc)
         
-        return myData
     }
     
     func transformDataDetailMovieServerModelToCastViewModel(data: [Cast]?) -> [CastViewModel]? {
@@ -115,28 +114,21 @@ final class DetailMovieInteractor: BaseInteractor {
 }
 
 // Input del Interactor
-extension DetailMovieInteractor: DetailMovieInteractorInputProtocol {
-    func fetchDataDetailMovieInteractor() {
-        self.provider?.fetchDataDetailMovieProvider()
-    }
-    
-    func saveDataAsFavouritesInteractor() {
-        self.provider?.saveDataAsFavouritesProvider()
+extension FavouritesInteractor: FavouritesInteractorInputProtocol {
+    func fetchDataFromDBInteractor(){
+        self.provider?.fetchDataFromDBProvider()
     }
 }
 
 // Output Provider
-extension DetailMovieInteractor: DetailMovieProviderOutputProtocol {
-    func setInformationDetailMovie(completion: Result<DetailMovieServerModel?, NetworkError>){
+extension FavouritesInteractor: FavouritesProviderOutputProtocol {
+    func setInformationFavourites(completion: Result<DetailMovieServerModel, NetworkError>) {
         switch completion{
         case .success(let data):
-            self.viewModel?.setInformationDetail(data: self.transformDataDetailMovieServerModelToDetailMovieTVModelView(data: data))
+            self.transformDataDetailMovieServerModelToDetailMovieTVModelView(data: data)
+            self.viewModel?.setInformationFavourites(data: self.dataSource )
         case .failure(let error):
             debugPrint(error)
         }
-    }
-    
-    func savedCorrectly() {
-        self.viewModel?.setInformationSavedCorrectly()
     }
 }

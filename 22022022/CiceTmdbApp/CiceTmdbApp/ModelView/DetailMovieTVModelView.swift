@@ -9,6 +9,9 @@ import Foundation
 
 struct DetailMovieTVModelView {
     
+    
+    let id: Int?
+    let originalTitle: String?
     let posterPath: String?
     let genres: [Genre]?
     let releaseDate: String?

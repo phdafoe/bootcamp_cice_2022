@@ -66,7 +66,6 @@ struct MoviePosterCell: View {
         } else {
             self.imageLoaderVM.loadImage(whit: modelData.backdropUrl)
         }
-        
     }
     
     var body: some View {

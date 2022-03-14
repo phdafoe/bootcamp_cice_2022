@@ -12,17 +12,17 @@ struct CustomAlertView: View {
     var title: String
     var message: String
     var imageURL: URL
-    @Binding var hideCustomAlertView: Bool
+    var hideCustomAlertView: Binding<Bool>
     @ObservedObject var imageLoaderVM = ImageLoader()
     
     init(title: String,
          message: String,
          imageURL: URL,
-         hideCustomAlertView: Binding<Bool>) {
+         hide: Binding<Bool>) {
         self.title = title
         self.message = message
         self.imageURL = imageURL
-        self.hideCustomAlertView = hideCustomAlertView
+        self.hideCustomAlertView = hide
         self.imageLoaderVM.loadImage(whit: self.imageURL)
     }
     
@@ -41,7 +41,7 @@ struct CustomAlertView: View {
                     Spacer()
                     Button {
                         // Aqui va la accion del Binding
-                        self.hideCustomAlertView.toggle()
+                        self.hideCustomAlertView.wrappedValue = false
                     } label: {
                         Image(systemName: "xmark")
                     }
@@ -49,6 +49,27 @@ struct CustomAlertView: View {
                 Divider()
                 Text(message)
                     .font(.custom("Arial", size: 18))
+                
+                if self.imageLoaderVM.image != nil{
+                    Image(uiImage: self.imageLoaderVM.image!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .clipShape(Circle())
+                        .frame(width: 100, height: 100)
+                        .shadow(radius: 10)
+                        .overlay(
+                            Circle()
+                                .stroke(Color.red, lineWidth: 1)
+                        )
+                        .loader(state: .ok)
+                } else {
+                    Circle()
+                        .fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]),
+                                             startPoint: .bottom,
+                                             endPoint: .top))
+                        .clipShape(Circle())
+                        .loader(state: .loading)
+                }
             }
             .padding()
             .frame(width: UIScreen.main.bounds.width * 0.90)
@@ -57,25 +78,7 @@ struct CustomAlertView: View {
             .cornerRadius(10)
             .shadow(radius: 10)
             
-            if self.imageLoaderVM.image != nil{
-                Image(uiImage: self.imageLoaderVM.image!)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .clipShape(Circle())
-                    .shadow(radius: 10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.red, lineWidth: 1)
-                    )
-                    .loader(state: .ok)
-            } else {
-                Rectangle()
-                    .fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.clear]),
-                                         startPoint: .bottom,
-                                         endPoint: .top))
-                    .clipShape(Circle())
-                    .loader(state: .loading)
-            }
+            
         }
     }
 }

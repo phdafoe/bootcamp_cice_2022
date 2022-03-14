@@ -29,6 +29,7 @@ import Combine
 // Input Protocol
 protocol DetailMovieProviderInputProtocol: BaseProviderInputProtocol {
     func fetchDataDetailMovieProvider()
+    func saveDataAsFavouritesProvider()
 }
 
 final class DetailMovieProvider: BaseProvider {
@@ -41,7 +42,6 @@ final class DetailMovieProvider: BaseProvider {
     let networkService: NetworkServiceInputProtocol = NetworkService()
     var cancellable: Set<AnyCancellable> = []
     var dataDTO: DetailMovieCoordinatorDTO?
-    
     
 }
 
@@ -64,6 +64,14 @@ extension DetailMovieProvider: DetailMovieProviderInputProtocol {
                 self?.interactor?.setInformationDetailMovie(completion: .success(resultData))
             }
             .store(in: &cancellable)
+    }
+    
+    func saveDataAsFavouritesProvider() {
+        DDBB.shared.addLocal(favorite: DownloadNewModel(pId: "\(self.dataDTO?.dataId ?? 0)")) { result in
+            self.interactor?.savedCorrectly()
+        } failure: { error in
+            debugPrint("Error no se ha salvado correctamente, \(error ?? "")")
+        }
     }
 }
 
